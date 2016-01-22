@@ -118,7 +118,7 @@
 
                                     <!-- logo -->
                                     <a href="#home-section" class="navbar-brand scrollto" title="Safandi">
-                                        <img src="images/logo.png" alt="logo" />
+                                        <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="logo" />
                                     </a><!-- /logo -->
 
                                 </div><!-- /navbar-header -->
@@ -199,12 +199,11 @@
 
     			<ul>
 
-
                     <!-- slide 1 -->
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="500">
 
                         <!-- Main image -->
-                        <img src="images/slider/slide-1.jpg"
+                        <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>"
                             data-fullwidthcentering="on"
                             alt="slide-1"
                             data-bgfit="cover"
@@ -259,7 +258,7 @@
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="500">
 
                         <!-- Main image -->
-                        <img src="images/slider/slide-2.jpg"
+                        <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>"
                             data-fullwidthcentering="on"
                             alt="slide-2"
                             data-bgfit="cover"
@@ -273,7 +272,7 @@
                             data-speed="700"
                             data-start="1000"
                             data-easing="linear">
-                            <img src="images/slider/iMac.png" alt="iMac image" />
+                            <img src="<?php echo base_url('assets/images/slider/iMac.png'); ?>" alt="iMac image" />
                         </div><!-- /layer 1 -->
 
                         <!-- layer 2 -->
@@ -482,7 +481,7 @@
 
                                     <!-- feature-box-image -->
                                     <div class="feature-box-image">
-                                        <img src="images/boxes/design.png" alt="design Image"/>
+                                        <img src="<?php echo base_url('assets/images/boxes/design.png'); ?>" alt="design Image"/>
                                     </div><!-- /feature-box-image -->
 
                                     <!-- feature-box-icon -->
@@ -524,7 +523,7 @@
 
                                     <!-- feature-box-image -->
                                     <div class="feature-box-image">
-                                        <img src="images/boxes/html5.png" alt="HTML Image"/>
+                                        <img src="<?php echo base_url('assets/images/boxes/html5.png'); ?>" alt="HTML Image"/>
                                     </div><!-- /feature-box-image -->
 
                                     <!-- feature-box-icon -->
@@ -566,7 +565,7 @@
 
                                     <!-- feature-box-image -->
                                     <div class="feature-box-image">
-                                        <img src="images/boxes/css3.png" alt="CSS3 Image"/>
+                                        <img src="<?php echo base_url('assets/images/boxes/css3.png'); ?>" alt="CSS3 Image"/>
                                     </div><!-- /feature-box-image -->
 
                                     <!-- feature-box-icon -->
@@ -608,7 +607,7 @@
 
                                     <!-- feature-box-image -->
                                     <div class="feature-box-image">
-                                        <img src="images/boxes/documentation.png" alt="Documentation Image"/>
+                                        <img src="<?php echo base_url('assets/images/boxes/documentation.png'); ?>" alt="Documentation Image"/>
                                     </div><!-- /feature-box-image -->
 
                                     <!-- feature-box-icon -->
@@ -1062,7 +1061,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/1-767x479.jpg" alt="work 1" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/1-767x479.jpg'); ?>" alt="work 1" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 1 -->
@@ -1080,7 +1079,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/2-767x479.jpg" alt="work 2" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 2 -->
@@ -1098,7 +1097,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/3-767x479.jpg" alt="work 3" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 3 -->
@@ -1116,7 +1115,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/4-767x479.jpg" alt="work 4" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 4 -->
@@ -1134,7 +1133,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/5-767x479.jpg" alt="work 5" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 5 -->
@@ -1152,7 +1151,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/6-767x479.jpg" alt="work 6" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 6 -->
@@ -1170,7 +1169,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/7-767x479.jpg" alt="work 7" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 7 -->
@@ -1188,7 +1187,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/8-767x479.jpg" alt="work 8" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 8 -->
@@ -1206,7 +1205,7 @@
                             <!-- img-figure -->
                             <div class="img-figure">
                                 <!-- image -->
-                                <img src="images/portfolio/thumbs/9-767x479.jpg" alt="work 9" />
+                                <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
                             </div><!-- /img-figure -->
 
                         </div><!-- /item 9 -->
@@ -1401,7 +1400,7 @@
 
                                 <!-- client-img -->
                                 <div class="client-img">
-                                    <img src="images/clients/1-90x90.jpg" alt="client" />
+                                    <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
                                 </div><!-- /client-img -->
 
                                 <!-- client-name -->
@@ -1425,7 +1424,7 @@
 
                                 <!-- client-img -->
                                 <div class="client-img">
-                                    <img src="images/clients/2-90x90.jpg" alt="client" />
+                                    <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
                                 </div><!-- /client-img -->
 
                                 <!-- client-name -->
@@ -1452,7 +1451,7 @@
 
                                 <!-- client-img -->
                                 <div class="client-img">
-                                    <img src="images/clients/3-90x90.jpg" alt="client" />
+                                    <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
                                 </div><!-- /client-img -->
 
                                 <!-- client-name -->
@@ -1476,7 +1475,7 @@
 
                                 <!-- client-img -->
                                 <div class="client-img">
-                                    <img src="images/clients/4-90x90.jpg" alt="client" />
+                                    <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
                                 </div><!-- /client-img -->
 
                                 <!-- client-name -->
@@ -1503,7 +1502,7 @@
 
                                 <!-- client-img -->
                                 <div class="client-img">
-                                    <img src="images/clients/5-90x90.jpg" alt="client" />
+                                    <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
                                 </div><!-- /client-img -->
 
                                 <!-- client-name -->
@@ -1527,7 +1526,7 @@
 
                                 <!-- client-img -->
                                 <div class="client-img">
-                                    <img src="images/clients/6-90x90.jpg" alt="client" />
+                                    <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
                                 </div><!-- /client-img -->
 
                                 <!-- client-name -->
@@ -1571,42 +1570,42 @@
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-1-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-2-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-3-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-4-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-5-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-6-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-7-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                         <!-- client-logo -->
                         <div class="client-logo">
-                            <img src="images/clients/client-8-logo.jpg" alt="Client Logo" />
+                            <img src="<?php echo base_url('assets/images/clients/client-1-logo.jpg'); ?>" alt="Client Logo" />
                         </div><!-- /client-item -->
 
                     </div><!-- /owl-clients -->
@@ -1661,7 +1660,7 @@
 
                                 <!-- member-img -->
                                 <div class="member-img">
-                                    <img src="images/team/1-290x290.jpg" alt="Member Image" />
+                                    <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
                                 </div><!-- /member-img -->
 
                                 <!-- member-name -->
@@ -1713,7 +1712,7 @@
 
                                 <!-- member-img -->
                                 <div class="member-img">
-                                    <img src="images/team/2-290x290.jpg" alt="Member Image" />
+                                    <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
                                 </div><!-- /member-img -->
 
                                 <!-- member-name -->
@@ -1765,7 +1764,7 @@
 
                                 <!-- member-img -->
                                 <div class="member-img">
-                                    <img src="images/team/3-290x290.jpg" alt="Member Image" />
+                                    <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
                                 </div><!-- /member-img -->
 
                                 <!-- member-name -->
@@ -1817,7 +1816,7 @@
 
                                 <!-- member-img -->
                                 <div class="member-img">
-                                    <img src="images/team/4-290x290.jpg" alt="Member Image" />
+                                    <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
                                 </div><!-- /member-img -->
 
                                 <!-- member-name -->
