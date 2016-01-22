@@ -1,5 +1,5 @@
 <div class="col-md-12">
-	<a href="<?php echo base_url('home_controller/test')?>">Test</a>
+	<a href="<?php echo base_url('home_controller/test')?>">Perubahan super sai</a>
 </div>
 
 <section id="home-section">
