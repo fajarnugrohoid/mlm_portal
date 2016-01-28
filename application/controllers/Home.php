@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home_controller extends CI_Controller {
+class Home extends MY_Frontend {
 
 	public function __construct()
 	{
@@ -9,12 +9,15 @@ class Home_controller extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('frontend_view/layout/header');
+		$this->header();
 		$this->load->view('frontend_view/home');
-		$this->load->view('frontend_view/layout/footer');
+		$this->footer();
 	}
-	public function test()
+	public function login()
 	{
-		echo "string";
+		$this->header();
+		$this->load->view("login/login");
+		$this->footer();
+		
 	}
 }
