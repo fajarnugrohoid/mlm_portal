@@ -574,7 +574,11 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 }
 
 
-
+.see_all_news
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 
 /* ==========================================================================
    7. Services Section
@@ -588,6 +592,8 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     position: relative;
     padding: 80px 0 50px;
     background-color: #ffffff;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* 7.2 feature-box-style2
