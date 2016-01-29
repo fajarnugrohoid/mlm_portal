@@ -16,7 +16,7 @@ class Home extends MY_Frontend {
 	public function login()
 	{
 		$this->header();
-		$this->load->view("login/login");
+		$this->load->view("frontend_view/login");
 		$this->footer();
 		
 	}

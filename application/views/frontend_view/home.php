@@ -1,21 +1,12 @@
 <div class="col-md-12">
-	<a href="<?php echo base_url('home_controller/test')?>">Perubahan super sai</a>
+	<a >Perubahan super sai</a>
 </div>
 
 <section id="home-section">
-
-
-            <!-- top-header
-            ========================================== -->
             <div id="top-header">
-                <!-- container -->
                 <div class="container">
-                    <!-- row -->
                     <div class="row">
-
-                        <!-- col-md-6 -->
                         <div class="col-md-6 col-sm-6">
-                            <!-- info -->
                             <div id="info">
                                 <span>
                                     Phone: +1 123 456 789
@@ -23,194 +14,100 @@
                                 <span>
                                     Email: Example@example.com
                                 </span>
-                            </div><!-- /info -->
-                        </div><!-- /col-md-6 -->
-
-                        <!-- col-md-6 -->
+                            </div>
+                        </div>
                         <div class="col-md-6 col-sm-6">
-
-                            <!-- header-social-icons -->
                             <div id="header-social-icons">
-
                                 <ul>
                                     <li>
-                                        <!-- twitter -->
                                         <a href="#" title="Twitter" data-placement="bottom" data-rel="tooltip" class="twitter">
                                             <i class="fa fa-twitter"></i>
-                                        </a><!-- /twitter -->
+                                        </a>
                                     </li>
                                     <li>
-                                        <!-- facebook -->
                                         <a href="#" title="Facebook" data-placement="bottom" data-rel="tooltip" class="facebook">
                                             <i class="fa fa-facebook"></i>
-                                        </a><!-- /facebook -->
+                                        </a>
                                     </li>
                                     <li>
-                                        <!-- google-plus -->
                                         <a href="#" title="Google Plus" data-placement="bottom" data-rel="tooltip" class="google-plus">
                                             <i class="fa fa-google-plus"></i>
-                                        </a><!-- /google-plus -->
+                                        </a>
                                     </li>
                                     <li>
-                                        <!-- youtube-play -->
                                         <a href="#" title="Youtube" data-placement="bottom" data-rel="tooltip" class="youtube-play">
                                             <i class="fa fa-youtube-play"></i>
-                                        </a><!-- /youtube-play -->
+                                        </a>
                                     </li>
                                     <li>
-                                        <!-- pinterest -->
                                         <a href="#" title="Pinterest" data-placement="bottom" data-rel="tooltip" class="pinterest">
                                             <i class="fa fa-pinterest"></i>
-                                        </a><!-- /pinterest -->
+                                        </a>
                                     </li>
                                     <li>
-                                        <!-- linkedin -->
                                         <a href="#" title="LinkedIn" data-placement="bottom" data-rel="tooltip" class="linkedin">
                                             <i class="fa fa-linkedin"></i>
-                                        </a><!-- /linkedin -->
+                                        </a>
                                     </li>
                                     <li>
-                                        <!-- skype -->
                                         <a href="#" title="Skype" data-placement="bottom" data-rel="tooltip" class="skype">
                                             <i class="fa fa-skype"></i>
-                                        </a><!-- /skype -->
+                                        </a>
                                     </li>
                                     <li>
-                                        <!-- instagram -->
                                         <a href="#" title="Instagram" data-placement="bottom" data-rel="tooltip" class="instagram">
                                             <i class="fa fa-instagram"></i>
-                                        </a><!-- /instagram -->
+                                        </a>
                                     </li>
                                 </ul>
-
-                            </div><!-- /header-social-icons -->
-
-                        </div><!-- /col-md-6 -->
-
-                    </div><!-- /row -->
-                </div><!-- /container -->
-            </div><!-- /top-header -->
-
-
-
-            <!-- =========================================
-            Menu
-            ========================================== -->
-            <!-- nav-wrapper -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="nav-wrapper">
-                <!-- navbar -->
                 <div class="navbar">
-                    <!-- container -->
                     <div class="container">
-                        <!-- row -->
                         <div class="row">
-
-                            <!-- col-md-12 -->
                             <div class="col-md-12">
-
-                                <!-- navbar-header -->
                                 <div class="navbar-header">
-
-                                    <!-- Mobile Menu -->
                                     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
                                         <i class="fa fa-bars"></i>
-                                    </button><!-- / mobile Menu -->
-
-                                    <!-- logo -->
+                                    </button>
                                     <a href="#home-section" class="navbar-brand scrollto" title="Safandi">
                                         <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="logo" />
-                                    </a><!-- /logo -->
-
-                                </div><!-- /navbar-header -->
-
-                                <!-- navbar-collapse -->
+                                    </a>
+                                </div>
                                 <div class="navbar-collapse collapse">
-
-                                    <!-- nav -->
                                     <ul class="nav navbar-nav navbar-right">
-
-                                        <!-- Home -->
                                         <li>
                                             <a href="#home-section" title="Home" class="scrollto">
                                                 Home
                                             </a>
-                                        </li><!-- /Home -->
-
-                                        <!-- Services -->
+                                        </li>
                                         <li>
-                                            <a href="#services-section" title="Our Services"  class="scrollto">
-                                                Services
+                                            <a href="<?php echo base_url('home/login')?>" title="Login">
+                                                Login
                                             </a>
-                                        </li><!-- /Services -->
-
-                                        <!-- Portfolio -->
-                                        <li>
-                                            <a href="#portfolio-section" title="Portfolio" class="scrollto">
-                                                Portfolio
-                                            </a>
-                                        </li><!-- /Portfolio -->
-
-                                        <!-- Testimonials -->
-                                        <li>
-                                            <a href="#monials-section" title="Testimonials" class="scrollto">
-                                                Testimonials
-                                            </a>
-                                        </li><!-- /Testimonials -->
-
-                                        <!-- Team -->
-                                        <li>
-                                            <a href="#team-section" title="Team" class="scrollto">
-                                                Team
-                                            </a>
-                                        </li><!-- /Team -->
-
-                                        <!-- Contact Us -->
-                                        <li>
-                                            <a href="#contact-section" title="Contact Us" class="scrollto">
-                                                Contact Us
-                                            </a>
-                                        </li><!-- /Contact Us -->
-
-                                    </ul><!-- /nav -->
-
-                                </div><!-- /navbar-collapse -->
-
-                            </div><!-- /col-md-12 -->
-
-                        </div><!-- /row -->
-                    </div><!-- /container -->
-                </div><!-- /navbar -->
-            </div><!-- /nav-wrapper -->
-
-
-        </section><!-- /home-section -->
-
-
-
-
-        <!-- =========================================
-        Revolution Slider
-        ========================================== -->
-        <!-- tp-banner-container -->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="tp-banner-container">
-
-		    <!-- tp-banner -->
 		    <div class="tp-banner" >
-
     			<ul>
-
-                    <!-- slide 1 -->
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="500">
-
-                        <!-- Main image -->
                         <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>"
                             data-fullwidthcentering="on"
                             alt="slide-1"
                             data-bgfit="cover"
                             data-bgposition="center bottom"
                             data-bgrepeat="no-repeat" />
-
-                        <!-- layer 1 -->
                         <div class="tp-caption base-color font-size-60 font-weight-800 sft"
                             data-y="155"
                             data-x="center"
@@ -221,9 +118,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             Safandi
-                        </div><!-- /layer 1 -->
-
-                        <!-- layer 2 -->
+                        </div>
                         <div class="tp-caption black-color font-size-36 font-weight-600 sft"
                             data-y="235"
                             data-x="center"
@@ -234,9 +129,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             Responsive one page with clean design
-                        </div><!-- /layer 2 -->
-
-                        <!-- layer 3 -->
+                        </div>
                         <div class="tp-caption sfb"
                             data-y="310"
                             data-x="center"
@@ -249,23 +142,15 @@
                             <a href="javascript:void(0)" class="btn btn-Nesto">
                                 Purchase Now <i class="fa fa-shopping-cart"></i>
                             </a>
-                        </div><!-- /layer 3 -->
-
-                    </li><!-- /slide 1 -->
-
-
-                    <!-- slide 2 -->
+                        </div>
+                    </li>
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="500">
-
-                        <!-- Main image -->
                         <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>"
                             data-fullwidthcentering="on"
                             alt="slide-2"
                             data-bgfit="cover"
                             data-bgposition="center center"
                             data-bgrepeat="no-repeat" />
-
-                        <!-- layer 1 -->
                         <div class="tp-caption sfb"
                             data-x="center"
                             data-y="90"
@@ -273,9 +158,7 @@
                             data-start="1000"
                             data-easing="linear">
                             <img src="<?php echo base_url('assets/images/slider/iMac.png'); ?>" alt="iMac image" />
-                        </div><!-- /layer 1 -->
-
-                        <!-- layer 2 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfl"
                             data-x="left" data-hoffset="20"
                             data-y="113"
@@ -285,9 +168,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             html5 &amp; css3
-                        </div><!-- /layer 2 -->
-
-                        <!-- layer 3 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfl"
                             data-x="left" data-hoffset="20"
                             data-y="153"
@@ -297,9 +178,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             responsive design
-                        </div><!-- /layer 3 -->
-
-                        <!-- layer 4 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfl"
                             data-x="left" data-hoffset="20"
                             data-y="193"
@@ -309,9 +188,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             300+ font awesome icons
-                        </div><!-- /layer 4 -->
-
-                        <!-- layer 5 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfl"
                             data-x="left" data-hoffset="20"
                             data-y="233"
@@ -321,9 +198,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             awesome revolution slider
-                        </div><!-- /layer 5 -->
-
-                        <!-- layer 6 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfl"
                             data-x="left" data-hoffset="20"
                             data-y="273"
@@ -333,9 +208,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             awesome animation effect
-                        </div><!-- /layer 6 -->
-
-                        <!-- layer 7 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfl"
                             data-x="left" data-hoffset="20"
                             data-y="313"
@@ -345,9 +218,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             Touch and swipe
-                        </div><!-- /layer 7 -->
-
-                        <!-- layer 8 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfl"
                             data-x="left" data-hoffset="20"
                             data-y="353"
@@ -357,9 +228,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             24 / 7 support via email
-                        </div><!-- /layer 8 -->
-
-                        <!-- layer 9 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfr"
                             data-x="right" data-hoffset="-20"
                             data-y="113"
@@ -369,9 +238,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             bootstrap 3 supported
-                        </div><!-- /layer 9 -->
-
-                        <!-- layer 10 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfr"
                             data-x="right" data-hoffset="-20"
                             data-y="153"
@@ -381,9 +248,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             well documented
-                        </div><!-- /layer 10 -->
-
-                        <!-- layer 11 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfr"
                             data-x="right" data-hoffset="-20"
                             data-y="193"
@@ -393,9 +258,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             Retina ready
-                        </div><!-- /layer 11 -->
-
-                        <!-- layer 12 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfr"
                             data-x="right" data-hoffset="-20"
                             data-y="233"
@@ -405,9 +268,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             pricing tables
-                        </div><!-- /layer 12 -->
-
-                        <!-- layer 13 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfr"
                             data-x="right" data-hoffset="-20"
                             data-y="273"
@@ -417,9 +278,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             seo optimized
-                        </div><!-- /layer 13 -->
-
-                        <!-- layer 14 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfr"
                             data-x="right" data-hoffset="-20"
                             data-y="313"
@@ -429,9 +288,7 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             easy to use for beginners
-                        </div><!-- /layer 14 -->
-
-                        <!-- layer 15 -->
+                        </div>
                         <div class="tp-caption uppercase medium_bg_asbestos sfr"
                             data-x="right" data-hoffset="-20"
                             data-y="353"
@@ -441,199 +298,102 @@
                             data-easing="Back.easeOut"
                             data-endeasing="easeOutElastic">
                             valid working contact form
-                        </div><!-- /layer 15 -->
-
-                    </li><!-- /slide 2 -->
-
-
+                        </div>
+                    </li>
                 </ul>
-
-            </div><!-- /tp-banner -->
-
-        </div><!-- /tp-banner-container -->
-
-
-
-
-        <!-- =========================================
-        Intro Section
-        ========================================== -->
-        <!-- intro-section -->
+            </div>
+        </div>
         <section id="intro-section">
-            <!-- container -->
             <div class="container">
-                <!-- row -->
                 <div class="row">
-
-
-                    <!-- home-boxes-wrapper -->
                     <div class="home-boxes-wrapper">
-
-
-                        <!-- col-md-3 col-sm-6 -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
-
-                            <!-- feature-box-style1 -->
                             <div class="feature-box-style1">
-
-                                <!-- box-container -->
                                 <div class="box-container">
-
-                                    <!-- feature-box-image -->
                                     <div class="feature-box-image">
                                         <img src="<?php echo base_url('assets/images/boxes/design.png'); ?>" alt="design Image"/>
-                                    </div><!-- /feature-box-image -->
-
-                                    <!-- feature-box-icon -->
+                                    </div>
                                     <div class="feature-box-icon">
                                         <i class="fa fa-pencil"></i>
-                                    </div><!-- /feature-box-icon -->
-
-                                    <!-- feature-box-containt -->
+                                    </div>
                                     <div class="feature-box-containt">
                                         <p>Consectetur et adipisicing elit, do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
                                         <a href="javascript:void(0)" title="Read More">Read More</a>
-                                    </div><!-- /feature-box-containt -->
-
-                                    <!-- feature-box-subtitle -->
+                                    </div>
                                     <div class="feature-box-subtitle">
                                         Responsive
-                                    </div><!-- /feature-box-subtitle -->
-
-                                    <!-- feature-box-title -->
+                                    </div>
                                     <div class="feature-box-title">
                                         <h4>Clean Design</h4>
-                                    </div><!-- /feature-box-title -->
-
-                                </div><!-- /box-container -->
-
-                            </div><!-- /feature-box-style1 -->
-
-                        </div><!-- /col-md-3 col-sm-6 -->
-
-
-                        <!-- col-md-3 col-sm-6 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
-
-                            <!-- feature-box-style1 -->
                             <div class="feature-box-style1">
-
-                                <!-- box-container -->
                                 <div class="box-container">
-
-                                    <!-- feature-box-image -->
                                     <div class="feature-box-image">
                                         <img src="<?php echo base_url('assets/images/boxes/html5.png'); ?>" alt="HTML Image"/>
-                                    </div><!-- /feature-box-image -->
-
-                                    <!-- feature-box-icon -->
+                                    </div>
                                     <div class="feature-box-icon">
                                         <i class="fa fa-html5"></i>
-                                    </div><!-- /feature-box-icon -->
-
-                                    <!-- feature-box-containt -->
+                                    </div>
                                     <div class="feature-box-containt">
                                         <p>Consectetur et adipisicing elit, do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
                                         <a href="javascript:void(0)" title="Read More">Read More</a>
-                                    </div><!-- /feature-box-containt -->
-
-                                    <!-- feature-box-subtitle -->
+                                    </div>
                                     <div class="feature-box-subtitle">
                                         Validated
-                                    </div><!-- /feature-box-subtitle -->
-
-                                    <!-- feature-box-title -->
+                                    </div>
                                     <div class="feature-box-title">
                                         <h4>HTML5 Code</h4>
-                                    </div><!-- /feature-box-title -->
-
-                                </div><!-- /box-container -->
-
-                            </div><!-- /feature-box-style1 -->
-
-                        </div><!-- /col-md-3 col-sm-6 -->
-
-
-                        <!-- col-md-3 col-sm-6 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
-
-                            <!-- feature-box-style1 -->
                             <div class="feature-box-style1">
-
-                                <!-- box-container -->
                                 <div class="box-container">
-
-                                    <!-- feature-box-image -->
                                     <div class="feature-box-image">
                                         <img src="<?php echo base_url('assets/images/boxes/css3.png'); ?>" alt="CSS3 Image"/>
-                                    </div><!-- /feature-box-image -->
-
-                                    <!-- feature-box-icon -->
+                                    </div>
                                     <div class="feature-box-icon">
                                         <i class="fa fa-css3"></i>
-                                    </div><!-- /feature-box-icon -->
-
-                                    <!-- feature-box-containt -->
+                                    </div>
                                     <div class="feature-box-containt">
                                         <p>Consectetur et adipisicing elit, do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
                                         <a href="javascript:void(0)" title="Read More">Read More</a>
-                                    </div><!-- /feature-box-containt -->
-
-                                    <!-- feature-box-subtitle -->
+                                    </div>
                                     <div class="feature-box-subtitle">
                                         Validated
-                                    </div><!-- /feature-box-subtitle -->
-
-                                    <!-- feature-box-title -->
+                                    </div>
                                     <div class="feature-box-title">
                                         <h4>CSS3 Code</h4>
-                                    </div><!-- /feature-box-title -->
-
-                                </div><!-- /box-container -->
-
-                            </div><!-- /feature-box-style1 -->
-
-                        </div><!-- /col-md-3 col-sm-6 -->
-
-
-                        <!-- col-md-3 col-sm-6 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
-
-                            <!-- feature-box-style1 -->
                             <div class="feature-box-style1">
-
-                                <!-- box-container -->
                                 <div class="box-container">
-
-                                    <!-- feature-box-image -->
                                     <div class="feature-box-image">
                                         <img src="<?php echo base_url('assets/images/boxes/documentation.png'); ?>" alt="Documentation Image"/>
-                                    </div><!-- /feature-box-image -->
-
-                                    <!-- feature-box-icon -->
+                                    </div>
                                     <div class="feature-box-icon">
                                         <i class="fa fa-book"></i>
-                                    </div><!-- /feature-box-icon -->
-
-                                    <!-- feature-box-containt -->
+                                    </div>
                                     <div class="feature-box-containt">
                                         <p>Consectetur et adipisicing elit, do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
                                         <a href="javascript:void(0)" title="Read More">Read More</a>
-                                    </div><!-- /feature-box-containt -->
-
-                                    <!-- feature-box-subtitle -->
+                                    </div>
                                     <div class="feature-box-subtitle">
                                         Awesome
-                                    </div><!-- /feature-box-subtitle -->
-
-                                    <!-- feature-box-title -->
+                                    </div>
                                     <div class="feature-box-title">
                                         <h4>Good Documents</h4>
-                                    </div><!-- /feature-box-title -->
-
-                                </div><!-- /box-container -->
-
-                            </div><!-- /feature-box-style1 -->
+                                    </div>
+                                </div>
+                            </div>
 
                         </div><!-- /col-md-3 col-sm-6 -->
 
