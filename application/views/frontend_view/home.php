@@ -95,7 +95,7 @@
                                 <i class="fa fa-bars"></i>
                             </button>
                             <a href="#home-section" class="navbar-brand scrollto" title="Safandi">
-                                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="logo" />
+                                <img src="<?php echo base_url('assets/images/logo-new.png'); ?>" alt="logo" />
                             </a>
                         </div>
                         <div class="navbar-collapse collapse">
@@ -137,21 +137,21 @@
 <div id="carousel" class="carousel slide carousel-fade">
     <div class="carousel-inner">
         <div data-slide-no="0" class="item carousel-item active" align="center">
-            <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>" alt="">
+            <img src="<?php echo base_url('assets/images/slider/slide1.jpg'); ?>" alt="">
             <div class="carousel-caption">
                 <h4>EL PODER DE TRANSFORMAR VIDAS</h4>
                 <p>We Give You Power For Change Your Life</p>
             </div>
         </div>
         <div data-slide-no="1" class="item carousel-item" align="center">
-            <img src="<?php echo base_url('assets/images/slider/slide-2.jpg'); ?>" alt="">
+            <img src="<?php echo base_url('assets/images/slider/slide2.jpg'); ?>" alt="">
             <div class="carousel-caption">
                 <h4>WORLD CLASS PRODCUT</h4>
                 <p>Feel The Wolrd Class Product</p>
             </div>
         </div>
         <div data-slide-no="2" class="item carousel-item" align="center">
-            <img src="<?php echo base_url('assets/images/slider/slide-3.jpg'); ?>" alt="">
+            <img src="<?php echo base_url('assets/images/slider/slide3.jpg'); ?>" alt="">
             <div class="carousel-caption">
                 <h4>FREEDOM TO BE YOU</h4>
                 <p>Mix And Macth As Great Possible You Want</p>
