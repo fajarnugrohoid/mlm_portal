@@ -98,25 +98,25 @@
 </section>
 <div id="carousel" class="carousel slide carousel-fade">
     <div class="carousel-inner">
-        <div data-slide-no="0" class="item carousel-item active">
+        <div data-slide-no="0" class="item carousel-item active" align="center">
             <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>" alt="">
             <div class="carousel-caption">
-                <h4>We Help You Estimate!</h4>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h4>EL PODER DE TRANSFORMAR VIDAS</h4>
+                <p>We Give You Power For Change Your Life</p>
             </div>
         </div>
-        <div data-slide-no="1" class="item carousel-item">
-            <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>" alt="">
+        <div data-slide-no="1" class="item carousel-item" align="center">
+            <img src="<?php echo base_url('assets/images/slider/slide-2.jpg'); ?>" alt="">
             <div class="carousel-caption">
-                <h4>second thumbnail</h4>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h4>WORLD CLASS PRODCUT</h4>
+                <p>Feel The Wolrd Class Product</p>
             </div>
         </div>
-        <div data-slide-no="2" class="item carousel-item">
-            <img src="<?php echo base_url('assets/images/slider/slide-1.jpg'); ?>" alt="">
+        <div data-slide-no="2" class="item carousel-item" align="center">
+            <img src="<?php echo base_url('assets/images/slider/slide-3.jpg'); ?>" alt="">
             <div class="carousel-caption">
-                <h4>Third Thumbnail label</h4>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h4>FREEDOM TO BE YOU</h4>
+                <p>Mix And Macth As Great Possible You Want</p>
             </div>
         </div>
     </div>
