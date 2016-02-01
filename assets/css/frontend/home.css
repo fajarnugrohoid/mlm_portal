@@ -13,7 +13,7 @@
 
 /* ==========================================================================
    1. General
-========================================================================== */
+   ========================================================================== */
 /* 1.1 Main Styles
 ---------------------------------------------------------------------------*/
 body {
@@ -33,9 +33,9 @@ body {
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-.browsehappy { margin: 0.2em 0; background-color: #cccccc; color: #000000; padding: 0.2em 0; }
+ .browsehappy { margin: 0.2em 0; background-color: #cccccc; color: #000000; padding: 0.2em 0; }
 
-.uppercase { text-transform: uppercase; }
+ .uppercase { text-transform: uppercase; }
 
 /* 1.2 Anchor
 ---------------------------------------------------------------------------*/
@@ -43,10 +43,10 @@ a {
     color: #ce0c21;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 a,
 a > * {
@@ -66,7 +66,7 @@ a:hover {
 
 /* ==========================================================================
    2. Typography
-========================================================================== */
+   ========================================================================== */
 /* 2.1 Headings
 ---------------------------------------------------------------------------*/
 h1,
@@ -131,7 +131,7 @@ strong { font-weight: 700; }
 
 /* ==========================================================================
    3. Home Section
-========================================================================== */
+   ========================================================================== */
 /* 3.1 Wrapper
 ---------------------------------------------------------------------------*/
 #home-section {
@@ -153,9 +153,9 @@ strong { font-weight: 700; }
     background-color: #ffffff;
 
     -webkit-border-bottom: 1px solid #efefef;
-       -moz-border-bottom: 1px solid #efefef;
-         -o-border-bottom: 1px solid #efefef;
-            border-bottom: 1px solid #efefef;
+    -moz-border-bottom: 1px solid #efefef;
+    -o-border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
 }
 .hide-top-header { display: none; }
 
@@ -180,15 +180,15 @@ strong { font-weight: 700; }
     display: inline-block;
 
     -webkit-border-left: 1px solid #efefef;
-       -moz-border-left: 1px solid #efefef;
-         -o-border-left: 1px solid #efefef;
-            border-left: 1px solid #efefef;
+    -moz-border-left: 1px solid #efefef;
+    -o-border-left: 1px solid #efefef;
+    border-left: 1px solid #efefef;
 }
 #header-social-icons ul li:last-child {
     -webkit-border-right: 1px solid #efefef;
-       -moz-border-right: 1px solid #efefef;
-         -o-border-right: 1px solid #efefef;
-            border-right: 1px solid #efefef;
+    -moz-border-right: 1px solid #efefef;
+    -o-border-right: 1px solid #efefef;
+    border-right: 1px solid #efefef;
 }
 #header-social-icons ul li a {
     width: 34px;
@@ -198,10 +198,10 @@ strong { font-weight: 700; }
     text-align: center;
 
     -webkit-transition: all 0.0s ease-in-out;
-       -moz-transition: all 0.0s ease-in-out;
-        -ms-transition: all 0.0s ease-in-out;
-         -o-transition: all 0.0s ease-in-out;
-            transition: all 0.0s ease-in-out;
+    -moz-transition: all 0.0s ease-in-out;
+    -ms-transition: all 0.0s ease-in-out;
+    -o-transition: all 0.0s ease-in-out;
+    transition: all 0.0s ease-in-out;
 }
 #header-social-icons ul li a:hover { color: #ffffff; }
 
@@ -226,15 +226,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #B67BB7;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     -webkit-border-bottom: 1px solid #efefef;
-       -moz-border-bottom: 1px solid #efefef;
-         -o-border-bottom: 1px solid #efefef;
-            border-bottom: 1px solid #efefef;
+    -moz-border-bottom: 1px solid #efefef;
+    -o-border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
 }
 #nav-wrapper:after {
     left: 0;
@@ -263,7 +263,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    4. Revolution Slider
-========================================================================== */
+   ========================================================================== */
 /* 4.1 Wrapper
 ---------------------------------------------------------------------------*/
 .forcefullwidth_wrapper_tp_banner {
@@ -287,15 +287,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/masksquare.png") no-repeat scroll 50% 50% / 100% 100% #333333 !important;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .tparrows:before {
     speak: none;
@@ -326,9 +326,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/maskoblong.png") no-repeat scroll 50% 50% / 100% 100% #333333;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 }
 .tp-caption.medium_bg_asbestos:hover { background: url("../images/mask/maskbutton.png") no-repeat scroll 50% 50% / 100% 100% #ce0c21; }
 
@@ -344,7 +344,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    5. Intro Section
-========================================================================== */
+   ========================================================================== */
 /* 5.1 Wrapper
 ---------------------------------------------------------------------------*/
 #intro-section {
@@ -358,14 +358,14 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-image: url(../images/background/1.jpg);
 
     -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     -webkit-border-bottom: 1px solid #efefef;
-       -moz-border-bottom: 1px solid #efefef;
-         -o-border-bottom: 1px solid #efefef;
-            border-bottom: 1px solid #efefef;
+    -moz-border-bottom: 1px solid #efefef;
+    -o-border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
 }
 
 /* 5.2 Wrapper ( for home 4 boxes only )
@@ -391,9 +391,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     margin: 0 0 30px 0;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 }
 
 /* 5.2.2.2 Container
@@ -408,15 +408,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     text-align: center;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 5.2.2.3 Image
@@ -428,20 +428,20 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     overflow: hidden;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     -webkit-border-bottom: 2px solid #ce0c21;
-       -moz-border-bottom: 2px solid #ce0c21;
-         -o-border-bottom: 2px solid #ce0c21;
-            border-bottom: 2px solid #ce0c21;
+    -moz-border-bottom: 2px solid #ce0c21;
+    -o-border-bottom: 2px solid #ce0c21;
+    border-bottom: 2px solid #ce0c21;
 
     -webkit-border-radius: 5px 5px 0 0;
-       -moz-border-radius: 5px 5px 0 0;
-         -o-border-radius: 5px 5px 0 0;
-            border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
 }
 .feature-box-style1 .feature-box-image img { width: 100%; }
 
@@ -459,15 +459,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/masksquare.png") no-repeat scroll 50% 50% / 100% 100% #ce0c21;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 5.2.2.5 Containt
@@ -481,10 +481,10 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     position: relative;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .feature-box-style1 .feature-box-containt:after {
     right: 0;
@@ -524,9 +524,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     height: 164px;
 
     -webkit-border-bottom: 2px solid #333333;
-       -moz-border-bottom: 2px solid #333333;
-         -o-border-bottom: 2px solid #333333;
-            border-bottom: 2px solid #333333;
+    -moz-border-bottom: 2px solid #333333;
+    -o-border-bottom: 2px solid #333333;
+    border-bottom: 2px solid #333333;
 }
 .feature-box-style1 div.box-container:hover .feature-box-containt {
     margin: 0;
@@ -544,7 +544,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    6. Section Title
-========================================================================== */
+   ========================================================================== */
 /* 6.1 Wrapper
 ---------------------------------------------------------------------------*/
 .section-title {
@@ -583,7 +583,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    7. Services Section
-========================================================================== */
+   ========================================================================== */
 /* 7.1 Wrapper
 ---------------------------------------------------------------------------*/
 #services-section {
@@ -621,15 +621,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/masksquare.png") no-repeat scroll 50% 50% / 100% 100% #333333;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .feature-box-style2 i { line-height: 60px; }
 .feature-box-style2 i.fa-mobile { font-size: 33px; }
@@ -656,7 +656,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    8. Counters Section
-========================================================================== */
+   ========================================================================== */
 /* 8.1 Wrapper
 ---------------------------------------------------------------------------*/
 #counters-section {
@@ -693,15 +693,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/masksquare.png") no-repeat scroll 50% 50% / 100% 100% #333333;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 8.2.3 Number
@@ -737,7 +737,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    9. Portfolio Section
-========================================================================== */
+   ========================================================================== */
 /* 9.1 Wrapper
 ---------------------------------------------------------------------------*/
 #portfolio-section {
@@ -775,15 +775,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/maskbutton.png") no-repeat scroll 50% 50% / 100% 100% #333333;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .portfolioFilter ul li:last-child { margin: 0 0 10px; }
 .portfolioFilter ul li:hover { background: url("../images/mask/maskbutton.png") no-repeat scroll 50% 50% / 100% 100% #ce0c21; }
@@ -806,16 +806,16 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     text-transform: uppercase;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-touch-callout: none;
-      -webkit-user-select: none;
-       -khtml-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-           -o-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
 }
 .selected { background: url("../images/mask/maskbutton.png") no-repeat scroll 50% 50% / 100% 100% #ce0c21; }
 
@@ -824,34 +824,34 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 .isotope,
 .isotope .isotope-item {
     -webkit-transition-duration: 0.8s;
-       -moz-transition-duration: 0.8s;
-        -ms-transition-duration: 0.8s;
-         -o-transition-duration: 0.8s;
-            transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
 }
 .isotope {
     -webkit-transition-property: height, width;
-       -moz-transition-property: height, width;
-        -ms-transition-property: height, width;
-         -o-transition-property: height, width;
-            transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
 }
 .isotope .isotope-item {
     -webkit-transition-property: -webkit-transform, opacity;
-       -moz-transition-property: -moz-transform, opacity;
-        -ms-transition-property: -ms-transform, opacity;
-         -o-transition-property: -o-transform, opacity;
-            transition-property: transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
 }
 /**** disabling Isotope CSS3 transitions ****/
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
     -webkit-transition-duration: 0s;
-       -moz-transition-duration: 0s;
-        -ms-transition-duration: 0s;
-         -o-transition-duration: 0s;
-            transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
 }
 /**** Isotope Filtering ****/
 .isotope-item { z-index: 2; }
@@ -882,9 +882,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     width: 100%;
 
     -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-         -o-border-radius: 10px;
-            border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
 }
 
 /* 9.4.4 Overlayer
@@ -902,15 +902,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     position: absolute;
 
     -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-         -o-border-radius: 10px;
-            border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 9.4.5 Anchor
@@ -924,9 +924,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/maskoblong.png") no-repeat scroll 50% 50% / 100% 100% rgba(255, 255, 255, 0.5);
 
     -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-         -o-border-radius: 10px;
-            border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
 }
 .portfolio-grid .img-figure-overlayer a i {
     top: 50%;
@@ -977,23 +977,23 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #ffffff;
 
     -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-       -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-         -o-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
 }
 .feature-pricing-box {
     z-index: 2;
 
     -webkit-transform: scale(1.05);
-       -moz-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-         -o-transform: scale(1.05);
-            transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 
     -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
-       -moz-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
-         -o-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* 10.2.2 Price
@@ -1028,15 +1028,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     cursor: default;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     -webkit-border-bottom: 1px dashed #efefef;
-       -moz-border-bottom: 1px dashed #efefef;
-         -o-border-bottom: 1px dashed #efefef;
-            border-bottom: 1px dashed #efefef;
+    -moz-border-bottom: 1px dashed #efefef;
+    -o-border-bottom: 1px dashed #efefef;
+    border-bottom: 1px dashed #efefef;
 }
 
 /* 10.2.4 Typography
@@ -1078,9 +1078,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 .pricing-box .btn,
 .feature-pricing-box .btn {
     -webkit-border-radius: 4px 4px 0 0;
-       -moz-border-radius: 4px 4px 0 0;
-         -o-border-radius: 4px 4px 0 0;
-            border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 
 
@@ -1101,20 +1101,20 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 }
 #monials-section .col-md-6:nth-child(odd) {
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-border: 1px solid #efefef;
-       -moz-border: 1px solid #efefef;
-         -o-border: 1px solid #efefef;
-            border: 1px solid #efefef;
+    -moz-border: 1px solid #efefef;
+    -o-border: 1px solid #efefef;
+    border: 1px solid #efefef;
 }
 #monials-section .col-md-6:nth-child(even) {
     -webkit-border: 1px solid transparent;
-       -moz-border: 1px solid transparent;
-         -o-border: 1px solid transparent;
-            border: 1px solid transparent;
+    -moz-border: 1px solid transparent;
+    -o-border: 1px solid transparent;
+    border: 1px solid transparent;
 }
 
 /* 11.2 Monials Block
@@ -1150,15 +1150,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #efefef;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .client-img:after {
     top: 0;
@@ -1174,9 +1174,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     height: 90px;
 
     -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-         -o-border-radius: 4px;
-            border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
 }
 
 /* 11.2.3 Name
@@ -1209,7 +1209,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    12. Client Slider
-========================================================================== */
+   ========================================================================== */
 /* 12.1 Wrapper
 ---------------------------------------------------------------------------*/
 #client-slider-section {
@@ -1238,7 +1238,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    13. Team Section
-========================================================================== */
+   ========================================================================== */
 /* 13.1 Wrapper
 ---------------------------------------------------------------------------*/
 #team-section  {
@@ -1267,15 +1267,15 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #333333;
 
     -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-         -o-border-radius: 10px;
-            border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /* 13.2.2 Image
@@ -1288,14 +1288,14 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     margin: 0 auto 25px;
 
     -webkit-border-radius: 50%;
-       -moz-border-radius: 50%;
-         -o-border-radius: 50%;
-            border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
 
     -webkit-border: 5px solid #ffffff;
-       -moz-border: 5px solid #ffffff;
-         -o-border: 5px solid #ffffff;
-            border: 5px solid #ffffff;
+    -moz-border: 5px solid #ffffff;
+    -o-border: 5px solid #ffffff;
+    border: 5px solid #ffffff;
 }
 .member-img img { width: 100%; }
 .member-img:after {
@@ -1346,9 +1346,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #ffffff;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-         -o-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 }
 
 /* 13.2.6 Hover
@@ -1364,7 +1364,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    14. Skills Section
-========================================================================== */
+   ========================================================================== */
 /* 14.1 Wrapper
 ---------------------------------------------------------------------------*/
 #skills-section {
@@ -1446,10 +1446,10 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .skill-chart-middle input { margin-top: 55px !important; }
 
@@ -1468,10 +1468,10 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     letter-spacing: 1px;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .skill-title-lg { bottom: 70px; }
 
@@ -1498,7 +1498,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    15. Contact Us Section
-========================================================================== */
+   ========================================================================== */
 /* 15.1 Wrapper
 ---------------------------------------------------------------------------*/
 #contact-section {
@@ -1545,31 +1545,31 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #ffffff;
 
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-         -o-box-shadow: none;
-            box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
 
     -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-         -o-border-radius: 4px;
-            border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
 
     -webkit-border: 2px solid #e5e5e5;
-       -moz-border: 2px solid #e5e5e5;
-         -o-border: 2px solid #e5e5e5;
-            border: 2px solid #e5e5e5;
+    -moz-border: 2px solid #e5e5e5;
+    -o-border: 2px solid #e5e5e5;
+    border: 2px solid #e5e5e5;
 }
 .contactForm .form-control:hover,
 .contactForm .form-control:focus {
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-         -o-box-shadow: none;
-            box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
 
     -webkit-border: 2px solid #ce0c21;
-       -moz-border: 2px solid #ce0c21;
-         -o-border: 2px solid #ce0c21;
-            border: 2px solid #ce0c21;
+    -moz-border: 2px solid #ce0c21;
+    -o-border: 2px solid #ce0c21;
+    border: 2px solid #ce0c21;
 }
 
 /* 15.2.4 Button
@@ -1600,18 +1600,18 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     margin: -69px 15px 0 0;
 }
 :-webkit-ui-invalid:not(output) { box-shadow: none; }
-   :-moz-ui-invalid:not(output) { box-shadow: none; }
-    :-ms-ui-invalid:not(output) { box-shadow: none; }
-     :-o-ui-invalid:not(output) { box-shadow: none; }
-         ui-invalid:not(output) { box-shadow: none; }
+:-moz-ui-invalid:not(output) { box-shadow: none; }
+:-ms-ui-invalid:not(output) { box-shadow: none; }
+:-o-ui-invalid:not(output) { box-shadow: none; }
+ui-invalid:not(output) { box-shadow: none; }
 
 
 
 
 /* ==========================================================================
    16. Map Section
-========================================================================== */
-#map-section {
+   ========================================================================== */
+   #map-section {
     width: 100%;
     height: 450px;
     margin: 0 auto;
@@ -1630,7 +1630,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    17. Subscribtion
-========================================================================== */
+   ========================================================================== */
 /* 17.1 Wrapper
 ---------------------------------------------------------------------------*/
 #subscribe {
@@ -1642,9 +1642,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #222222;
 
     -webkit-border-radius: 10px 10px 0 0;
-       -moz-border-radius: 10px 10px 0 0;
-         -o-border-radius: 10px 10px 0 0;
-            border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 /* 17.2 Input
@@ -1658,26 +1658,26 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background-color: #ffffff;
 
     -webkit-border: none;
-       -moz-border: none;
-         -o-border: none;
-            border: none;
+    -moz-border: none;
+    -o-border: none;
+    border: none;
 
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-         -o-box-shadow: none;
-            box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
 
     -webkit-border-radius: 4px 0 0 4px;
-       -moz-border-radius: 4px 0 0 4px;
-         -o-border-radius: 4px 0 0 4px;
-            border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -o-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
 }
 #subscribe .form-control:hover,
 #subscribe .form-control:focus {
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-         -o-box-shadow: none;
-            box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
 }
 
 /* 17.3 Submit
@@ -1691,14 +1691,14 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     background: url("../images/mask/maskbutton.png") no-repeat scroll 50% 50% / 100% 100% #ce0c21;
 
     -webkit-border: none;
-       -moz-border: none;
-         -o-border: none;
-            border: none;
+    -moz-border: none;
+    -o-border: none;
+    border: none;
 
     -webkit-border-radius: 0 4px 4px 0;
-       -moz-border-radius: 0 4px 4px 0;
-         -o-border-radius: 0 4px 4px 0;
-            border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -o-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
 }
 #subscribe .submit.focus,
 #subscribe .submit:hover {
@@ -1721,7 +1721,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    18. Footer
-========================================================================== */
+   ========================================================================== */
 /* 18.1 Wrapper
 ---------------------------------------------------------------------------*/
 #footer-section {
@@ -1769,9 +1769,9 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     text-align: center;
 
     -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-         -o-border-radius: 4px;
-            border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
 }
 #footer-section #footer-social-icons ul li a i { line-height: 30px; }
 
@@ -1780,7 +1780,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 
 /* ==========================================================================
    19. Bootstrap New Elements
-========================================================================== */
+   ========================================================================== */
 /* 19.1 tooltip
 ========================================================================== */
 .tooltip {
@@ -1796,14 +1796,14 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     min-height: 40px;
 
     -webkit-border: 0;
-       -moz-border: 0;
-         -o-border: 0;
-            border: 0;
+    -moz-border: 0;
+    -o-border: 0;
+    border: 0;
 
     -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-         -o-border-radius: 0;
-            border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
 }
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand { margin-left: 0; }
@@ -1827,14 +1827,14 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
     padding: 8px 10px;
 
     -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-         -o-border-radius: 4px;
-            border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
 
     -webkit-border: 1px solid #888888;
-       -moz-border: 1px solid #888888;
-         -o-border: 1px solid #888888;
-            border: 1px solid #888888;
+    -moz-border: 1px solid #888888;
+    -o-border: 1px solid #888888;
+    border: 1px solid #888888;
 }
 
 
@@ -1843,22 +1843,22 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 .btn:focus { outline: none; }
 .btn {
     -webkit-border: 2px solid transparent;
-       -moz-border: 2px solid transparent;
-         -o-border: 2px solid transparent;
-            border: 2px solid transparent;
+    -moz-border: 2px solid transparent;
+    -o-border: 2px solid transparent;
+    border: 2px solid transparent;
 
     -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .btn:active,
 .btn.active {
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-         -o-box-shadow: none;
-            box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
 }
 .btn.disabled,
 .btn[disabled],
@@ -1907,16 +1907,16 @@ fieldset[disabled] .btn {
     background-color: #ce0c21;
 
     -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-         -o-border-radius: 4px;
-            border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
 }
 #contact-section .alert.alert-nesto { margin-bottom: 30px; }
 #contact-section .alert {
     -webkit-border: none;
-       -moz-border: none;
-         -o-border: none;
-            border: none;
+    -moz-border: none;
+    -o-border: none;
+    border: none;
 }
 
 
@@ -1924,8 +1924,8 @@ fieldset[disabled] .btn {
 
 /* ==========================================================================
    20. Responsive
-========================================================================== */
-@media only screen and (max-width: 1199px) {
+   ========================================================================== */
+   @media only screen and (max-width: 1199px) {
 
     #intro-section { padding: 30px 0 0 0; }
     .home-boxes-wrapper { margin: 0; }
@@ -1967,26 +1967,26 @@ fieldset[disabled] .btn {
     #monials-section .col-md-6:nth-child(odd),
     #monials-section .col-md-6:nth-child(even) {
         -webkit-border-radius: 0;
-           -moz-border-radius: 0;
-             -o-border-radius: 0;
-                border-radius: 0;
+        -moz-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
 
         -webkit-border: 1px solid transparent;
-           -moz-border: 1px solid transparent;
-             -o-border: 1px solid transparent;
-                border: 1px solid transparent;
+        -moz-border: 1px solid transparent;
+        -o-border: 1px solid transparent;
+        border: 1px solid transparent;
 
         -webkit-border-bottom: 1px solid #efefef;
-           -moz-border-bottom: 1px solid #efefef;
-             -o-border-bottom: 1px solid #efefef;
-                border-bottom: 1px solid #efefef;
+        -moz-border-bottom: 1px solid #efefef;
+        -o-border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
     }
     #monials-section .col-md-6:first-child {
 
         -webkit-border-top: 1px solid #efefef;
-           -moz-border-top: 1px solid #efefef;
-             -o-border-top: 1px solid #efefef;
-                border-top: 1px solid #efefef;
+        -moz-border-top: 1px solid #efefef;
+        -o-border-top: 1px solid #efefef;
+        border-top: 1px solid #efefef;
 
     }
 
@@ -2037,15 +2037,15 @@ fieldset[disabled] .btn {
 
     .feature-pricing-box {
         -webkit-transform: scale(1.0);
-           -moz-transform: scale(1.0);
-            -ms-transform: scale(1.0);
-             -o-transform: scale(1.0);
-                transform: scale(1.0);
+        -moz-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        -o-transform: scale(1.0);
+        transform: scale(1.0);
 
         -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-           -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-             -o-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+        -o-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
     }
 
     #footer-section p {
