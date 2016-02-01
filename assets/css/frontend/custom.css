@@ -1,4 +1,4 @@
-/* Import Basic Files
+<<<<<<< .mine/* Import Basic Files
 ---------------------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
 @import url(font-awesome.min.css);
@@ -2099,4 +2099,4 @@ fieldset[disabled] .btn {
     #subscribe { width: 300px; }
     #subscribe .form-control { width: 165px; }
 
-}
+}=======>>>>>>> .theirs
