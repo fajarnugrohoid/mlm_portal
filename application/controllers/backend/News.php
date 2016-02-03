@@ -11,9 +11,15 @@ class News extends MY_Backend {
   public function index()
   {
     $this->header();
-    $data['list_news'] = $this->news_model->m_list_news();
-    $this->load->view('backend_view/news/index',$data);
+    $this->load->view('backend_view/news/index');
     $this->footer();
+  }
+  public function list_data()
+  {
+    
+    $data['data'] =$this->news_model->m_list_news();
+    echo json_encode( $data );
+    
   }
   function insert()
   {

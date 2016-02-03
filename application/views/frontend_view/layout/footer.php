@@ -1,8 +1,7 @@
-
 </body>
-<script type="text/javascript" src="<?php echo base_url('assets/js/frontend/vendor/modernizr.custom.js')?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/frontend/vendor/jquery-1.11.0.min.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/frontend/vendor/modernizr.custom.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/jquery.easing.1.3.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/jquery.scrollto.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/rs-plugin/js/jquery.themepunch.plugins.min.js')?>"></script>

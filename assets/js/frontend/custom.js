@@ -1,7 +1,3 @@
-$(document).ready(function(){
-	
-});
-
 /*jshint new: true */
 /*global $, jQuery, document, window, navigator, GMaps, google*/
 /* ==========================================================================

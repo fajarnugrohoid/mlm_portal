@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Dashboard</title>
+  <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.1.3.min.js')?>"></script>
   <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/backend/dataTables.bootstrap.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/bootstrap-theme.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/font-awesome.css'); ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/css/dataTables.bootstrap.css')?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/css/dataTables.tableTools.css')?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/css/animate.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/jquery.gritter.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/backend/animate.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/pace-theme-minimal.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/main.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/skins.css')?>" rel="stylesheet">
@@ -26,7 +26,7 @@
       </a>
       <div class="navbar-right">
         <ul class="nav navbar-nav">
-         <!--  <li class="dropdown navbar-menu">
+          <li class="dropdown navbar-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bookmark fa-lg"></i>
               <span class="badge">4</span>
@@ -92,8 +92,8 @@
                 <a href="#">See all tasks</a>
               </li>
             </ul>
-          </li> -->
-          <!-- <li class="dropdown navbar-menu">
+          </li>
+          <li class="dropdown navbar-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope fa-lg"></i>
               <span class="badge">3</span>
@@ -137,8 +137,8 @@
                 <a href="#">See all messages</a>
               </li>
             </ul>
-          </li> -->
-          <!-- <li class="dropdown navbar-menu">
+          </li>
+          <li class="dropdown navbar-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell fa-lg"></i>
               <span class="badge">4</span>
@@ -172,7 +172,7 @@
                 <a href="#">See all notifications</a>
               </li>
             </ul>
-          </li> -->
+          </li>
           <li class="dropdown profile-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-cog fa-lg"></i>
@@ -181,9 +181,9 @@
             </a>
             <ul class="dropdown-menu box profile">
               <li><div class="up-arrow"></div></li>
-             <!--  <li class="border-top">
+              <li class="border-top">
                 <a href="pages-user.html"><i class="fa fa-user"></i>My Account</a>
-              </li> -->
+              </li>
               <li>
                 <a href="<?php echo base_url('login_controller/logout'); ?>"><i class="fa fa-power-off"></i>Log Out</a>
               </li>
@@ -217,7 +217,7 @@
               <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="sub-menu">
-              <li><a  href="<?php echo base_url('backend/news/add/')?>">New</a></li>
+              <li><a  href="<?php echo base_url('backend/news/insert/')?>">New</a></li>
               <li><a  href="<?php echo base_url('backend/news/index/')?>">List</a></li>
             </ul>
           </li>

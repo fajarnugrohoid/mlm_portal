@@ -1,6 +1,5 @@
 // panel info
 $(document).ready(function () {
-	alert("was included");
      	$('.alert-autocloseable-success').hide();;
 		$('.alert-autocloseable-danger').hide();
 
