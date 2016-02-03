@@ -1,10 +1,10 @@
 
 <div class="col-md-12">
   <div class="alert alert-success alert-autocloseable-success">
-    Data Berhasil Di Proses
+    <span id="label_berhasil">Data Berhasil Di Proses</span>
   </div>
   <div class="alert alert-danger alert-autocloseable-danger">
-    Data Gagal Di proses
+    <span id="label_gagal">Data Gagal Di proses</span>
   </div>
 </div>
 
@@ -18,19 +18,19 @@
           <form>
             <div class="form-group">
               <label>Title</label>
-              <input type="text" name="title_product" class="form-control required" title="Nama harus diisi" required>
+              <input type="text" name="title" class="form-control required" required>
             </div>
             <div class="form-group">
               <label>Description</label>
-              <textarea name="describe_shirt" class=" ckeditor form-control" required></textarea> 
+              <textarea name="description" class=" ckeditor form-control" required></textarea> 
             </div>
             <div class="form-group">
               <label>Link</label>
-              <input type="number" name="price_product" class="form-control" required>
+              <input type="number" name="link" class="form-control" required>
             </div>
             <div class="form-group">
               <label>Category</label>
-              <select class="form-control" id="category_selectbox" name="size_shirt">
+              <select class="form-control" id="category" name="category">
               </select>
             </div>
             <input type="submit" name="save" value="save" class="btn btn-success">        
@@ -48,6 +48,7 @@
   {
     show_alert("1");
     load_category();
+    console.log($('form').serialize());
   });
 
   function load_category()
@@ -59,13 +60,27 @@
       datatype:'application/json',
       success:function(success){
 
-        $('select#category_selectbox').html('');
+        $('select#category').html('');
         for(var i=0;i<success.length;i++)
         {
           $("<option />").val(success[i].id)
           .text(success[i].category)
-          .appendTo($('select#category_selectbox'));
+          .appendTo($('select#category'));
         }
+
+      }
+    });
+  }
+
+  function save_news()
+  {
+    console.log(form.serialize());
+    $.ajax({
+      type:"POST",
+      "url": base_url+'backend/news/insert_data',
+      "data": form.serialize(),
+      success:function(success){
+
 
       }
     });

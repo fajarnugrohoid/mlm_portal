@@ -34,38 +34,26 @@
    $(document).ready(function()
    {
       load_data_news();
-      
+
    });
 
    function load_data_news()
    {
       $('#list-news').dataTable().fnDestroy();
-      table_news = $('#list-news').dataTable( 
+      table_news = $('#list-news').DataTable( 
       {
-         
+
          "columnDefs": 
          [ 
+         {
+            "targets": 4,
+            "render": function ( data, type, full, meta ) 
             {
-               "targets": 4,
-               "render": function ( data, type, full, meta ) 
-               {
-                  return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/insert" class="btn btn-success">Edit</a>';
-                  return ;
-               }
-            },
-            {
-               "targets": 0,
-               "render": function ( data, type, full, meta ) 
-               {
-                  var number = 0;
-                  for (var i = 0; i <  0; i++) {
-                     i++;
-                  };
-                  console.log(i);
-                  return number+i;
-               }
-            } 
+               return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/insert" class="btn btn-success">Edit</a>';
+            }
+         }
          ],
+         "order": [[ 1, 'asc' ]],
          "ajax": 
          {
             "url": base_url+'backend/news/list_data',
@@ -79,17 +67,29 @@
          "order": [[ 1, 'asc' ]],
          "columns": 
          [
-            { "data": "id" },
-            { "data": "title" },
-            { "data": "description" },
-            { "data": "link" }
+         { "data": "id" },
+         { "data": "title" },
+         { "data": "description" },
+         { "data": "link" }
          ]
 
       });
-   }
+      table_news.on( 'order.dt search.dt', function () {
+        table_news.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+        });
+      }).draw();
+}
 
-   function delete_news(data)
-   {
-      alert(data);
-   }
+function delete_news(param)
+{
+   $.ajax({
+      type:"GET",
+      "url": base_url+'backend/news/delete_news_data/'+param,
+      success:function(success){
+         alert(success);
+         table_news.ajax.reload();
+      }
+   });
+}
 </script>

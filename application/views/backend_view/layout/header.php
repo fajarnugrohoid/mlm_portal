@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Dashboard</title>
-  <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.1.3.min.js')?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>
   <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/dataTables.bootstrap.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/bootstrap-theme.css'); ?>" rel="stylesheet">

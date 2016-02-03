@@ -14,6 +14,7 @@ function show_alert(param)
 	if (param == 1) 
 	{
 		$('#autoclosable-btn-success').prop("disabled", true);
+		$('label_berhasil').html("");
 		$('.alert-autocloseable-success').show();
 
 		$('.alert-autocloseable-success').delay(3000).fadeOut( "slow", function() {
