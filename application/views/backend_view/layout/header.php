@@ -213,60 +213,12 @@
           </li>
           <li class="menu">
             <a href="#">
-              <i class="fa fa-folder-open"></i><span>User</span>
+              <i class="fa fa-folder-open"></i><span>News</span>
               <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="sub-menu">
-              <li><a  href="<?php echo base_url('backend_controller/user_controller/insert')?>">New</a></li>
-              <li><a  href="<?php echo base_url('backend_controller/user_controller/index/')?>">List</a></li>
-            </ul>
-          </li>
-          <li class="menu">
-            <a href="#">
-              <i class="fa fa-folder-open"></i><span>Shirt</span>
-              <i class="fa fa-angle-left pull-right"></i>
-            </a>
-            <ul class="sub-menu">
-              <li><a  href="<?php echo base_url('backend_controller/shirt_controller/insert')?>">New</a></li>
-              <li><a  href="<?php echo base_url('backend_controller/shirt_controller/index/')?>">List</a></li>
-            </ul>
-          </li>
-          <li class="menu">
-            <a href="#">
-              <i class="fa fa-folder-open"></i><span>Pant</span>
-              <i class="fa fa-angle-left pull-right"></i>
-            </a>
-            <ul class="sub-menu">
-              <li><a  href="<?php echo base_url('backend_controller/pant_controller/insert')?>">New</a></li>
-              <li><a  href="<?php echo base_url('backend_controller/pant_controller/index/')?>">List</a></li>
-            </ul>
-          </li>
-          <li class="menu">
-            <a href="#">
-              <i class="fa fa-folder-open"></i><span>Merchand</span>
-              <i class="fa fa-angle-left pull-right"></i>
-            </a>
-            <ul class="sub-menu">
-              <li><a  href="<?php echo base_url('backend_controller/merchand_controller/insert')?>">New</a></li>
-              <li><a  href="<?php echo base_url('backend_controller/merchand_controller/index/')?>">List</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="<?php echo base_url('cart_controller/list_cart_admin')?>">
-              <i class="fa fa-shopping-cart"></i>
-              <span>Cart</span>
-              <small class="badge pull-right bg-blue"><?php print_r($this->cart->total_items()); ?></small>
-            </a>
-          </li>
-          <li class="menu">
-            <a href="#">
-              <i class="fa fa-file"></i><span>Report</span>
-              <i class="fa fa-angle-left pull-right"></i>
-            </a>
-            <ul class="sub-menu">
-              <li><a href="<?php echo base_url('backend_controller/report_controller/shirt_report_xls')?>"><span>Shirt To Excel</span></a></li>
-              <li><a href="<?php echo base_url('backend_controller/report_controller/pant_report_xls')?>"><span>Pant To Excel</span></a></li>
-              <li><a href="<?php echo base_url('backend_controller/report_controller/merchand_report_xls')?>"><span>Merchand To Excel</span></a></li>
+              <li><a  href="<?php echo base_url('backend/news/add/')?>">New</a></li>
+              <li><a  href="<?php echo base_url('backend/news/index/')?>">List</a></li>
             </ul>
           </li>
         </ul>

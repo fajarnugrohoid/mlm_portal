@@ -1,0 +1,20 @@
+.breadcrumb > li+li:before 
+{
+	content: "\f105";
+	font-family: 'FontAwesome';
+	padding: 0px 8px;
+
+}
+.breadcrumb
+{
+	background: #464545;
+}
+.breadcrumb > .active
+{
+	color: white;
+}
+.panel-default > .panel-heading 
+{
+    color: #fff;
+    background: #464545 !important;
+}
