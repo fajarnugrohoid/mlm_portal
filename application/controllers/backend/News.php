@@ -21,16 +21,23 @@ class News extends MY_Backend {
     echo json_encode( $data );
     
   }
+  public function list_data_category()
+  {
+    
+    $data=$this->news_model->m_list_category();
+    echo json_encode( $data );
+    
+  }
   function insert()
   {
     $this->header();
     $this->load->view('backend_view/news/add');
     $this->footer();
   }
-  function edit($slug)
+  function edit($id)
   {
     $data=array(
-     'slug'=>$slug,
+     'id'=>$id,
      );
 
     $data['data_edit']=$this->product_model->m_edit_shirt($data);

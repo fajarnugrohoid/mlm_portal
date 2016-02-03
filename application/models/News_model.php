@@ -13,6 +13,13 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
    }
+   function m_list_category()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_category');
+      $query = $this->db->get();
+      return $query->result();
+   }
    function m_insert_news($data)
    {
       $this->db->insert('mst_news',$data);
