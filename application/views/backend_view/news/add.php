@@ -86,12 +86,15 @@
       }
     },
     onValidationComplete: function (form, status) {
-      console.log($('form').serialize());
+      var valueDescription = CKEDITOR.instances['description'].getData();
+      var valTitle= $('#title').val();
+      var valCategory= $('#category').val();
+      var valUserfile= $('#userfile').val();
       $.ajax({
         type:"POST",
-        dataType: 'json',
         "url": base_url+'backend/news/insert_data',
-        "data": $('form').serialize(),
+        "data": 'title=' + valTitle + '&description=' + valueDescription+ '&category=' + valCategory+ '&userfile=' + valUserfile,
+        mimeType: "multipart/form-data",
         success:function(success){
           console.log(success);
           show_alert(success);
