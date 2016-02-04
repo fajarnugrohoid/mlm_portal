@@ -87,7 +87,8 @@ function delete_news(param)
       type:"GET",
       "url": base_url+'backend/news/delete_news_data/'+param,
       success:function(success){
-         alert(success);
+         console.log(success);
+         show_alert(success);
          table_news.ajax.reload();
       }
    });

@@ -39,15 +39,24 @@ class News extends MY_Backend {
     $data=array(
      'id' => $id
      );
+
     
     $param=$this->news_model->m_delete_news_data($data,$id);
-    if($param)
+    if($param == 1)
     {
-      return 1;
+      $out= array(
+       'isSuccess' => 1,
+       'message' => "Success Delete Data"
+       );
+      echo json_encode( $out );
     }
     else
     {
-      return 2;
+      $out= array(
+       'isSuccess' => 0,
+       'message' => "Failed Delete Data"
+       );
+      echo json_encode( $out );
     }
 
   }

@@ -22,10 +22,17 @@ class News_model extends CI_Model {
    }
    function m_delete_news_data($data,$id)
    {
-      $this->db->where('id', $id);
-      $this->db->delete('mst_news');
-      echo $this->db->last_query();   
-      die();
+      $query=$this->db->where('id', $id);
+      $query=$this->db->delete('mst_news');
+      if ($query) 
+      {
+         return 1;
+      }
+      else
+      {
+         return 0;
+      }
+      
    }
 
 }
