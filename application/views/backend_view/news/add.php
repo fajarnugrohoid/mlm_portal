@@ -22,16 +22,18 @@
             </div>
             <div class="form-group">
               <label>Description</label>
-              <textarea name="description" class=" ckeditor form-control" required></textarea> 
-            </div>
-            <div class="form-group">
-              <label>Link</label>
-              <input type="number" name="link" class="form-control" required>
+              <textarea name="description" class="ckeditor form-control" required></textarea> 
             </div>
             <div class="form-group">
               <label>Category</label>
               <select class="form-control" id="category" name="category">
               </select>
+            </div>
+            <div class="form-group">
+              <label>Image</label>
+              <input type="file" name="userfile" class="form-control" id="input-foto" accept="image/x-png, image/gif, image/jpeg , image/jpg" >
+              <br>
+              <img class="show_foto" src="#" id="div_image">
             </div>
             <input type="submit" name="save" value="save" class="btn btn-success">        
           </form>
