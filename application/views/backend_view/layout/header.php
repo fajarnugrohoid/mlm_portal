@@ -3,6 +3,8 @@
 <head>
   <title>Dashboard</title>
   <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/plugins/jquery.validationEngine.js')?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/plugins/jquery.validationEngine-en.js')?>"></script>
   <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/dataTables.bootstrap.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/bootstrap-theme.css'); ?>" rel="stylesheet">
@@ -13,6 +15,7 @@
   <link href="<?php echo base_url('assets/css/backend/main.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/skins.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/backend/custom.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/validationEngine.jquery.css')?>" rel="stylesheet">
 </head>
 <body class="skin-dark">
   <header class="header" id="#head-nav-backend">

@@ -9,7 +9,8 @@
 <script type="text/javascript" src="<?php echo base_url('assets/js/backend/jquery.sparkline.min.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/backend/main.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/backend/custom.js')?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/plugins//ckeditor/ckeditor.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/showfoto.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/plugins/ckeditor/ckeditor.js')?>"></script>
 </div>
 </section>
 </aside>
