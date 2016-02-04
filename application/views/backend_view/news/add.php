@@ -46,7 +46,6 @@
   var base_url= "<?php echo base_url()?>"
   $(document).ready(function()
   {
-    show_alert("1");
     load_category();
     console.log($('form').serialize());
   });

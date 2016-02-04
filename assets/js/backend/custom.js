@@ -1,22 +1,15 @@
 // panel info
 $(document).ready(function () {
-	$('.alert-autocloseable-success').hide();;
+	$('.alert-autocloseable-success').hide();
 	$('.alert-autocloseable-danger').hide();
-
-
-	$(document).on('click', '.close', function () {
-		$(this).parent().hide();
-	});
 });
 
 function show_alert(param)
 {
-	console.log(param.isSuccess);
 	if (param.isSuccess == 1) 
 	{
-		alert("test");
 		$('#autoclosable-btn-success').prop("disabled", true);
-		$('label_berhasil').html(param.message);
+		$('#label_berhasil').html(param.message);
 		$('.alert-autocloseable-success').show();
 
 		$('.alert-autocloseable-success').delay(3000).fadeOut( "slow", function() {
@@ -26,7 +19,7 @@ function show_alert(param)
 	else
 	{
 		$('#autoclosable-btn-danger').prop("disabled", true);
-		$('label_gagal').html(param.message);
+		$('#label_gagal').html(param.message);
 		$('.alert-autocloseable-danger').show();
 
 		$('.alert-autocloseable-danger').delay(3000).fadeOut( "slow", function() {

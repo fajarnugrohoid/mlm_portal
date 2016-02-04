@@ -1,3 +1,12 @@
+<div class="col-md-12">
+   <div class="alert alert-success alert-autocloseable-success">
+      <span id="label_berhasil">Data Berhasil Di Proses</span>
+   </div>
+   <div class="alert alert-danger alert-autocloseable-danger">
+      <span id="label_gagal">Data Gagal Di proses</span>
+   </div>
+</div>
+
 <div class="col-sm-12">
    <ol class="breadcrumb">
       <li><a href="<?php echo base_url('backend/dashboard/index/')?>">Dashboard</a></li>
@@ -75,22 +84,23 @@
 
       });
       table_news.on( 'order.dt search.dt', function () {
-        table_news.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+         table_news.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
             cell.innerHTML = i+1;
-        });
+         });
       }).draw();
-}
+   }
 
-function delete_news(param)
-{
-   $.ajax({
-      type:"GET",
-      "url": base_url+'backend/news/delete_news_data/'+param,
-      success:function(success){
-         console.log(success);
-         show_alert(success);
-         table_news.ajax.reload();
-      }
-   });
-}
+   function delete_news(param)
+   {
+      $.ajax({
+         type:"GET",
+         dataType : "json",
+         "url": base_url+'backend/news/delete_news_data/'+param,
+         success:function(success){
+            console.log(success);
+            show_alert(success);
+            table_news.ajax.reload();
+         }
+      });
+   }
 </script>
