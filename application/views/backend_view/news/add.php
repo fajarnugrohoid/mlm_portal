@@ -9,29 +9,31 @@
 </div>
 
 </div>
-<div class="col-sm-12">
+<div class="col-sm-12" id="news_add">
   <div class="grid">
     <div class="panel panel-default">
       <div class="panel-heading black-chrome">Add Data</div>
-      <div class="panel-body "  style=" overflow: scroll;">
+      <div class="panel-body">
         <div class="col-md-12">
-          <form>
+          <form name="form_news" id="form_news" action="" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label>Title</label>
-              <input type="text" name="title" class="form-control required" required>
+              <input type="text" name="title" id="title" class="form-control validate[required]">
             </div>
             <div class="form-group">
               <label>Description</label>
-              <textarea name="description" class=" ckeditor form-control" required></textarea> 
-            </div>
-            <div class="form-group">
-              <label>Link</label>
-              <input type="number" name="link" class="form-control" required>
+              <textarea name="description" id="description" class="validate[required] form-control ckeditor"></textarea> 
             </div>
             <div class="form-group">
               <label>Category</label>
               <select class="form-control" id="category" name="category">
               </select>
+            </div>
+            <div class="form-group">
+              <label>Image</label>
+              <input type="file" name="userfile" class="form-control" id="input-foto" accept="image/x-png, image/gif, image/jpeg , image/jpg" >
+              <br>
+              <img class="show_foto" src="#" id="div_image">
             </div>
             <input type="submit" name="save" value="save" class="btn btn-success">        
           </form>
@@ -46,9 +48,7 @@
   var base_url= "<?php echo base_url()?>"
   $(document).ready(function()
   {
-    show_alert("1");
     load_category();
-    console.log($('form').serialize());
   });
 
   function load_category()
@@ -72,18 +72,39 @@
     });
   }
 
-  function save_news()
-  {
-    console.log(form.serialize());
-    $.ajax({
-      type:"POST",
-      "url": base_url+'backend/news/insert_data',
-      "data": form.serialize(),
-      success:function(success){
-
-
+  $("#news_add form").validationEngine({
+    custom_error_messages: {
+      '#title': {
+        'required': {
+          'message': "You Must Set The Title"
+        }
+      },
+      '#description': {
+        'required': {
+          'message': "You Must Set The Description Of This Article"
+        }
       }
-    });
-  }
+    },
+    onValidationComplete: function (form, status) {
+      var valueDescription = CKEDITOR.instances['description'].getData();
+      var valTitle= $('#title').val();
+      var valCategory= $('#category').val();
+      var valUserfile= $('#userfile').val();
+      $.ajax({
+        type:"POST",
+        "url": base_url+'backend/news/insert_data',
+        "data": 'title=' + valTitle + '&description=' + valueDescription+ '&category=' + valCategory+ '&userfile=' + valUserfile,
+        mimeType: "multipart/form-data",
+        success:function(success){
+          console.log(success);
+          show_alert(success);
+          if (success.isSuccess) {
+            $("#title").val("");
+            CKEDITOR.instances.description.setData('');
+          };
+        }
+      });
+    }
+  });
 
 </script>

@@ -1,3 +1,12 @@
+<div class="col-md-12">
+   <div class="alert alert-success alert-autocloseable-success">
+      <span id="label_berhasil">Data Berhasil Di Proses</span>
+   </div>
+   <div class="alert alert-danger alert-autocloseable-danger">
+      <span id="label_gagal">Data Gagal Di proses</span>
+   </div>
+</div>
+
 <div class="col-sm-12">
    <ol class="breadcrumb">
       <li><a href="<?php echo base_url('backend/dashboard/index/')?>">Dashboard</a></li>
@@ -16,7 +25,7 @@
                         <th>No</th>
                         <th>Title</th>
                         <th>Description</th>
-                        <th>Link</th>
+                        <th>category</th>
                         <th>Aksi</th>
                      </tr>
                   </thead>
@@ -51,6 +60,16 @@
             {
                return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/insert" class="btn btn-success">Edit</a>';
             }
+         },
+         {
+            "targets": 2,
+            "render": function ( data, type, full, meta ) 
+            {
+               console.log(full);
+               var myDesc = full.description
+               var desc = myDesc.substring(1, 50);
+               return desc+'....';
+            }
          }
          ],
          "order": [[ 1, 'asc' ]],
@@ -70,27 +89,28 @@
          { "data": "id" },
          { "data": "title" },
          { "data": "description" },
-         { "data": "link" }
+         { "data": "category" }
          ]
 
       });
       table_news.on( 'order.dt search.dt', function () {
-        table_news.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+         table_news.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
             cell.innerHTML = i+1;
-        });
+         });
       }).draw();
-}
+   }
 
-function delete_news(param)
-{
-   $.ajax({
-      type:"GET",
-      "url": base_url+'backend/news/delete_news_data/'+param,
-      success:function(success){
-         console.log(success);
-         show_alert(success);
-         table_news.ajax.reload();
-      }
-   });
-}
+   function delete_news(param)
+   {
+      $.ajax({
+         type:"GET",
+         dataType : "json",
+         "url": base_url+'backend/news/delete_news_data/'+param,
+         success:function(success){
+            console.log(success);
+            show_alert(success);
+            table_news.ajax.reload();
+         }
+      });
+   }
 </script>
