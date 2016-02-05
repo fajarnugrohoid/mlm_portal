@@ -15,18 +15,18 @@
 // IMPORTANT!!! Do not remove uncommented settings in this file even if
 // you are using session configuration.
 // See http://kcfinder.sunhater.com/install for setting descriptions
-// if(isset($_COOKIE['remember_me_cookie'])) 
-// {
+if(isset($_COOKIE['remember_me_cookie'])) 
+{
 
-//     $my_config=false;
-// }
-// else
-// {
-//     $my_config=true;
-// }
+    $my_config=false;
+}
+else
+{
+    $my_config=true;
+}
 $_CONFIG = array(
 
-    'disabled' => false,
+    'disabled' => $my_config,
     'denyZipDownload' => false,
     'denyUpdateCheck' => false,
     'denyExtensionRename' => false,

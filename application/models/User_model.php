@@ -11,9 +11,9 @@ class User_model extends CI_Model {
    function m_auth($email,$password)
    {
 
-      $query = $this->db->get_where('user', array(
-         'email' => $email,
-         'password' => base64_encode($password)
+      $query = $this->db->get_where('mst_member', array(
+         'name' => $email,
+         'password' => md5($password)
          ));
       if($query->num_rows() == 1)
       {

@@ -18,19 +18,19 @@
                 </div>
                 <div class="col-md-6 col-sm-6">
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" style="padding-left:20px;">
                         <li>
-                            <a href="#how-to-jafra-section" title="Home" class="scrollto">
+                            <a href="#how-to-jafra-section" style="color:gray;" title="Home" class="scrollto">
                                 Jafra How To
                             </a>
                         </li>
                         <li>
-                            <a href="#how-to-jafra-section" title="Home" class="scrollto">
+                            <a href="#how-to-jafra-section" style="color:gray;" title="Home" class="scrollto">
                                 Join
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('home/login')?>" title="Login" >
+                            <a  style="color:gray;" href="<?php echo base_url('home/login')?>" title="Login" >
                                 Login
                             </a>
                         </li>

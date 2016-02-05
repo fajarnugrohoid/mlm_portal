@@ -1,13 +1,9 @@
 <?php 
 if(isset($_COOKIE['remember_me_cookie'])) 
 {
-    if ($level=$this->session->userdata('level')=='admin') 
+    if ($level=$this->session->userdata('level')=='1') 
     {
-        redirect('backend_controller/dashboard_controller/index');
-    }
-    else if($level=$this->session->userdata('level')=='guest')
-    {
-        redirect('backend_controller/dashboard_controller/dashboard_user');
+        redirect('backend/dashboard/index');
     }
     
 }
@@ -15,7 +11,7 @@ if(isset($_COOKIE['remember_me_cookie']))
 <link href="<?php echo base_url('assets/css/frontend/login.css'); ?>" rel="stylesheet">
 <div class="container">
     <div class="row">
-        <div align="center">
+        <div style="margin-top:50px;" class="col-md-12" align="center">
             <?php if(isset($_SESSION)) {
                 echo $this->session->flashdata('flash_data');
             } ?>
@@ -26,23 +22,23 @@ if(isset($_COOKIE['remember_me_cookie']))
                 <?php echo form_open('login/auth'); ?>
                     <legend>Sign In</legend>
                     <div class="form-group">
-                        <label for="username-email">E-mail or Username</label>
-                        <input value='' id="email" name="email" placeholder="E-mail" type="text" class="form-control" />
+                        <label for="username-email">Username</label>
+                        <input value='' id="username" name="username" placeholder="Username" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input id="password" name="password" value='' placeholder="Password" type="text" class="form-control" />
                     </div>
-                    <!-- <div class="input-group">
+                    <div class="input-group">
                         <div class="checkbox">
-                            <label><input id="login-remember" type="checkbox" name="remember" value="1"> Remember me</label>
+                            <label><input id="remember_me_checkbox" type="checkbox" name="remember_me_checkbox" value="1"> Remember me</label>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="form-group link_register">
                         <button type="submit" class="btn btn-default btn-login-submit btn-block m-t-md">Login</button>
                     </div>
                 <?php echo form_close(); ?>
-                <!-- <span class='text-center'><a href="/resetting/request" class="text-sm">Forgot Password?</a></span> -->
+                <span class='text-center'><a href="/resetting/request" class="text-sm">Forgot Password?</a></span>
                 <div class="form-group">
                     <p class="text-center m-t-xs text-sm">Do not have an account? <span class="label_login_fb">or login with facebook</span> &nbsp;<span id="fb-root"></span><span class="fb-login-button"></span></p> 
                     <a href="/register/" class="btn btn-default btn-block m-t-md">Create an account</a>

@@ -3,6 +3,7 @@
 <head>
   <title>Dashboard</title>
   <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js')?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/plugins/jquery.validationEngine.js')?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/plugins/jquery.validationEngine-en.js')?>"></script>
   <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
@@ -188,7 +189,7 @@
                 <a href="pages-user.html"><i class="fa fa-user"></i>My Account</a>
               </li>
               <li>
-                <a href="<?php echo base_url('login_controller/logout'); ?>"><i class="fa fa-power-off"></i>Log Out</a>
+                <a href="<?php echo base_url('login/logout'); ?>"><i class="fa fa-power-off"></i>Log Out</a>
               </li>
             </ul>
           </li>
@@ -201,11 +202,33 @@
       <section class="sidebar">
         <div class="user-panel">
           <div class="pull-left image">
-            <img src= "<?php echo base_url().'assets/image/'.$this->session->userdata('image'); ?>" class="img-circle" alt="User Image">
+            <?php 
+            if ($this->session->userdata('image')=="") 
+            {
+                $myimage='team/1-290x290.jpg';
+            }
+            else
+            {
+                $myimage=$this->session->userdata('image');
+            }
+
+            ?>
+            <img src= "<?php echo base_url().'assets/images/'.$myimage ?>" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p><?php echo $this->session->userdata('email'); ?></p>
-            <span><?php echo $this->session->userdata('level'); ?></span>
+            <p><?php echo "Username : ".$this->session->userdata('name'); ?></p>
+            <span>
+            <?php 
+            if($this->session->userdata('level')=="1")
+            {
+              echo "Level : Admin";
+            }
+            else if($this->session->userdata('level')=="2")
+            {
+              echo "Level : Admin Child";
+            }
+            ?>
+            </span>
           </div>
         </div>
         <ul class="sidebar-menu">
