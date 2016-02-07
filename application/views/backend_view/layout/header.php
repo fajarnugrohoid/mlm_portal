@@ -205,11 +205,11 @@
             <?php 
             if ($this->session->userdata('image')=="") 
             {
-                $myimage='team/1-290x290.jpg';
+              $myimage='team/1-290x290.jpg';
             }
             else
             {
-                $myimage=$this->session->userdata('image');
+              $myimage=$this->session->userdata('image');
             }
 
             ?>
@@ -218,16 +218,16 @@
           <div class="pull-left info">
             <p><?php echo "Username : ".$this->session->userdata('name'); ?></p>
             <span>
-            <?php 
-            if($this->session->userdata('level')=="1")
-            {
-              echo "Level : Admin";
-            }
-            else if($this->session->userdata('level')=="2")
-            {
-              echo "Level : Admin Child";
-            }
-            ?>
+              <?php 
+              if($this->session->userdata('level')=="1")
+              {
+                echo "Level : Admin";
+              }
+              else if($this->session->userdata('level')=="2")
+              {
+                echo "Level : Admin Child";
+              }
+              ?>
             </span>
           </div>
         </div>

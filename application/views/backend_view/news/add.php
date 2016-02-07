@@ -15,7 +15,7 @@
       <div class="panel-heading black-chrome">Add Data</div>
       <div class="panel-body">
         <div class="col-md-12">
-          <form name="form_news" id="form_news" action="" method="post" enctype="multipart/form-data">
+          <!-- <form name="form_news" id="form_news" action="" method="post" enctype="multipart/form-data" accept-charset="utf-8">
             <div class="form-group">
               <label>Title</label>
               <input type="text" name="title" id="title" class="form-control validate[required]">
@@ -30,12 +30,26 @@
               </select>
             </div>
             <div class="form-group">
+              <label>Related video link</label>
+              <input type="text" name="link" id="link" class="form-control validate[required]">
+            </div>
+            <div class="form-group">
               <label>Image</label>
               <input type="file" name="userfile" class="form-control" id="input-foto" accept="image/x-png, image/gif, image/jpeg , image/jpg" >
               <br>
               <img class="show_foto" src="#" id="div_image">
             </div>
-            <input type="submit" name="save" value="save" class="btn btn-success">        
+            <input type="submit" onclick="uploadImage()" name="save" value="save" class="btn btn-success">        
+          </form> -->
+
+          <form method="post" action="" id="upload_file">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" value="" />
+
+            <label for="userfile">File</label>
+            <input type="file" name="userfile" id="userfile" size="20" />
+
+            <input type="submit" name="submit" id="submit" />
           </form>
         </div>
       </div>
@@ -72,39 +86,92 @@
     });
   }
 
-  $("#news_add form").validationEngine({
-    custom_error_messages: {
-      '#title': {
-        'required': {
-          'message': "You Must Set The Title"
-        }
-      },
-      '#description': {
-        'required': {
-          'message': "You Must Set The Description Of This Article"
-        }
+  function uploadImage(e)
+  {
+    e.preventDefault();
+    $.ajax({
+      type:"POST",
+      "url": base_url+'backend/news/uploadImage',
+      fileElementId :'userfile',
+      success:function(success){
+        return success;
       }
-    },
-    onValidationComplete: function (form, status) {
-      var valueDescription = CKEDITOR.instances['description'].getData();
-      var valTitle= $('#title').val();
-      var valCategory= $('#category').val();
-      var valUserfile= $('#userfile').val();
-      $.ajax({
-        type:"POST",
-        "url": base_url+'backend/news/insert_data',
-        "data": 'title=' + valTitle + '&description=' + valueDescription+ '&category=' + valCategory+ '&userfile=' + valUserfile,
-        mimeType: "multipart/form-data",
-        success:function(success){
-          console.log(success);
-          show_alert(success);
-          if (success.isSuccess) {
-            $("#title").val("");
-            CKEDITOR.instances.description.setData('');
-          };
+    });
+
+  }
+
+  $(function() {
+  $('#upload_file').submit(function(e) {
+    e.preventDefault();
+    $.ajaxFileUpload({
+      url       : base_url+'backend/news/uploadImage', 
+      secureuri   :false,
+      fileElementId :'userfile',
+      dataType    : 'json',
+      data      : {
+        'title'       : $('#title').val()
+      },
+      success : function (data, status)
+      {
+        if(data.status != 'error')
+        {
+          $('#files').html('<p>Reloading files...</p>');
+          refresh_files();
+          $('#title').val('');
         }
-      });
-    }
+        alert(data.msg);
+      }
+    });
+    return false;
   });
+});
+
+  // $("#news_add form").validationEngine({
+  //   custom_error_messages: {
+  //     '#title': {
+  //       'required': {
+  //         'message': "You Must Set The Title"
+  //       }
+  //     },
+  //     '#description': {
+  //       'required': {
+  //         'message': "You Must Set The Description Of This Article"
+  //       }
+  //     }
+  //   },
+  //   onValidationComplete: function (form, status) {
+  //     uploadImage();
+  //     var valueDescription = CKEDITOR.instances['description'].getData();
+  //     var valTitle= $('#title').val();
+  //     var valCategory= $('#category').val();
+  //     var valLink= $('#link').val();
+  //     var valUserfile= $('#input-foto').val();
+  //     var data = {
+  //       title : valTitle,
+  //       description : valueDescription,
+  //       category : valCategory,
+  //       link : valLink,
+  //       userfile : valUserfile
+  //     }
+  //     $.ajax({
+  //       type:"POST",
+  //       "url": base_url+'backend/news/insert_data',
+  //       // contentType : false,
+  //       // "data": 'title=' + valTitle + '&description=' + valueDescription+ '&category=' + valCategory+ '&userfile=' + valUserfile,
+  //       "data": data,
+  //       fileElementId :'userfile',
+  //       dataType    : 'json',
+  //       mimeType: "multipart/form-data",
+  //       success:function(success){
+  //         console.log(success);
+  //         show_alert(success);
+  //         if (success.isSuccess==1) {
+  //           $("#title").val("");
+  //           CKEDITOR.instances.description.setData('');
+  //         };
+  //       }
+  //     });
+  //   }
+  // });
 
 </script>

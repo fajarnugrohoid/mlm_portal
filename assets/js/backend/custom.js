@@ -6,6 +6,7 @@ $(document).ready(function () {
 
 function show_alert(param)
 {
+	console.log("from js=",param);
 	if (param.isSuccess == 1) 
 	{
 		$('#autoclosable-btn-success').prop("disabled", true);
