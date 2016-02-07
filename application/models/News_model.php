@@ -36,6 +36,7 @@ class News_model extends CI_Model {
    }
    function m_insert_news($data)
    {
+      print_r($data);
       $this->db->insert('mst_news',$data);
    }
 

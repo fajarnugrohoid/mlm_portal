@@ -10,7 +10,7 @@ $(document).ready(function(){
          reader.readAsDataURL(input.files[0]);
       }
    }
-   $("#input-foto").change(function(){
+   $("#userfile").change(function(){
       readURL(this);
    });
 });
@@ -24,7 +24,7 @@ $(document).ready(function(){
          reader.readAsDataURL(input.files[0]);
       }
    }
-   $("#input-foto2").change(function(){
+   $("#userfile2").change(function(){
       readURL(this);
    });
 });
@@ -38,7 +38,7 @@ $(document).ready(function(){
          reader.readAsDataURL(input.files[0]);
       }
    }
-   $("#input-foto3").change(function(){
+   $("#userfile3").change(function(){
       readURL(this);
    });
 });
@@ -56,7 +56,7 @@ $(document).ready(function(){
          reader.readAsDataURL(input.files[0]);
       }
    }
-   $("#input-foto").change(function(){
+   $("#userfile").change(function(){
       readURL(this);
       $('#div_image').show();
    });
@@ -73,7 +73,7 @@ $(document).ready(function(){
          reader.readAsDataURL(input.files[0]);
       }
    }
-   $("#input-foto2").change(function(){
+   $("#userfile2").change(function(){
       readURL(this);
       $('#div_image2').show();
    });
@@ -90,7 +90,7 @@ $(document).ready(function(){
          reader.readAsDataURL(input.files[0]);
       }
    }
-   $("#input-foto3").change(function(){
+   $("#userfile3").change(function(){
       readURL(this);
       $('#div_image3').show();
    });

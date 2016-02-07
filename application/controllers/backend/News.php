@@ -37,29 +37,34 @@ class News extends MY_Backend {
   function insert_data()
   {
 
+    $file_element_name = 'userfile';
     $this->form_validation->set_rules('title', 'Title','is_unique[mst_news.title]');
     if ($this->form_validation->run() == true)
     {  
-      $config = array(
-        'allowed_types' => 'jpg|jpeg|gif|png',
-        'max_size' => 2000,
-        'file_name' => url_title($this->input->post('userfile')),
-        'upload_path' => './assets/images/news/'
-        );
-      $this->load->library('upload',$config);
-      $this->upload->initialize($config);
+
+      $config['upload_path'] = './assets/images/news/';
+      $config['allowed_types'] = 'gif|jpg|png';
+      $config['max_size'] = 1024 * 8;
+      $config['encrypt_name'] = FALSE;
+      $config['file_name'] = url_title($this->input->post('userfile'));
+
+      $this->load->library('upload', $config);
+
       $data=array(
         'title' => $this->input->post('title'),
         'description' => $this->input->post('description'),
         'category' => $this->input->post('category'),
         'link' => $this->input->post('link')
         );
-      if ($this->input->post('userfile') !="")
+
+      $length = strlen($this->input->post('userfile'));
+      echo "legnth -".$length;
+      if ($this->input->post('userfile') != "")
       {
-        if($this->upload->do_upload())
+        if($this->upload->do_upload($file_element_name))
         {
           $file = $this->upload->file_name;
-          $data['photo']=$file;
+          $data['image']=$file;
           $this->news_model->m_insert_news($data); 
           $out= array(
             'isSuccess' => 1,
@@ -81,9 +86,9 @@ class News extends MY_Backend {
       {
         $this->news_model->m_insert_news($data); 
         $out= array(
-            'isSuccess' => 1,
-            'message' => "File Has Been Save Without Image"
-            );
+          'isSuccess' => 1,
+          'message' => "File Has Been Save Without Image"
+          );
         echo json_encode( $out );
       }
     }
@@ -121,45 +126,5 @@ class News extends MY_Backend {
       echo json_encode( $out );
     }
 
-  }
-  function uploadImage()
-  {
-    $status = "";
-    $msg = "";
-    $file_element_name = 'userfile';
-     
-    if ($status != "error")
-    {
-        $config['upload_path'] = './assets/images/news/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = 1024 * 8;
-        $config['encrypt_name'] = FALSE;
- 
-        $this->load->library('upload', $config);
- 
-        if (!$this->upload->do_upload($file_element_name))
-        {
-            $status = 'error';
-            $msg = $this->upload->display_errors('', '');
-        }
-        else
-        {
-            $data = $this->upload->data();
-            $file_id = $this->files_model->insert_file($data['file_name'], $_POST['title']);
-            if($file_id)
-            {
-                $status = "success";
-                $msg = "File successfully uploaded";
-            }
-            else
-            {
-                unlink($data['full_path']);
-                $status = "error";
-                $msg = "Something went wrong when saving the file, please try again.";
-            }
-        }
-        @unlink($_FILES[$file_element_name]);
-    }
-    echo json_encode(array('status' => $status, 'msg' => $msg));
   }
 }
