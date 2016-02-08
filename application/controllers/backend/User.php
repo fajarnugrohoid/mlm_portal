@@ -33,4 +33,11 @@ class User extends MY_Backend {
     echo json_encode( $data );
 
   }
+  public function change_status()
+  {
+
+    $out = array('isSuccess' => 1,'message' => 'On Progress' );
+    echo json_encode( $out );
+
+  }
 }

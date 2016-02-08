@@ -36,7 +36,7 @@ class Register extends MY_Frontend {
 			'expiration' => 10
 			);
 		$cap = create_captcha($vals);
-		$this->session->set_userdata('keycode',md5($cap['word']));
+		$this->session->set_userdata('keycode',$cap['word']);
 		$data['captcha_img'] = $cap['image'];
 		$this->header();
 		$this->load->view("frontend_view/register",$data);
@@ -47,23 +47,26 @@ class Register extends MY_Frontend {
 
 		
 		$captcha = $this->input->post('captcha');
-		if(md5($captcha)==$this->session->userdata('keycode')){
-			$data['captcha']= $captcha;
-			$this->session->unset_userdata('keycode');
-		}else{
-			redirect('register?cap_error=1','refresh');
-		}
+		// echo "md5 captcha = ".$captcha;
+		// echo "<br>keycode = ".$this->session->userdata('keycode');
+		// die();
+		// if($captcha==$this->session->userdata('keycode')){
+		// 	$data['captcha']= $captcha;
+		// 	$this->session->unset_userdata('keycode');
+		// }else{
+		// 	redirect('register?cap_error=1','refresh');
+		// }
 
 		$password = $this->input->post('password');
 		$password = md5($password);
 		$email=$this->input->post('email');
 		$type_email=$this->input->post('type_email');
 		$data = array(
-			'username' => $this->input->post('username'),
-			'email' =>  $email,
+			'name' => $this->input->post('username'),
+			'email' =>  $email."@".$type_email,
 			'type_email' =>  $type_email,
 			'password' => $password,
-			'active' => 1,
+			'status' => 1,
 			'level' => 1
 			);
 	
@@ -71,11 +74,13 @@ class Register extends MY_Frontend {
 		if ($this->form_validation->run() == true)
 		{  
 			$id = $this->user_model->m_add_account($data);
+			$this->session->set_flashdata('flash_data', 'Your Account Has Been Registered');
+			redirect(base_url().'register');
 		}
 		else
 		{
-			$this->session->set_flashdata('flash_data', 'Your Email Already Registered');
-			redirect(base_url().'home/register');
+			$this->session->set_flashdata('flash_data', 'Your Email Already Registered Try With Another Email');
+			redirect(base_url().'register');
 		}
 	}
 

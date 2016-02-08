@@ -49,7 +49,7 @@
    function load_data_user()
    {
       $('#list-user').dataTable().fnDestroy();
-      table_news = $('#list-news').DataTable( 
+      table_user = $('#list-user').DataTable( 
       {
 
          "columnDefs": 
@@ -58,7 +58,8 @@
             "targets": 4,
             "render": function ( data, type, full, meta ) 
             {
-               return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn btn-success">Edit</a>';
+               return '<select id="change_status_select_box" onchange="change_status()" class="form-control"><option value="1">Approve</option><option value="0">Disapprove</option></select>';
+               // return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn btn-success">Edit</a>';
             }
          }
          ],
@@ -76,6 +77,7 @@
          "order": [[ 1, 'asc' ]],
          "columns": 
          [
+         { "data": "id" },
          { "data": "name" },
          { "data": "level" },
          { "data": "status" },
@@ -83,24 +85,24 @@
          ]
 
       });
-      table_news.on( 'order.dt search.dt', function () {
-         table_news.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+      table_user.on( 'order.dt search.dt', function () {
+         table_user.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
             cell.innerHTML = i+1;
          });
       }).draw();
    }
 
-   function delete_news(param)
-   {
-      $.ajax({
-         type:"GET",
-         dataType : "json",
-         "url": base_url+'backend/news/delete_news_data/'+param,
-         success:function(success){
-            console.log(success);
-            show_alert(success);
-            table_news.ajax.reload();
-         }
-      });
-   }
+function change_status()
+{
+   $.ajax({
+      type:"post",
+      dataType: 'json',
+      "url": base_url+'backend/user/change_status',
+      datatype:'application/json',
+      success:function(success){
+         alert(success.message);
+      }
+    });
+}
+   
 </script>

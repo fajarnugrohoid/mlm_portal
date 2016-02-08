@@ -1,21 +1,21 @@
 <link href="<?php echo base_url('assets/css/frontend/login.css'); ?>" rel="stylesheet">
 <div class=" col-md-12 login-content">
-  <div align="center">
+  <div align="center" style="margin-top:80px;">
     <?php if(isset($_SESSION)) {
       echo $this->session->flashdata('flash_data');
     } ?>
   </div>
-  <div class="col-md-12 login-box container-fluid" style="margin-top:80px;margin-bottom:80px;">
+  <div class="col-md-12 login-box container-fluid" style="margin-bottom:80px;">
     <legend>Sing Up</legend>
     <div class="col-md-7">
       <?php echo form_open('register/submit'); ?>
       <div class="form-group">
         <label>Username</label>
-        <input type="text" name="username" class="form-control" required>
+        <input type="text" name="username" class="form-control" placeholder="username" required>
       </div>
       <div class="form-group">
         <label>Password</label>
-        <input type="password" name="password" class="form-control" required>
+        <input type="password" name="password" class="form-control" placeholder="********" required>
       </div>
       <div class="form-group col-md-6">
         <label>Email</label>
