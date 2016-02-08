@@ -32,7 +32,7 @@
         <div class="image" align="center" style="margin-bottom:25px;margin-top:85px;"><?php echo $captcha_img;?></div>
         <div class="input-group">
           <input name="captcha" class="form-control" required>
-          <span class="input-group-addon" id="basic-addon2">&nbsp;&nbsp;<?php echo "<a  class ='refresh'><i class='fa fa-refresh'></i>&nbsp;perbarui gambar</a>";?></span>
+          <span class="input-group-addon" id="basic-addon2">&nbsp;&nbsp;<a href='' class ='refresh'><i class='fa fa-refresh'></i>&nbsp;perbarui gambar</a></span>
         </div>
         <?php
         $wrong = $this->input->get('cap_error');
