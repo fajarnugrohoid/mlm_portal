@@ -50,21 +50,19 @@ class Register extends MY_Frontend {
 		// echo "md5 captcha = ".$captcha;
 		// echo "<br>keycode = ".$this->session->userdata('keycode');
 		// die();
-		// if($captcha==$this->session->userdata('keycode')){
-		// 	$data['captcha']= $captcha;
-		// 	$this->session->unset_userdata('keycode');
-		// }else{
-		// 	redirect('register?cap_error=1','refresh');
-		// }
+		if($captcha==$this->session->userdata('keycode')){
+			$data['captcha']= $captcha;
+			$this->session->unset_userdata('keycode');
+		}else{
+			redirect('register?cap_error=1','refresh');
+		}
 
 		$password = $this->input->post('password');
 		$password = md5($password);
 		$email=$this->input->post('email');
-		$type_email=$this->input->post('type_email');
 		$data = array(
 			'name' => $this->input->post('username'),
-			'email' =>  $email."@".$type_email,
-			'type_email' =>  $type_email,
+			'email' =>  $email,
 			'password' => $password,
 			'status' => 1,
 			'level' => 1

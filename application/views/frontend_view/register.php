@@ -17,19 +17,12 @@
         <label>Password</label>
         <input type="password" name="password" class="form-control" placeholder="********" required>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group">
         <label>Email</label>
-        <input type="text" name="email" class="form-control" placeholder="admin" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label>Domain Email</label>
-        <select name="type_email" id="type_email" class="form-control">
-          <option value="gmail.com">gmail.com</option>
-          <option value="yahoo.com">yahoo.com</option>
-        </select>
+        <input type="email" name="email" class="form-control" placeholder="admin" required>
       </div>
       <div class="form-group panel-captcha">
-        <div class="image" align="center" style="margin-bottom:25px;margin-top:85px;"><?php echo $captcha_img;?></div>
+        <div class="image" align="center" style="margin-bottom:25px;margin-top:25px;"><?php echo $captcha_img;?></div>
         <div class="input-group">
           <input name="captcha" class="form-control" required>
           <span class="input-group-addon" id="basic-addon2">&nbsp;&nbsp;<a href='' class ='refresh'><i class='fa fa-refresh'></i>&nbsp;perbarui gambar</a></span>

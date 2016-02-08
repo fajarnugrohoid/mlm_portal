@@ -87,7 +87,7 @@ Footer Section
 </section><!-- /section -->
 
 </body>
-<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>
+<!--<script type="text/javascript" src="<?php// echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>-->
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/vendor/modernizr.custom.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/jquery.easing.1.3.js')?>"></script>

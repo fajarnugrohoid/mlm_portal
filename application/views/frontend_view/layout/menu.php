@@ -113,8 +113,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo site_url() ?>referral" title="Referral">
-                                        Referral
+                                    <a href="<?php echo site_url() ?>profile/user" title="Profile">
+                                        Profile
                                     </a>
                                 </li>
                                 <li>
