@@ -1,13 +1,3 @@
-<?php 
-if(isset($_COOKIE['remember_me_cookie'])) 
-{
-    if ($level=$this->session->userdata('level')=='1') 
-    {
-        redirect('backend/dashboard/index');
-    }
-    
-}
-?>
 <link href="<?php echo base_url('assets/css/frontend/login.css'); ?>" rel="stylesheet">
 <div class="col-md-12 container" style="margin-bottom:30px;">
     <div class="row">
@@ -22,8 +12,8 @@ if(isset($_COOKIE['remember_me_cookie']))
                 <?php echo form_open('login/auth'); ?>
                     <legend>Sign In</legend>
                     <div class="form-group">
-                        <label for="username-email">Username</label>
-                        <input value='' id="username" name="username" placeholder="Username" type="text" class="form-control" />
+                        <label for="username-email">Email</label>
+                        <input value='' id="email" name="email" placeholder="Email" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>

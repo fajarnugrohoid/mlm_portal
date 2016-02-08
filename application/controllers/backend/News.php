@@ -37,68 +37,60 @@ class News extends MY_Backend {
   function insert_data()
   {
 
-    $file_element_name = 'userfile';
-    $this->form_validation->set_rules('title', 'Title','is_unique[mst_news.title]');
-    if ($this->form_validation->run() == true)
-    {  
+    if($this->input->post('save')) 
+    {
+      $this->form_validation->set_rules('title', 'Title','is_unique[mst_news.title]');
+      if ($this->form_validation->run() == true)
+      {  
+        $config = array(
+          'allowed_types' => 'jpg|jpeg|gif|png',
+          'max_size' => 2000,
+          'file_name' => url_title($this->input->post('file_upload')),
+          'upload_path' => './assets/images/news/'
+          );
+        $this->load->library('upload',$config);
 
-      $config['upload_path'] = './assets/images/news/';
-      $config['allowed_types'] = 'gif|jpg|png';
-      $config['max_size'] = 1024 * 8;
-      $config['encrypt_name'] = FALSE;
-      $config['file_name'] = url_title($this->input->post('userfile'));
-
-      $this->load->library('upload', $config);
-
-      $data=array(
-        'title' => $this->input->post('title'),
-        'description' => $this->input->post('description'),
-        'category' => $this->input->post('category'),
-        'link' => $this->input->post('link')
-        );
-
-      $length = strlen($this->input->post('userfile'));
-      echo "legnth -".$length;
-      if ($this->input->post('userfile') != "")
-      {
-        if($this->upload->do_upload($file_element_name))
+        $data=array(
+          'title' => $this->input->post('title'),
+          'description' => $this->input->post('description'),
+          'link' => $this->input->post('link'),
+          'category' => $this->input->post('category'),
+          );
+        if ($_FILES['userfile']['size'] > 0)
         {
-          $file = $this->upload->file_name;
-          $data['image']=$file;
-          $this->news_model->m_insert_news($data); 
-          $out= array(
-            'isSuccess' => 1,
-            'message' => "File Has Been Save"
-            );
-          echo json_encode( $out );
+          if($this->upload->do_upload())
+          {
+            $file = $this->upload->file_name;
+            $data['image']=$file;
+            $this->news_model->m_insert_news($data);
+            $this->session->set_flashdata('flash_data', 'Data Has Been Save');
+            redirect(base_url().'backend/news/insert');
+          }
+          else
+          {
+            $this->session->set_flashdata('flash_data', $this->upload->display_errors());
+            redirect(base_url().'backend/news/insert');
+          }
+
         }
         else
         {
-          $out= array(
-            'isSuccess' => 0,
-            'message' => $this->upload->display_errors()
-            );
-          echo json_encode( $out );
+          $this->news_model->m_insert_news($data);
+          $this->session->set_flashdata('flash_data', 'Data Has Been Saved');
+          redirect(base_url().'backend/news/insert');
         }
-
       }
       else
       {
-        $this->news_model->m_insert_news($data); 
-        $out= array(
-          'isSuccess' => 1,
-          'message' => "File Has Been Save Without Image"
-          );
-        echo json_encode( $out );
+        $this->session->set_flashdata('flash_data', 'Data has been exists');
+        redirect(base_url().'backend/news/insert');
       }
     }
     else
     {
-      $out= array(
-        'isSuccess' => 0,
-        'message' => "Data With That Title Has been Exist!"
-        );
-      echo json_encode( $out );
+
+      $this->session->set_flashdata('flash_data', 'Make Sure Your file is an image');
+      redirect(base_url().'backend/news/insert');
     }
   }
   function delete_news_data($id)
@@ -126,5 +118,94 @@ class News extends MY_Backend {
       echo json_encode( $out );
     }
 
+  }
+  function edit_news($id)
+  {
+    $data=array(
+      'id'=>$id,
+      );
+
+    $data['data_edit']=$this->news_model->m_edit_news($data);
+    $this->header();
+    $this->load->view('backend_view/news/edit',$data);
+    $this->footer();
+  }
+  function edit_news_data()
+  {
+    if($this->input->post('save')) 
+    {
+
+      $id=$this->input->post('id');
+      $title =$this->input->post('title');
+      $original_value = $this->db->query("SELECT title FROM mst_news WHERE id = ".$id)->row()->title;
+      if($title != $original_value) 
+      {
+        // echo "tidak sama";
+        // die();
+        $is_unique =  'is_unique[mst_news.title]';
+      } 
+      else
+      {
+        // echo "sama";
+        // die();
+        $is_unique =  '';
+      }
+      $this->form_validation->set_rules('title', 'Title',$is_unique);
+      // print_r($this->form_validation->run());
+      // die();
+      if ($this->form_validation->run())
+      {  
+        $config = array(
+          'allowed_types' => 'jpg|jpeg|gif|png',
+          'max_size' => 2000,
+          'file_name' => url_title($this->input->post('file_upload')),
+          'upload_path' => './assets/images/news/'
+          );
+        $this->load->library('upload',$config);
+
+
+        $data=array(
+          'title' => $this->input->post('title'),
+          'description' => $this->input->post('description'),
+          'link' => $this->input->post('link'),
+          'category' => $this->input->post('category'),
+          );
+        if ($_FILES['userfile']['size'] > 0)
+        {
+          if($this->upload->do_upload())
+          {
+
+            $file = $this->upload->file_name;
+            $data['image']=$file;
+            $this->news_model->m_edit_news_data($data,$id); 
+            $this->session->set_flashdata('flash_data', 'Data Has Been Edited');
+            redirect($this->agent->referrer());
+          }
+          else
+          {
+            $this->session->set_flashdata('flash_data', $this->upload->display_errors());
+            redirect($this->agent->referrer());
+          }
+
+        }
+        else
+        {
+          $data['image']="";
+          $this->news_model->m_edit_news_data($data,$id); 
+          $this->session->set_flashdata('flash_data', 'Data Has Been Edited Without Photo');
+          redirect($this->agent->referrer());
+        }
+      }
+      else
+      {
+        $this->session->set_flashdata('flash_data', 'Data has been exists');
+        redirect($this->agent->referrer());
+      }
+    }
+    else
+    {
+      $this->session->set_flashdata('flash_data', 'Make Sure Your file is an image');
+      redirect($this->agent->referrer());
+    }
   }
 }

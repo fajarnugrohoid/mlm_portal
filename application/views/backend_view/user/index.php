@@ -18,14 +18,14 @@
       <div class="panel panel-default">
          <div class="panel-heading black-chrome">List Data</div>
          <div class="panel-body "  style=" overflow: scroll;">
-            <div class="col-md-12 div-list-shirt">
-               <table id="list-news" class="table table-striped table-responsive table-bordered" cellspacing="0" width="100%">
+            <div class="col-md-12">
+               <table id="list-user" class="table table-striped table-responsive table-bordered" cellspacing="0" width="100%">
                   <thead>
                      <tr>
                         <th>No</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>category</th>
+                        <th>Name</th>
+                        <th>Level</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                      </tr>
                   </thead>
@@ -39,16 +39,16 @@
 </div>   
 <script type="text/javascript">
    var base_url= "<?php echo base_url()?>";
-   var table_news;
+   var table_user;
    $(document).ready(function()
    {
-      load_data_news();
+      load_data_user();
 
    });
 
-   function load_data_news()
+   function load_data_user()
    {
-      $('#list-news').dataTable().fnDestroy();
+      $('#list-user').dataTable().fnDestroy();
       table_news = $('#list-news').DataTable( 
       {
 
