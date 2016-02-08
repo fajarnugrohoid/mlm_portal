@@ -33,7 +33,8 @@
             <br>
             <img class="show_foto" src="#" id="div_image">
           </div>
-          <input type="submit" name="save" value="submit" class="btn btn-success">        
+          <input type="submit" name="save" value="submit" class="btn btn-success"> 
+          <a class="btn btn-primary" href="<?php echo base_url('backend/news/index/')?>">Beranda</a>       
           <?php echo form_close();?> 
         </div>
       </div>

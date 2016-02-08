@@ -233,8 +233,13 @@
         </div>
         <ul class="sidebar-menu">
           <li class="active">
-            <a href="<?php echo base_url('backend_controller/dashboard_controller/dashboard_user')?>">
+            <a href="<?php echo base_url('backend/dashboard/index')?>">
               <i class="fa fa-home"></i><span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo base_url('backend/user/index')?>">
+              <i class="fa fa-user"></i><span>Users</span>
             </a>
           </li>
           <li class="menu">

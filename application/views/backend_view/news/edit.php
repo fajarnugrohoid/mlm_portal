@@ -43,6 +43,7 @@
             <?php endif ?>
           </div>
           <input type="submit" name="save" value="submit" class="btn btn-success">        
+          <a class="btn btn-primary" href="<?php echo base_url('backend/news/index/')?>">Beranda</a>
           <?php echo form_close();?> 
           <?php } ?>
         </div>
