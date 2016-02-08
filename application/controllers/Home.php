@@ -20,4 +20,13 @@ class Home extends MY_Frontend {
 		$this->footer();
 		
 	}
+
+	public function referral(){
+		$this->header();
+		$user_referral = $this->uri->segment(3);
+		$data['user_referral']  = $user_referral;
+		echo 'name:' . $user_referral;
+		$this->load->view('frontend_view/referral', $data);
+		$this->footer();
+	}
 }
