@@ -58,7 +58,7 @@
             "targets": 4,
             "render": function ( data, type, full, meta ) 
             {
-               return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/insert" class="btn btn-success">Edit</a>';
+               return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn btn-success">Edit</a>';
             }
          },
          {

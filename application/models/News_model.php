@@ -23,14 +23,13 @@ class News_model extends CI_Model {
    function m_delete_news_data($data,$id)
    {
       $query=$this->db->where('id', $id);
-      $query=$this->db->delete('mst_news');
-      if ($query) 
+      $query = $this->db->get('mst_news');
+      $count = $this->db->count_all_results();
+      foreach ($query->result() as $row){}
+      unlink("./assets/images/news/".$row->image);
+      if($this->db->delete('mst_news',$data))
       {
          return 1;
-      }
-      else
-      {
-         return 0;
       }
       
    }
@@ -39,5 +38,28 @@ class News_model extends CI_Model {
       print_r($data);
       $this->db->insert('mst_news',$data);
    }
+   function m_edit_news($data)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where($data);
+      $query = $this->db->get();
+      return $query->result();
 
+   }
+   function m_edit_news_data($data,$id)
+   {
+      $this->db->where('id', $id);
+      $query = $this->db->get('mst_news');
+      $count = $this->db->count_all_results();
+      
+      if ($this->upload->file_name == "") 
+      {
+         foreach ($query->result() as $row){}
+            unlink("./assets/images/news/".$row->image);
+      }  
+
+      $this->db->where('id', $id);
+      $this->db->update('mst_news',$data);
+   }
 }
