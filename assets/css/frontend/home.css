@@ -1819,11 +1819,15 @@ ui-invalid:not(output) { box-shadow: none; }
     padding: 10px 0;
     font-size: 15px;
 }
-.navbar-nav > li > a:hover { color: #b67bb7; }
+.navbar-nav > li > a:hover { 
+    color: #000; 
+}
 .navbar-nav > li { margin-left: 20px; }
 .navbar-nav > li:first-child { margin-left: 0; }
 .nav > li > a:hover, .nav > li > a:focus { background-color: transparent; }
-.navbar-nav > li.active > a { color: #b67bb7; }
+.navbar-nav > li.active > a { 
+    color: #000; 
+}
 .navbar-toggle {
     margin: 0;
     color: #888888;
