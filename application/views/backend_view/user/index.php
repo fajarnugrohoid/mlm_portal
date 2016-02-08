@@ -60,22 +60,12 @@
             {
                return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn btn-success">Edit</a>';
             }
-         },
-         {
-            "targets": 2,
-            "render": function ( data, type, full, meta ) 
-            {
-               console.log(full);
-               var myDesc = full.description
-               var desc = myDesc.substring(1, 50);
-               return desc+'....';
-            }
          }
          ],
          "order": [[ 1, 'asc' ]],
          "ajax": 
          {
-            "url": base_url+'backend/news/list_data',
+            "url": base_url+'backend/user/list_data',
             "type": "GET",
             "dataSrc" : function(param_data)
             {
@@ -86,10 +76,10 @@
          "order": [[ 1, 'asc' ]],
          "columns": 
          [
-         { "data": "id" },
-         { "data": "title" },
-         { "data": "description" },
-         { "data": "category" }
+         { "data": "name" },
+         { "data": "level" },
+         { "data": "status" },
+         { "data": "email" },
          ]
 
       });

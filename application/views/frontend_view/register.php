@@ -19,11 +19,11 @@
       </div>
       <div class="form-group col-md-6">
         <label>Email</label>
-        <input type="email" name="email" class="form-control" required>
+        <input type="text" name="email" class="form-control" placeholder="admin" required>
       </div>
       <div class="form-group col-md-6">
         <label>Domain Email</label>
-        <select class="form-control">
+        <select name="type_email" id="type_email" class="form-control">
           <option value="gmail.com">gmail.com</option>
           <option value="yahoo.com">yahoo.com</option>
         </select>

@@ -21,4 +21,17 @@ class User_model extends CI_Model {
       }
 
    }
+// register
+   function m_add_account($data)
+   {
+      $this->db->insert('mst_member',$data);
+   }
+// user
+   function m_list_user()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_member');
+      $query = $this->db->get();
+      return $query->result();
+   }
 }

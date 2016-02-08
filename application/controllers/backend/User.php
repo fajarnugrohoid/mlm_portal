@@ -6,6 +6,7 @@ class User extends MY_Backend {
   public function __construct()
   {
     parent::__construct();
+    $this->load->model('user_model');
     if(!isset($_COOKIE['remember_me_cookie'])) 
     {
       session_destroy();
@@ -24,5 +25,12 @@ class User extends MY_Backend {
       redirect('home/login');
     }
     $this->footer();
+  }
+  public function list_data()
+  {
+
+    $data['data'] =$this->user_model->m_list_user();
+    echo json_encode( $data );
+
   }
 }
