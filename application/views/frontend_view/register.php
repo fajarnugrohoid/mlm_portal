@@ -1,35 +1,28 @@
 <link href="<?php echo base_url('assets/css/frontend/login.css'); ?>" rel="stylesheet">
 <div class=" col-md-12 login-content">
-  <div align="center">
+  <div align="center" style="margin-top:80px;">
     <?php if(isset($_SESSION)) {
       echo $this->session->flashdata('flash_data');
     } ?>
   </div>
-  <div class="col-md-12 login-box container-fluid" style="margin-top:80px;margin-bottom:80px;">
+  <div class="col-md-12 login-box container-fluid" style="margin-bottom:80px;">
     <legend>Sing Up</legend>
     <div class="col-md-7">
       <?php echo form_open('register/submit'); ?>
       <div class="form-group">
         <label>Username</label>
-        <input type="text" name="username" class="form-control" required>
+        <input type="text" name="username" class="form-control" placeholder="username" required>
       </div>
       <div class="form-group">
         <label>Password</label>
-        <input type="password" name="password" class="form-control" required>
+        <input type="password" name="password" class="form-control" placeholder="********" required>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group">
         <label>Email</label>
-        <input type="email" name="email" class="form-control" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label>Domain Email</label>
-        <select class="form-control">
-          <option value="gmail.com">gmail.com</option>
-          <option value="yahoo.com">yahoo.com</option>
-        </select>
+        <input type="email" name="email" class="form-control" placeholder="admin" required>
       </div>
       <div class="form-group panel-captcha">
-        <div class="image" align="center" style="margin-bottom:25px;margin-top:85px;"><?php echo $captcha_img;?></div>
+        <div class="image" align="center" style="margin-bottom:25px;margin-top:25px;"><?php echo $captcha_img;?></div>
         <div class="input-group">
           <input name="captcha" class="form-control" required>
           <span class="input-group-addon" id="basic-addon2">&nbsp;&nbsp;<a href='' class ='refresh'><i class='fa fa-refresh'></i>&nbsp;perbarui gambar</a></span>

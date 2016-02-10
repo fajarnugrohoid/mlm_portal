@@ -9,26 +9,21 @@
         <div class='col-md-3'></div>
         <div class="col-md-6">
             <div class="login-box well">
-                <?php echo form_open('login/auth'); ?>
-                    <legend>Sign In</legend>
+                <?php echo form_open('forgot_password/submit'); ?>
+                    <legend>Forgot Password</legend>
                     <div class="form-group">
                         <label for="username-email">Email</label>
                         <input value='' id="email" name="email" placeholder="Email" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input id="password" name="password" value='' placeholder="Password" type="text" class="form-control" />
-                    </div>
-                    <div class="input-group">
-                        <div class="checkbox">
-                            <label><input id="remember_me_checkbox" type="checkbox" name="remember_me_checkbox" value="1"> Remember me</label>
-                        </div>
+                        <label for="password">New Password</label>
+                        <input id="new_password" name="new_password" value='' placeholder="New Password" type="text" class="form-control" />
                     </div>
                     <div class="form-group link_register">
-                        <button type="submit" class="btn btn-default btn-login-submit btn-block m-t-md">Login</button>
+                        <button type="submit" class="btn btn-default btn-login-submit btn-block m-t-md">Send Request</button>
                     </div>
                 <?php echo form_close(); ?>
-                <span class='text-center'><a href="<?php echo base_url('home/forgot_password/')?>" class="text-sm">Forgot Password?</a></span>
+                <span class='text-center'>Already remeber password Click <a href="<?php echo base_url('home/login/')?>" class="text-sm">Login</a></span>
                 <div class="form-group">
                     <p class="text-center m-t-xs text-sm">Do not have an account? <span class="label_login_fb">or login with facebook</span> &nbsp;<span id="fb-root"></span><span class="fb-login-button"></span></p> 
                     <a href="<?php echo base_url('home/register/')?>" class="btn btn-default btn-block m-t-md">Create an account</a>
