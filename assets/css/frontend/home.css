@@ -533,7 +533,7 @@ a.instagram:hover { background: url("../images/mask/masksquare.png") no-repeat s
 }
 .feature-box-style1 div.box-container:hover .feature-box-containt {
     margin: 0;
-    height: 152px;
+    height: 102px;
     padding: 0 20px 35px;
 }
 .feature-box-style1 div.box-container:hover .feature-box-icon {
