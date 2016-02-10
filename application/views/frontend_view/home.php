@@ -45,14 +45,15 @@
                                     <i class="fa fa-newspaper-o"></i>
                                 </div>
                                 <div class="feature-box-containt">
-                                    <?php $deskripsi = $row_hot_promo->description; echo $deskripsi =word_limiter($deskripsi, 2); ?>
+                                    <?php echo substr($row_hot_promo->title,0,12) ?>        
+                                    <br>
                                     <a title="Read More">Read More</a> / <a title="Read More">See All News</a>
                                 </div>
                                 <div class="feature-box-subtitle">
-                                    <?php echo $row_hot_promo->description ?>
+                                    <?php echo substr($row_hot_promo->description,0,12) ?>
                                 </div>
                                 <div class="feature-box-title">
-                                    <h4><?php echo $row_hot_promo->title ?></h4>
+                                    <h4><?php echo substr($row_hot_promo->title,0,12) ?></h4>
                                 </div>
                             </div>
                         </div>
