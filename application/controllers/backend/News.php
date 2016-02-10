@@ -138,11 +138,15 @@ class News extends MY_Backend {
       $id=$this->input->post('id');
       $title =$this->input->post('title');
       $original_value = $this->db->query("SELECT title FROM mst_news WHERE id = ".$id)->row()->title;
+      // echo "title=".$title;
+      // echo "original_value=".$original_value;
+      // die();
+      $is_unique =  '';
       if($title != $original_value) 
       {
         // echo "tidak sama";
         // die();
-        $is_unique =  'is_unique[mst_news.title]';
+        $is_unique =  ',is_unique[mst_news.title]';
       } 
       else
       {
@@ -150,10 +154,13 @@ class News extends MY_Backend {
         // die();
         $is_unique =  '';
       }
-      $this->form_validation->set_rules('title', 'Title',$is_unique);
-      // print_r($this->form_validation->run());
+      // echo "is_unique=".$is_unique;
+      // print_r("$this->form_validation->run()=".$$this->form_validation->run());
       // die();
-      if ($this->form_validation->run())
+      $this->form_validation->set_rules('title', 'Title'.$is_unique);
+      print_r($this->form_validation->run());
+      // die();
+      if ($this->form_validation->run()==false)
       {  
         $config = array(
           'allowed_types' => 'jpg|jpeg|gif|png',

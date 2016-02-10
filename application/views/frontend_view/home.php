@@ -30,38 +30,38 @@
     <div class="container">
         <div class="row">
             <div class="home-boxes-wrapper">
-                <?php $no = 1; foreach($list_data_hot_promo as $row_hot_promo):?>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="feature-box-style1">
-                            <div class="box-container">
-                                <div class="feature-box-image">
+                <?php $no = 1; foreach($promo as $row_hot_promo):?>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature-box-style1">
+                        <div class="box-container">
+                            <div class="feature-box-image">
                                 <?php if ($row_hot_promo->image==""): ?>
                                     <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
-                                    <?php else: ?>
+                                <?php else: ?>
                                     <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_promo->image ?>"/>
                                 <?php endif ?>
-                                </div>
-                                <div class="feature-box-icon">
-                                    <i class="fa fa-newspaper-o"></i>
-                                </div>
-                                <div class="feature-box-containt">
-                                    <?php echo substr($row_hot_promo->title,0,12) ?>        
-                                    <br>
-                                    <a title="Read More">Read More</a> / <a title="Read More">See All News</a>
-                                </div>
-                                <div class="feature-box-subtitle">
-                                    <?php echo substr($row_hot_promo->description,0,12) ?>
-                                </div>
-                                <div class="feature-box-title">
-                                    <h4><?php echo substr($row_hot_promo->title,0,12) ?></h4>
-                                </div>
+                            </div>
+                            <div class="feature-box-icon">
+                                <i class="fa fa-newspaper-o"></i>
+                            </div>
+                            <div class="feature-box-containt">
+                                <?php echo substr($row_hot_promo->title,0,12) ?>        
+                                <br>
+                                <a title="Read More">Read More</a> / <a title="Read More">See All News</a>
+                            </div>
+                            <div class="feature-box-subtitle">
+                                <?php echo substr($row_hot_promo->description,0,12) ?>
+                            </div>
+                            <div class="feature-box-title">
+                                <h4><?php echo substr($row_hot_promo->title,0,12) ?></h4>
                             </div>
                         </div>
                     </div>
-                  <?php endforeach ?>
-            </div>
+                </div>
+            <?php endforeach ?>
         </div>
     </div>
+</div>
 </section>
 
 <section id="products-section">
@@ -324,80 +324,22 @@
                 </div>
             </div>
         </div>
+        <?php $no = 1; foreach($list_data_hot_event as $row_hot_event):?>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
                 <div class="feature-box-icon">
                     <i class="fa fa-globe"></i>
                 </div>
                 <div class="feature-box-containt">
-                    <h4>Event</h4>
-                    <p>Website creation services in a professional and reliable with excellent results</p>
+                    <h4><?php echo substr($row_hot_event->title,0,12) ?></h4>
+                    <p><?php echo substr($row_hot_event->description,0,50) ?></p>
                     <div align="center"><a>Read More</a></div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-                <div class="feature-box-icon">
-                    <i class="fa fa-globe"></i>
-                </div>
-                <div class="feature-box-containt">
-                    <h4>Event</h4>
-                    <p>Website creation services in a professional and reliable with excellent results</p>
-                    <div align="center"><a>Read More</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-                <div class="feature-box-icon">
-                    <i class="fa fa-globe"></i>
-                </div>
-                <div class="feature-box-containt">
-                    <h4>Event</h4>
-                    <p>Website creation services in a professional and reliable with excellent results</p>
-                    <div align="center"><a>Read More</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-                <div class="feature-box-icon">
-                    <i class="fa fa-globe"></i>
-                </div>
-                <div class="feature-box-containt">
-                    <h4>Event</h4>
-                    <p>Website creation services in a professional and reliable with excellent results</p>
-                    <div align="center"><a>Read More</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-                <div class="feature-box-icon">
-                    <i class="fa fa-globe"></i>
-                </div>
-                <div class="feature-box-containt">
-                    <h4>Event</h4>
-                    <p>Website creation services in a professional and reliable with excellent results</p>
-                    <div align="center"><a>Read More</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-                <div class="feature-box-icon">
-                    <i class="fa fa-globe"></i>
-                </div>
-                <div class="feature-box-containt">
-                    <h4>Event</h4>
-                    <p>Website creation services in a professional and reliable with excellent results</p>
-                    <div align="center"><a>Read More</a></div>
-                </div>
-            </div>
-        </div>
-        <div align="center" class="col-md-12 see_all_news"><a>See All News</a></div>
-    </div>
+        <?php endforeach ?>
+    <div align="center" class="col-md-12 see_all_news"><a>See All News</a></div>
+</div>
 </section>
 
 

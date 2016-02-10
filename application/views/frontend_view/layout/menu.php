@@ -104,7 +104,7 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a href="#home-section" title="Home" class="scrollto">
+                                    <a href="<?php echo base_url('home')?>" title="Home">
                                         Home
                                     </a>
                                 </li>

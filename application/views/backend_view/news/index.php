@@ -43,6 +43,7 @@
    $(document).ready(function()
    {
       load_data_news();
+      delete_news();
 
    });
 

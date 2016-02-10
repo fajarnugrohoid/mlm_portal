@@ -10,11 +10,19 @@ class Home extends MY_Frontend {
 	}
 	public function index()
 	{
-		$data_hot_promo['list_data_hot_promo'] =$this->news_model->m_home_hot_promo();
-		$data_hot_news['list_data_hot_news'] =$this->news_model->m_home_hot_promo();
+		$results=$this->news_model->m_home_hot();
+    	$data['promo'] = $results['promo'];
+		$data['event'] = $results['event'];
 		$this->header();
-		$this->load->view('frontend_view/home',$data_hot_promo,$data_hot_news);
+		$this->load->view('frontend_view/home',$data);
 		$this->footer();
+	}
+	public function tai()
+	{
+		$results=$this->news_model->m_home_hot();
+		$data['promo'] = $results['promo'];
+		$data['event'] = $results['event'];
+		print_r($data);
 	}
 	public function login()
 	{
