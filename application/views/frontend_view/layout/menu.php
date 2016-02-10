@@ -17,12 +17,12 @@
 
                     <ul class="nav navbar-nav navbar-right" style="padding-left:20px;">
                         <li>
-                            <a href="#how-to-jafra-section" style="color:gray;" title="Home" class="scrollto">
+                            <a href="#how-to-jafra-section" style="color:gray;" title="How To" class="scrollto">
                                 Jafra How To
                             </a>
                         </li>
                         <li>
-                            <a href="#how-to-jafra-section" style="color:gray;" title="Home" class="scrollto">
+                            <a href="<?php echo base_url('register/index/')?>" style="color:gray;" title="Join">
                                 Join
                             </a>
                         </li>
@@ -91,7 +91,7 @@
                             <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
                                 <i class="fa fa-bars"></i>
                             </button>
-                            <a href="#home-section" class="navbar-brand scrollto" title="Safandi">
+                            <a href="<?php echo base_url();?>" class="navbar-brand" title="Safandi">
                                 <img src="<?php echo base_url('assets/images/logo-new.png'); ?>" alt="logo" />
                             </a>
                         </div>
@@ -104,7 +104,7 @@
                                 </li>
                                 <li>
                                     <a href="#products-section" title="Products" class="scrollto">
-                                        Products
+                                        News
                                     </a>
                                 </li>
                                 <li>
@@ -112,19 +112,33 @@
                                         Events
                                     </a>
                                 </li>
+                                
                                 <li>
-                                    <a href="<?php echo site_url() ?>profile/user" title="Profile">
-                                        Profile
+                                    <a href="#portfolio-section" title="Galery" class="scrollto">
+                                        Galery
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="#about-section" title="About" class="scrollto">
-                                        About
+                                    <a href="#monials-section" title="About" class="scrollto">
+                                        Testimonial
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#about-us-section" title="About" class="scrollto">
+                                        About Us
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#contact-section" title="Contact" class="scrollto">
                                         Contact
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="<?php echo site_url() ?>profile/user" title="Profile">
+                                        Profile
                                     </a>
                                 </li>
 
