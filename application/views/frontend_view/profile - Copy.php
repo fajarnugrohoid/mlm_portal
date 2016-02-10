@@ -95,21 +95,76 @@
                 <h2 align="center">Network</h2>
                 <p align="left">&nbsp;</p>
 
-                <ul id="org" style="display:none">
-                    <li><?php echo $nama; ?>
+                <ul id="org2" style="display:none">
+                    <li>
                         <?php
-                        echo $res_network;
+                        if ($login_photo==null || $login_photo==''){
+                            echo '<img src="'.base_url().'assets/uploads/photos/noimage_m.png" width="60" height="60" />';
+                        }else{
+                            echo '<img src="'.base_url().'assets/uploads/photos/'.$login_photo.'" width="60" height="60" />';
+                        }
+
+                        ?>
+                        <?php 
+                        echo $login_id_anggota . "<br/><a href='javascript:void(0)' onclick=\"set_content('adm_jaringan/filter_jaringan/".$login_id_anggota."')\" >" . $login_nama . "</a>"; 
                         ?>
                     </li>
                 </ul>
-                <br/><br/><br/><br/><br/><br/>
 
-                <div align="center"><div id="chart" class="orgChart"></div></div>
-            </div>
 
+                <ul id="org" style="display:none">
+
+
+                    <li>
+                        <?php
+                        if ($photo==null || $photo==''){
+                            echo '<img src="'.base_url().'assets/uploads/photos/noimage_m.png" width="60" height="60" />';
+                        }else{
+                            echo '<img src="'.base_url().'assets/uploads/photos/'.$photo.'" width="60" height="60" />';
+                        }
+                        ?>
+
+                        <?php 
+                        echo $id_anggota . "<br/><a href='javascript:void(0)' onclick=\"set_content('adm_jaringan/filter_jaringan/".$id_anggota."')\" >" . $nama . "</a>"; 
+                        ?>
+
+                        <ul>
+                         <?php
+                         foreach($res_level2->result() as $r2){
+                            if ($r2->photo==null || $r2->photo==''){
+                                echo '<li><img src="'.base_url().'assets/uploads/photos/noimage_m.png" width="60" height="60">';
+                            }else{
+                                echo '<li><img src="'.base_url().'assets/uploads/photos/'.$r2->photo.'" width="60" height="60">';
+                            }
+                            echo $r2->member_id . "<br/><a href='javascript:void(0)' onclick=\"set_content('adm_jaringan/filter_jaringan/".$r2->member_id."')\" >" . $r2->name . "</a>";
+
+                            $res_level3=$this->user_model->get_data_by_id_upline($r2->member_id);
+                            echo '<ul>';
+                            foreach($res_level3->result() as $r3){
+                                if ($r3->photo==null || $r3->photo==''){
+                                    echo '<li><img src="'.base_url().'assets/uploads/photos/noimage_m.png" width="60" height="60">';
+                                }else{
+                                    echo '<li><img src="'.base_url().'assets/uploads/photos/'.$r3->photo.'" width="60" height="60">';
+                                }
+                                echo $r3->member_id . "<br/><a href='javascript:void(0)' onclick=\"set_content('adm_jaringan/filter_jaringan/".$r3->member_id."')\" >" . $r3->name . "</a>";
+                                echo '</li>';
+
+                            }
+                            echo '</ul>';
+                            echo '</li>';
+                        }
+                        ?>
+                    </ul>
+
+
+                </img></li>
+            </ul>
+            <div align="center"><div id="chart" class="orgChart"></div></div>
         </div>
-        <div class="clearfix"></div>
+
     </div>
+    <div class="clearfix"></div>
+</div>
 </div>
 <script>
     jQuery(document).ready(function() {

@@ -6,7 +6,8 @@ class Profile extends MY_Frontend {
 	public function __construct()
 	{
 		parent::__construct();  
-		$this->load->model('user_model');       
+		$this->load->model('user_model');    
+		$this->load->library('generate_network');   
 	}
 	public function index()
 	{
@@ -73,9 +74,48 @@ class Profile extends MY_Frontend {
 		
 		//exit;
 
-
+		$res_network = '';
+		$res_level2=$this->user_model->get_data_by_id_upline($id_anggota);
+		$res_network.= $this->generate_network->print_list($res_level2,$id_anggota);
+		$data['id_anggota'] = $id_anggota;
+		$data['res_network'] = $res_network;
 		$this->load->view('frontend_view/profile', $data);
 		$this->footer();
 	}
+
+	function network(){
+		/*$res_level2=$this->user_model->get_data_by_id_upline('MMS20141');
+		echo "<ul>";
+		echo "<li>MMS20141</li>";
+		$this->print_list($res_level2, 'MMS20141');
+		echo "</ul>";  */
+		$res_network = '';
+		$res_level2=$this->user_model->get_data_by_id_upline('MMS20141');
+		$res_network.="<ul>";
+		$res_network.= "<li>MMS20141</li>";
+		$res_network.= $this->generate_network->print_list($res_level2,'MMS20141');
+		$res_network.= "</ul>";
+
+		echo $res_network; 
+		
+	}
+
 	
+
+	/*
+	function print_list($array, $parent=0) {
+		if (count($array->result()) > 0) { echo '<ul>'; }
+
+		foreach ($array->result() as $row) {
+			if ($row->upline_id == $parent) {
+				echo '<li>' . $row->member_id;
+				$array2=$this->user_model->get_data_by_id_upline($row->member_id);
+            $this->print_list($array2, $row->member_id);  # recurse
+            echo '</li>';
+        }   
+    }
+
+    if (count($array->result()) > 0) { echo '</ul>'; } 
+} */
+
 }
