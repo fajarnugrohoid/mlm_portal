@@ -124,9 +124,7 @@
 </section>
 
 <section id="products-section">
-    <div class="container">
-
-        
+    <div class="container"> 
         <div class="col-md-6" style="padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
@@ -235,7 +233,6 @@
                         <p>BANGKOK (AP) — With its fluorescent bulbs and cafeteria-style tables, the Bangkok restaurant Raan Jay Fai wouldn't win any awards for interior decorating.              But that hasn't deterred Martha Stewart, one of the restaurant's many fans...</p>
                     </div> 
                 </div>
-                <hr>
             </div>
         </div>
         <div class="col-md-6" style="padding: 50px 50px 10px 10px;">
@@ -459,82 +456,6 @@
             </div>
         </div>
         <div align="center" class="col-md-12 see_all_news"><a>See All News</a></div>
-    </div>
-</section>
-
-<section id="portfolio-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title">
-                    <div class="main-title">
-                        Our Galery
-                    </div>
-                    <div class="desc-title">
-                        We’re in the business of big ideas, here are some of our latest and greatest.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="portfolioFilter">
-                    <ul>
-                        <li>
-                            <a href="#" class="selected" data-filter="*">All</a>
-                        </li><li>
-                        <a href="#" data-filter=".home-port-website">WebSites</a>
-                    </li><li>
-                    <a href="#" data-filter=".home-port-logo">Logos</a>
-                </li>
-                <li>
-                    <a href="#" data-filter=".home-port-image">Images</a>
-                </li>
-                <li>
-                    <a href="#" data-filter=".home-port-video">Videos</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item col-md-4 col-sm-6 col-xs-12 home-port-website">
-                <div class="img-figure-overlayer">
-                    <a class="fancybox" title="Amazing Tiger" href="images/portfolio/thumbs/1-767x479.jpg">
-                        <i class="fa fa-search-plus"></i>
-                    </a>
-                </div>
-                <div class="img-figure">
-                    <img src="<?php echo base_url('assets/images/portfolio/thumbs/1-767x479.jpg'); ?>" alt="work 1" />
-                </div>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6 col-xs-12 home-port-logo">
-                <div class="img-figure-overlayer">
-                    <a class="fancybox" title="Smoke Apple" href="images/portfolio/thumbs/2-767x479.jpg">
-                        <i class="fa fa-search-plus"></i>
-                    </a>
-                </div>
-                <div class="img-figure">
-                    <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
-                </div>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6 col-xs-12 home-port-video">
-                <div class="img-figure-overlayer">
-                    <a class="fancybox-media" title="Angry Bear" href="http://vimeo.com/76512663">
-                        <i class="fa fa-search-plus"></i>
-                    </a>
-                </div>
-                <div class="img-figure">
-                    <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
-                </div>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6 col-xs-12 home-port-image">
-                <div class="img-figure-overlayer">
-                    <a class="fancybox" title="Creative Hand" href="images/portfolio/thumbs/4-767x479.jpg">
-                        <i class="fa fa-search-plus"></i>
-                    </a>
-                </div>
-                <div class="img-figure">
-                    <img src="<?php echo base_url('assets/images/portfolio/thumbs/2-767x479.jpg'); ?>" alt="work 2" />
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
