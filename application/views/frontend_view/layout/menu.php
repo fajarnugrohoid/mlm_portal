@@ -27,9 +27,15 @@
                             </a>
                         </li>
                         <li>
+                        <?php if (isset($_COOKIE['remember_me_cookie'])): ?>
+                            <a  style="color:gray;" href="<?php echo base_url('backend/dashboard')?>" title="Login" >
+                                Dashboard
+                            </a>
+                            <?php else: ?>
                             <a  style="color:gray;" href="<?php echo base_url('home/login')?>" title="Login" >
                                 Login
                             </a>
+                        <?php endif ?>
                         </li>
                     </ul>
 
