@@ -30,94 +30,34 @@
     <div class="container">
         <div class="row">
             <div class="home-boxes-wrapper">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="feature-box-style1">
-                        <div class="box-container">
-                            <div class="feature-box-image">
-                                <img src="<?php echo base_url('assets/images/boxes/design.png'); ?>" alt="design Image"/>
-                            </div>
-                            <div class="feature-box-icon">
-                                <i class="fa fa-newspaper-o"></i>
-                            </div>
-                            <div class="feature-box-containt">
-                                <p>dekspripsi ....</p>
-                                <a href="javascript:void(0)" title="Read More">Read More</a> / <a href="javascript:void(0)" title="Read More">See All News</a>
-                            </div>
-                            <div class="feature-box-subtitle">
-                                Hot Promo deskripsi limit
-                            </div>
-                            <div class="feature-box-title">
-                                <h4>Hot Promo</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="feature-box-style1">
-                        <div class="box-container">
-                            <div class="feature-box-image">
-                                <img src="<?php echo base_url('assets/images/boxes/design.png'); ?>" alt="design Image"/>
-                            </div>
-                            <div class="feature-box-icon">
-                                <i class="fa fa-newspaper-o"></i>
-                            </div>
-                            <div class="feature-box-containt">
-                                <p>dekspripsi ....</p>
-                                <a href="javascript:void(0)" title="Read More">Read More</a> / <a href="javascript:void(0)" title="Read More">See All News</a>
-                            </div>
-                            <div class="feature-box-subtitle">
-                                Hot Promo deskripsi limit
-                            </div>
-                            <div class="feature-box-title">
-                                <h4>Hot Promo</h4>
+                <?php $no = 1; foreach($list_data_hot_promo as $row_hot_promo):?>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="feature-box-style1">
+                            <div class="box-container">
+                                <div class="feature-box-image">
+                                <?php if ($row_hot_promo->image==""): ?>
+                                    <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
+                                    <?php else: ?>
+                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_promo->image ?>"/>
+                                <?php endif ?>
+                                </div>
+                                <div class="feature-box-icon">
+                                    <i class="fa fa-newspaper-o"></i>
+                                </div>
+                                <div class="feature-box-containt">
+                                    <?php $deskripsi = $row_hot_promo->description; echo $deskripsi =word_limiter($deskripsi, 2); ?>
+                                    <a title="Read More">Read More</a> / <a title="Read More">See All News</a>
+                                </div>
+                                <div class="feature-box-subtitle">
+                                    <?php echo $row_hot_promo->description ?>
+                                </div>
+                                <div class="feature-box-title">
+                                    <h4><?php echo $row_hot_promo->title ?></h4>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="feature-box-style1">
-                        <div class="box-container">
-                            <div class="feature-box-image">
-                                <img src="<?php echo base_url('assets/images/boxes/design.png'); ?>" alt="design Image"/>
-                            </div>
-                            <div class="feature-box-icon">
-                                <i class="fa fa-newspaper-o"></i>
-                            </div>
-                            <div class="feature-box-containt">
-                                <p>dekspripsi ....</p>
-                                <a href="javascript:void(0)" title="Read More">Read More</a> / <a href="javascript:void(0)" title="Read More">See All News</a>
-                            </div>
-                            <div class="feature-box-subtitle">
-                                Hot Promo deskripsi limit
-                            </div>
-                            <div class="feature-box-title">
-                                <h4>Hot Promo</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="feature-box-style1">
-                        <div class="box-container">
-                            <div class="feature-box-image">
-                                <img src="<?php echo base_url('assets/images/boxes/design.png'); ?>" alt="design Image"/>
-                            </div>
-                            <div class="feature-box-icon">
-                                <i class="fa fa-newspaper-o"></i>
-                            </div>
-                            <div class="feature-box-containt">
-                                <p>dekspripsi ....</p>
-                                <a href="javascript:void(0)" title="Read More">Read More</a> / <a href="javascript:void(0)" title="Read More">See All News</a>
-                            </div>
-                            <div class="feature-box-subtitle">
-                                Hot Promo deskripsi limit
-                            </div>
-                            <div class="feature-box-title">
-                                <h4>Hot Promo</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  <?php endforeach ?>
             </div>
         </div>
     </div>
@@ -470,7 +410,7 @@
                         Testimonial
                     </div>
                     <div class="desc-title">
-                        
+
                     </div>
                 </div>
             </div>

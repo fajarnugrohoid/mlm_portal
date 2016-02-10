@@ -30,6 +30,11 @@
       </a>
       <div class="navbar-right">
         <ul class="nav navbar-nav">
+          <li class="profile-menu">
+            <a href="<?php echo base_url('home'); ?>">
+              <span class="username">Portal/Home</span>
+            </a>
+          </li>
           <li class="dropdown profile-menu">
             <a href="" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-cog fa-lg"></i>
@@ -45,11 +50,6 @@
                 <a href="<?php echo base_url('login/logout'); ?>"><i class="fa fa-power-off"></i>Log Out</a>
               </li>
             </ul>
-          </li>
-          <li class="profile-menu">
-            <a href="<?php echo base_url('home'); ?>">
-              <span class="username">Portal/Home</span>
-            </a>
           </li>
         </ul>
       </div>
