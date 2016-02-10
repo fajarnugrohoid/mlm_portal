@@ -125,13 +125,15 @@
 
 <section id="products-section">
     <div class="container">
-        <div style="padding: 50px 50px 10px 10px;" class="col-md-6">
+
+        
+        <div class="col-md-6" style="padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
                     We’re in the business of big ideas, here are some of our latest and greatest.
                 </div>
                 <div class="main-title">
-                    Our Product
+                    Hot News
                 </div>
             </div>
             <div class="row">
@@ -236,13 +238,13 @@
                 <hr>
             </div>
         </div>
-        <div style="padding: 50px 50px 10px 10px;" class="col-md-6">
+        <div class="col-md-6" style="padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
                     We’re in the business of big ideas, here are some of our latest and greatest.
                 </div>
                 <div class="main-title">
-                    Our Work
+                    Hot Events
                 </div>
             </div>
             <div class="row">
@@ -466,7 +468,7 @@
             <div class="col-md-12">
                 <div class="section-title">
                     <div class="main-title">
-                        Our Work
+                        Our Galery
                     </div>
                     <div class="desc-title">
                         We’re in the business of big ideas, here are some of our latest and greatest.
@@ -538,151 +540,16 @@
 
 
 
-
-<!-- =========================================
-Pricing Section
-========================================== -->
-<!-- pricing-section -->
-<section id="pricing-section">
-    <!-- container -->
-    <div class="container">
-
-        <!-- col-md-3 -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-
-            <!-- pricing-box -->
-            <div class="pricing-box" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:300}">
-
-                <!-- Title & price -->
-                <div class="price">
-                    <h3>Starter</h3>
-                    <h1>$ 10 <span>/ mo</span></h1>
-                </div><!-- /Title & price -->
-
-                <!-- Details -->
-                <ul>
-                    <li><b>1 GB</b> Disk Space</li>
-                    <li><b>10 GB</b>/ mo Bandwidth</li>
-                    <li><b>20</b> Email Accounts</li>
-                    <li><b>3</b> Subdomains</li>
-                    <li><b>1</b> Free Template</li>
-                    <li><b>24 / 7</b> Support</li>
-                </ul><!-- /Details -->
-
-                <!-- Sign up -->
-                <a class="btn btn-md btn-Nesto" href="javascript:void(0)">Sign up</a>
-
-            </div><!-- /pricing-box -->
-
-        </div><!-- /col-md-3 -->
-
-
-        <!-- col-md-3 -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-
-            <!-- pricing-box -->
-            <div class="pricing-box" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-
-                <!-- Title & price -->
-                <div class="price">
-                    <h3>professional</h3>
-                    <h1>$ 15 <span>/ mo</span></h1>
-                </div><!-- /Title & price -->
-
-                <!-- Details -->
-                <ul>
-                    <li><b>10 GB</b> Disk Space</li>
-                    <li><b>100 GB</b>/ mo Bandwidth</li>
-                    <li><b>200</b> Email Accounts</li>
-                    <li><b>10</b> Subdomains</li>
-                    <li><b>5</b> Free Template</li>
-                    <li><b>24 / 7</b> Support</li>
-                </ul><!-- /Details -->
-
-                <!-- Sign up -->
-                <a class="btn btn-md btn-Nesto" href="javascript:void(0)">Sign up</a>
-
-            </div><!-- /pricing-box -->
-
-        </div><!-- /col-md-3 -->
-
-
-        <!-- col-md-3 -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-
-            <!-- pricing-box -->
-            <div class="feature-pricing-box">
-
-                <!-- Title & price -->
-                <div class="price">
-                    <h3>Deluxe</h3>
-                    <h1>$ 20 <span>/ mo</span></h1>
-                </div><!-- /Title & price -->
-
-                <!-- Details -->
-                <ul>
-                    <li><b>100 GB</b> Disk Space</li>
-                    <li><b>1000 GB</b>/ mo Bandwidth</li>
-                    <li><b>Unlimited</b> Email Accounts</li>
-                    <li><b>Unlimited</b> Subdomains</li>
-                    <li><b>10</b> Free Template</li>
-                    <li><b>24 / 7</b> Support</li>
-                </ul><!-- /Details -->
-
-                <!-- Sign up -->
-                <a class="btn btn-md btn-Nesto-o" href="javascript:void(0)">Sign up</a>
-
-            </div><!-- /pricing-box -->
-
-        </div><!-- /col-md-3 -->
-
-
-        <!-- col-md-3 -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-
-            <!-- pricing-box -->
-            <div class="pricing-box" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:700}">
-
-                <!-- Title & price -->
-                <div class="price">
-                    <h3>gold</h3>
-                    <h1>$ 30 <span>/ mo</span></h1>
-                </div><!-- /Title & price -->
-
-                <!-- Details -->
-                <ul>
-                    <li><b>Unlimited</b> Disk Space</li>
-                    <li><b>Unlimited</b>/ mo Bandwidth</li>
-                    <li><b>Unlimited</b> Email Accounts</li>
-                    <li><b>Unlimited</b> Subdomains</li>
-                    <li><b>Unlimited</b> Free Template</li>
-                    <li><b>24 / 7</b> Support</li>
-                </ul><!-- /Details -->
-
-                <!-- Sign up -->
-                <a class="btn btn-md btn-Nesto" href="javascript:void(0)">Sign up</a>
-
-            </div><!-- /pricing-box -->
-
-        </div><!-- /col-md-3 -->
-
-
-    </div><!-- /container -->
-</section><!-- /section -->
-
-
-
-
 <section id="monials-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
                     <div class="main-title">
-                        What Clients Say
+                        Testimonial
                     </div>
                     <div class="desc-title">
-                        Our main objective in everything we do, is satisfying our clients.
+                        
                     </div>
                 </div>
             </div>
@@ -690,22 +557,31 @@ Pricing Section
                 <div class="col-md-6" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:900}">
                     <div class="monials-block-left">
                         <div class="client-img">
-                            <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
+                            <img src="<?php echo base_url('assets/images/clients/front-Arni.png'); ?>" alt="client" />
                         </div>
-                        <div class="client-name">steven flores</div>
+                        <div class="client-name">Arni Yuniati</div>
                         <div class="containt">
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt elit, laborei et dolore magnai aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                            <p>
+                                Saya Arni, penghasilan saya di Oriflame 17 juta per bulan.
+                                Ketika pertama join Oriflame, target saya hanya ingin dapat bonus 4 jutaan per bulan untuk mengganti...
+                                <div align="left"><a>Baca Selengkapnya ...</a></div>
+                            </p>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:1100}">
                     <div class="monials-block-right">
                         <div class="client-img">
-                            <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
+                            <img src="<?php echo base_url('assets/images/clients/front-adnein.png'); ?>" alt="client" />
                         </div>
-                        <div class="client-name">jennifer collins</div>
+                        <div class="client-name">Adnein</div>
                         <div class="containt">
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt elit, laborei et dolore magnai aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                            <p>
+                                Saya Adnein, penghasilan saya di Oriflame 20 juta per bulan.
+                                Ini buku cerita saya tentang Oriflame, bisnis yang saya jalankan saat ini, yang membuat saya...
+                                <div align="left"><a>Baca Selengkapnya ...</a></div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -713,11 +589,15 @@ Pricing Section
                 <div class="col-md-6" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:900}">
                     <div class="monials-block-left">
                         <div class="client-img">
-                            <img src="<?php echo base_url('assets/images/clients/1-90x90.jpg'); ?>" alt="client" />
+                            <img src="<?php echo base_url('assets/images/clients/front-detty.png'); ?>" alt="client" />
                         </div>
-                        <div class="client-name">steven flores</div>
+                        <div class="client-name">Detty Indriana</div>
                         <div class="containt">
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt elit, laborei et dolore magnai aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                            <p>
+                                Saya Detty, penghasilan saya di Oriflame 16 juta per bulan.
+                                Perlahan tapi pasti, ilmu bisnis Oriflame saya bertambah, rekening tabungan saya makin lama makin...
+                                <div align="left"><a>Baca Selengkapnya ...</a></div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -738,356 +618,30 @@ Pricing Section
     </div>
 </section>
 
+<!--/about us-section-->
 
-
-
-<!-- =========================================
-Team Section
-========================================== -->
-<!-- team-section -->
-<section id="team-section">
-    <!-- container -->
+<section id="about-us-section">
     <div class="container">
-        <!-- row -->
         <div class="row">
-
-
-            <!-- col-md-12 -->
-            <div class="col-md-12">
-
-                <!-- section-title -->
-                <div class="section-title">
-
-                    <!-- main-title -->
-                    <div class="main-title">
-                        Our Awesome Team
-                    </div><!-- /main-title -->
-
-                    <!-- desc-title -->
-                    <div class="desc-title">
-                        Our team is the brightest designers, data analysis, and software engineers.
-                    </div><!-- /desc-title -->
-
-                </div><!-- /section-title -->
-
-            </div><!-- /col-md-12 -->
-
-
-            <!-- col-md-3 col-sm-6 col-xs-12 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-
-
-                <!-- member-box-wrapper -->
-                <div class="member-box-wrapper" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:700}">
-                    <!-- member-box -->
-                    <div class="member-box">
-
-                        <!-- member-img -->
-                        <div class="member-img">
-                            <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
-                        </div><!-- /member-img -->
-
-                        <!-- member-name -->
-                        <div class="member-name">
-                            <h2>Linda Russell</h2>
-                        </div><!-- /member-name -->
-
-                        <!-- member-title -->
-                        <div class="member-title">
-                            <h4>Designer</h4>
-                        </div><!-- /member-title -->
-
-                        <!-- member-social -->
-                        <div class="member-social">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Twitter" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Facebook" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Google +" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div><!-- /member-social -->
-
-                    </div><!-- /member-box -->
-                </div><!-- /member-box-wrapper -->
-
-
-            </div><!-- /col-md-3 col-sm-6 col-xs-12 -->
-
-
-            <!-- col-md-3 col-sm-6 col-xs-12 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-
-
-                <!-- member-box-wrapper -->
-                <div class="member-box-wrapper" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:900}">
-                    <!-- member-box -->
-                    <div class="member-box">
-
-                        <!-- member-img -->
-                        <div class="member-img">
-                            <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
-                        </div><!-- /member-img -->
-
-                        <!-- member-name -->
-                        <div class="member-name">
-                            <h2>Dwight Oli</h2>
-                        </div><!-- /member-name -->
-
-                        <!-- member-title -->
-                        <div class="member-title">
-                            <h4>Founder / CEO</h4>
-                        </div><!-- /member-title -->
-
-                        <!-- member-social -->
-                        <div class="member-social">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Twitter" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Facebook" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Google +" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div><!-- /member-social -->
-
-                    </div><!-- /member-box -->
-                </div><!-- /member-box-wrapper -->
-
-
-            </div><!-- /col-md-3 col-sm-6 col-xs-12 -->
-
-
-            <!-- col-md-3 col-sm-6 col-xs-12 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-
-
-                <!-- member-box-wrapper -->
-                <div class="member-box-wrapper" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:1100}">
-                    <!-- member-box -->
-                    <div class="member-box">
-
-                        <!-- member-img -->
-                        <div class="member-img">
-                            <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
-                        </div><!-- /member-img -->
-
-                        <!-- member-name -->
-                        <div class="member-name">
-                            <h2>Hailey Reid</h2>
-                        </div><!-- /member-name -->
-
-                        <!-- member-title -->
-                        <div class="member-title">
-                            <h4>Developer</h4>
-                        </div><!-- /member-title -->
-
-                        <!-- member-social -->
-                        <div class="member-social">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Twitter" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Facebook" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Google +" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div><!-- /member-social -->
-
-                    </div><!-- /member-box -->
-                </div><!-- /member-box-wrapper -->
-
-
-            </div><!-- /col-md-3 col-sm-6 col-xs-12 -->
-
-
-            <!-- col-md-3 col-sm-6 col-xs-12 -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-
-
-                <!-- member-box-wrapper -->
-                <div class="member-box-wrapper" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:700}">
-                    <!-- member-box -->
-                    <div class="member-box">
-
-                        <!-- member-img -->
-                        <div class="member-img">
-                            <img src="<?php echo base_url('assets/images/team/1-290x290.jpg'); ?>" alt="Member Image" />
-                        </div><!-- /member-img -->
-
-                        <!-- member-name -->
-                        <div class="member-name">
-                            <h2>Daryl Oliver</h2>
-                        </div><!-- /member-name -->
-
-                        <!-- member-title -->
-                        <div class="member-title">
-                            <h4>Marketing</h4>
-                        </div><!-- /member-title -->
-
-                        <!-- member-social -->
-                        <div class="member-social">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Twitter" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Facebook" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Google +" data-placement="top" data-rel="tooltip">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div><!-- /member-social -->
-
-                    </div><!-- /member-box -->
-                </div><!-- /member-box-wrapper -->
-
-
-            </div><!-- /col-md-3 col-sm-6 col-xs-12 -->
-
-
-        </div><!-- /row -->
-    </div><!-- /container -->
-</section><!-- /team-section -->
-
-
-
-
-<!-- =========================================
-Skills Section
-========================================== -->
-<!-- skills-section -->
-<section id="skills-section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
-
-
-            <!-- skill-chart-left -->
-            <div class="skill-chart-left" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:800}">
-
-                <!-- Value -->
-                <input type="text" value="0" data-rel="95" class="skill-chart animated" />
-
-                <!-- skill-title -->
-                <div class="skill-title">
-                    HTML
-                </div><!-- /skill-title -->
-
-                <!-- top-bg -->
-                <div class="top-bg"></div>
-
-            </div><!-- /skill-chart-left -->
-
-
-            <!-- skill-chart-left -->
-            <div class="skill-chart-left" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:1100}">
-
-                <!-- Value -->
-                <input type="text" value="0" data-rel="88" class="skill-chart animated" />
-
-                <!-- skill-title -->
-                <div class="skill-title">
-                    Wordpress
-                </div><!-- /skill-title -->
-
-                <!-- top-bg -->
-                <div class="top-bg"></div>
-
-            </div><!-- /skill-chart-left -->
-
-
-            <!-- skill-chart-middle -->
-            <div class="skill-chart-middle" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-
-                <!-- Value -->
-                <input type="text" value="0" data-rel="90" class="skill-chart-lg animated" />
-
-                <!-- skill-title -->
-                <div class="skill-title-lg">
-                    Javascript
-                </div><!-- /skill-title -->
-
-                <!-- top-bg-lg -->
-                <div class="top-bg-lg"></div>
-
-            </div><!-- /skill-chart-middle -->
-
-
-            <!-- skill-chart-right -->
-            <div class="skill-chart-right" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:1100}">
-
-                <!-- Value -->
-                <input type="text" value="0" data-rel="95" class="skill-chart animated" />
-
-                <!-- skill-title -->
-                <div class="skill-title">
-                    CSS3
-                </div><!-- /skill-title -->
-
-                <!-- top-bg -->
-                <div class="top-bg"></div>
-
-            </div><!-- /skill-chart-right -->
-
-
-            <!-- skill-chart-right -->
-            <div class="skill-chart-right" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:800}">
-
-                <!-- Value -->
-                <input type="text" value="0" data-rel="75" class="skill-chart animated" />
-
-                <!-- skill-title -->
-                <div class="skill-title">
-                    PhotoShop
-                </div><!-- /skill-title -->
-
-                <!-- top-bg -->
-                <div class="top-bg"></div>
-
-            </div><!-- /skill-chart-right -->
-
-
-        </div><!-- /row -->
-    </div><!-- /container -->
-</section><!-- /section -->
-
+            <div class="main-title">
+                About Us
+            </div>
+            <p>
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+                Website creation services in a professional and reliable with excellent results
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--/about us-section-->
 
 
 
@@ -1197,7 +751,7 @@ Contact Us Section
 Map Section
 ========================================== -->
 <!-- map-section -->
-<section id="map-section">
+<!-- <section id="map-section">
     <div id="map"></div>
-</section>
+</section> -->
 
