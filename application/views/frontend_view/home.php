@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row">
             <div class="home-boxes-wrapper">
-                <?php $no = 1; foreach($promo as $row_hot_promo):?>
+                <?php foreach($promo as $row_hot_promo):?>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="feature-box-style1">
                         <div class="box-container">
@@ -69,50 +69,25 @@
         <div class="col-md-6" style="padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
-                    We’re in the business of big ideas, here are some of our latest and greatest.
+                    This Is Our Hot News Hope Its Makes You Interested.
                 </div>
                 <div class="main-title">
                     Hot News
                 </div>
             </div>
             <div class="row">
-                <div class="row"> 
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#">
-                            <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/10/http-www.urchinbali.comgallery.jpg" class="img-responsive img-box img-thumbnail"> 
-                        </a>
-                    </div> 
-                    <div class="col-xs-12 col-sm-9 col-md-9">
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-picture">
-                                    <a href="#" title="sintret">
-                                        <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <div class="list-group-item-heading">
-                                        <a href="#" title="sintret">
-                                            <small>sintret</small>
-                                        </a>
-                                    </div>
-                                    <small>
-                                        <i class="glyphicon glyphicon-time"></i> 3 days ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
-                                        <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 2 places </a></span>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">5 of Bali’s Spanking New Haunts - WanderLuxe Magazine</a></h4>
-                        <p>Naturally, we know where Bali's newest restaurants are and what to order, so give that private chef a rest and check out these spanking new haunts.</p>
-                    </div> 
-                </div>
+                <?php foreach($news as $row_hot_news):?>
                 <hr>
                 <div class="row"> 
                     <div class="col-xs-12 col-sm-3 col-md-3">
                         <a href="#">
-                            <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/09/http-barbacoabali.com_.jpg" class="img-responsive img-box img-thumbnail"> 
+                            <div class="feature-box-image">
+                                <?php if ($row_hot_news->image==""): ?>
+                                    <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
+                                <?php else: ?>
+                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_news->image ?>"/>
+                                <?php endif ?>
+                            </div>
                         </a>
                     </div> 
                     <div class="col-xs-12 col-sm-9 col-md-9">
@@ -120,109 +95,52 @@
                             <div class="list-group-item">
                                 <div class="row-picture">
                                     <a href="#" title="sintret">
-                                        <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
+                                        <img src="<?php echo base_url('assets/images/png-gto-logo.png'); ?>"/>
                                     </a>
                                 </div>
                                 <div class="row-content">
                                     <div class="list-group-item-heading">
                                         <a href="#" title="sintret">
-                                            <small>sintret</small>
+                                            <small><?php echo substr($row_hot_news->title,0,12) ?></small>
                                         </a>
                                     </div>
                                     <small>
-                                        <i class="glyphicon glyphicon-time"></i> 1 month ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
+                                        <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
                                         <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 9 places </a></span>
+                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : news </a></span>
                                     </small>
                                 </div>
                             </div>
                         </div>
-                        <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4>
-                        <p>We know that there’s tons to noms in Bali, but what’s the best and where are they? Here are our top 8 Seminyak Bali restaurants to visit.</p>
+                        <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
+                        <p><?php echo substr($row_hot_news->description,0,200)."...." ?></p>
                     </div> 
                 </div>
-                <hr>
-                <div class="row"> 
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#">
-                            <img src="http://i.huffpost.com/gen/2038950/thumbs/s-BANGKOK-NOODLES-large.jpg" class="img-responsive img-box img-thumbnail"> 
-                        </a>
-                    </div> 
-                    <div class="col-xs-12 col-sm-9 col-md-9">
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-picture">
-                                    <a href="#" title="sintret">
-                                        <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <div class="list-group-item-heading">
-                                        <a href="#" title="sintret">
-                                            <small>sintret</small>
-                                        </a>
-                                    </div>
-                                    <small>
-                                        <i class="glyphicon glyphicon-time"></i> 1 month ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
-                                        <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 9 places </a></span>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">These Are The Best Noodle Spots In Bangkok</a></h4>
-                        <p>BANGKOK (AP) — With its fluorescent bulbs and cafeteria-style tables, the Bangkok restaurant Raan Jay Fai wouldn't win any awards for interior decorating.              But that hasn't deterred Martha Stewart, one of the restaurant's many fans...</p>
-                    </div> 
-                </div>
+            <?php endforeach ?>
             </div>
         </div>
         <div class="col-md-6" style="padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
-                    We’re in the business of big ideas, here are some of our latest and greatest.
+                    This Is Our Hot Product We Trust It Can be Your World.
                 </div>
                 <div class="main-title">
-                    Hot Events
+                    Hot Product
                 </div>
             </div>
             <div class="row">
-                <div class="row"> 
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#">
-                            <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/10/http-www.urchinbali.comgallery.jpg" class="img-responsive img-box img-thumbnail"> 
-                        </a>
-                    </div> 
-                    <div class="col-xs-12 col-sm-9 col-md-9">
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-picture">
-                                    <a href="#" title="sintret">
-                                        <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <div class="list-group-item-heading">
-                                        <a href="#" title="sintret">
-                                            <small>sintret</small>
-                                        </a>
-                                    </div>
-                                    <small>
-                                        <i class="glyphicon glyphicon-time"></i> 3 days ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
-                                        <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 2 places </a></span>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">5 of Bali’s Spanking New Haunts - WanderLuxe Magazine</a></h4>
-                        <p>Naturally, we know where Bali's newest restaurants are and what to order, so give that private chef a rest and check out these spanking new haunts.</p>
-                    </div> 
-                </div>
+                <?php foreach($product as $row_hot_product):?>
                 <hr>
                 <div class="row"> 
                     <div class="col-xs-12 col-sm-3 col-md-3">
                         <a href="#">
-                            <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/09/http-barbacoabali.com_.jpg" class="img-responsive img-box img-thumbnail"> 
+                            <div class="feature-box-image">
+                                <?php if ($row_hot_product->image==""): ?>
+                                    <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
+                                <?php else: ?>
+                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_product->image ?>"/>
+                                <?php endif ?>
+                            </div>
                         </a>
                     </div> 
                     <div class="col-xs-12 col-sm-9 col-md-9">
@@ -230,61 +148,28 @@
                             <div class="list-group-item">
                                 <div class="row-picture">
                                     <a href="#" title="sintret">
-                                        <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
+                                        <img src="<?php echo base_url('assets/images/png-gto-logo.png'); ?>"/>
                                     </a>
                                 </div>
                                 <div class="row-content">
                                     <div class="list-group-item-heading">
                                         <a href="#" title="sintret">
-                                            <small>sintret</small>
+                                            <small><?php echo substr($row_hot_product->title,0,12) ?></small>
                                         </a>
                                     </div>
                                     <small>
-                                        <i class="glyphicon glyphicon-time"></i> 1 month ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
+                                        <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
                                         <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 9 places </a></span>
+                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : product </a></span>
                                     </small>
                                 </div>
                             </div>
                         </div>
-                        <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4>
-                        <p>We know that there’s tons to noms in Bali, but what’s the best and where are they? Here are our top 8 Seminyak Bali restaurants to visit.</p>
+                        <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
+                        <p><?php echo substr($row_hot_product->description,0,200)."...." ?></p>
                     </div> 
                 </div>
-                <hr>
-                <div class="row"> 
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#">
-                            <img src="http://i.huffpost.com/gen/2038950/thumbs/s-BANGKOK-NOODLES-large.jpg" class="img-responsive img-box img-thumbnail"> 
-                        </a>
-                    </div> 
-                    <div class="col-xs-12 col-sm-9 col-md-9">
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-picture">
-                                    <a href="#" title="sintret">
-                                        <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <div class="list-group-item-heading">
-                                        <a href="#" title="sintret">
-                                            <small>sintret</small>
-                                        </a>
-                                    </div>
-                                    <small>
-                                        <i class="glyphicon glyphicon-time"></i> 1 month ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
-                                        <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 9 places </a></span>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">These Are The Best Noodle Spots In Bangkok</a></h4>
-                        <p>BANGKOK (AP) — With its fluorescent bulbs and cafeteria-style tables, the Bangkok restaurant Raan Jay Fai wouldn't win any awards for interior decorating.              But that hasn't deterred Martha Stewart, one of the restaurant's many fans...</p>
-                    </div> 
-                    <hr>
-                </div>
+            <?php endforeach ?>
             </div>
         </div>
     </div>
@@ -324,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <?php $no = 1; foreach($list_data_hot_event as $row_hot_event):?>
+        <?php foreach($event as $row_hot_event):?>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
                 <div class="feature-box-icon">

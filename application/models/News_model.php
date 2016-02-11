@@ -64,18 +64,21 @@ class News_model extends CI_Model {
    }
 
    // FRONTS
-   function m_home_hot()
+   function m_home_hot_promo()
    {
-      $query1 = $this->db->query("SELECT * FROM mst_news WHERE category='1' LIMIT 4");
-      $query2 = $this->db->query("SELECT * FROM mst_news WHERE category='4' LIMIT 4");
-      return array('promo' => $query1, 'event' => $query2);
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","1");
+      $this->db->limit("4");
+      $query = $this->db->get();
+      return $query->result_object();
    }
    function m_home_hot_news()
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","4");
-      $this->db->limit("4");
+      $this->db->limit("3");
       $query = $this->db->get();
       return $query->result();
    }
@@ -83,7 +86,8 @@ class News_model extends CI_Model {
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
-      $this->db->where('category = "3" LIMIT 4');
+      $this->db->where("category","3");
+      $this->db->limit("3");
       $query = $this->db->get();
       return $query->result();
    }
@@ -91,9 +95,10 @@ class News_model extends CI_Model {
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
-      $this->db->where('category = "2" LIMIT 4');
+      $this->db->where("category","2");
+      $this->db->limit("6");
       $query = $this->db->get();
-      return $query;
+      return $query->result();
    }
    function m_home_hot_testimonial()
    {

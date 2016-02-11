@@ -98,7 +98,7 @@
                                 <i class="fa fa-bars"></i>
                             </button>
                             <a href="<?php echo base_url();?>" class="navbar-brand" title="Safandi">
-                                <img src="<?php echo base_url('assets/images/logo-new.png'); ?>" alt="logo" />
+                                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="logo" />
                             </a>
                         </div>
                         <div class="navbar-collapse collapse">

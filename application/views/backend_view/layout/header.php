@@ -31,7 +31,7 @@
       <div class="navbar-right">
         <ul class="nav navbar-nav">
           <li class="profile-menu">
-            <a href="<?php echo base_url('home'); ?>">
+            <a href="<?php echo base_url('home/index'); ?>">
               <span class="username">Portal/Home</span>
             </a>
           </li>

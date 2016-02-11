@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => '128.199.129.112',
 	'username' => 'root',
-	'password' => '',
-	'database' => 'mlm_portal',
+	'password' => 'jancuk123',
+	'database' => 'gotogether',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

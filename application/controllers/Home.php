@@ -10,14 +10,24 @@ class Home extends MY_Frontend {
 	}
 	public function index()
 	{
-		$results=$this->news_model->m_home_hot();
-    	$data['promo'] = $results['promo'];
-		$data['event'] = $results['event'];
+    	$data['promo'] = $this->news_model->m_home_hot_promo();
+		$data['event'] = $this->news_model->m_home_hot_event();
+		$data['news'] = $this->news_model->m_home_hot_news();
+		$data['product'] = $this->news_model->m_home_hot_product();
+		// echo "=================================";
+		// print_r($data['promo']);
+		// echo "=================================";
+		// echo "=================================";
+		// echo "=================================";
+		// echo "=================================";
+		// print_r($data['event']);
+		// echo "=================================";
+		// die();
 		$this->header();
 		$this->load->view('frontend_view/home',$data);
 		$this->footer();
 	}
-	public function tai()
+	public function json()
 	{
 		$results=$this->news_model->m_home_hot();
 		$data['promo'] = $results['promo'];
