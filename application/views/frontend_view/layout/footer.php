@@ -103,11 +103,9 @@ Footer Section
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/owl/owl.carousel.min.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/jquery.knob.js')?>"></script>
 
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>	
-<script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/gmaps.js')?>"></script>
-
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/waypoints.min.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/uikit/uikit.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/retina-1.1.0.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/showfoto.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/custom.js')?>"></script>
 </html>

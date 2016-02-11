@@ -34,26 +34,26 @@ class Login extends MY_Backend {
 				'sponsor_id' => $result->sponsor_id,
 				'upline_id' => $result->upline_id,
 				'photo' => $result->photo,
-				'no_hp' => $result->no_hp,
-				'name' => $result->name,
+				'handphone' => $result->handphone,
+				'username' => $result->username,
 				'plan' => $result->plan,
 				'downline_count' => $result->downline_count,
 				'mothers_name' => $result->mothers_name,
 				);
 			$data2=array(					
-				'status'=>$result->status,
+				'is_active'=>$result->status,
 				'position'=>$result->status,
 				'level'=>$result->level,
 				);
 
 			$this->session->set_userdata($data2);
-			if ($_SESSION['status']=='1') 
+			if ($_SESSION['is_active']=='1') 
 			{
 				$this->session->set_userdata('sess_login', $data);
 				redirect('home/index');
 
 			}
-			else if($_SESSION['status']=='0'){
+			else if($_SESSION['is_active']=='0'){
 
 				setcookie('remember_me_cookie','',time()-3600,'/');
 				$this->session->set_flashdata('flash_data', 'Your account not activated yet!');

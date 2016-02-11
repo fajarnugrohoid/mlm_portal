@@ -17,7 +17,7 @@
           </div>
           <div class="form-group">
             <label>Title</label>
-            <input type="text" name="title" id="title" class="form-control" value="<?php echo $val->title ?>" required>
+            <input type="text" name="title" id="title" class="form-control" value="<?php echo $val->title ?>" readonly>
           </div>
           <div class="form-group">
             <label>Description</label>

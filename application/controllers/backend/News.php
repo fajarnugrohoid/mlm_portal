@@ -147,20 +147,21 @@ class News extends MY_Backend {
         // echo "tidak sama";
         // die();
         $is_unique =  ',is_unique[mst_news.title]';
+        $this->form_validation->set_rules('title', 'Title'.$is_unique);
       } 
       else
       {
         // echo "sama";
         // die();
         $is_unique =  '';
+        $this->form_validation->set_rules('title', 'Title'.$is_unique);
       }
       // echo "is_unique=".$is_unique;
       // print_r("$this->form_validation->run()=".$$this->form_validation->run());
       // die();
-      $this->form_validation->set_rules('title', 'Title'.$is_unique);
       print_r($this->form_validation->run());
       // die();
-      if ($this->form_validation->run()==false)
+      if ($this->form_validation->run()==FALSE)
       {  
         $config = array(
           'allowed_types' => 'jpg|jpeg|gif|png',
