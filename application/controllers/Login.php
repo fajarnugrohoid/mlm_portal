@@ -50,7 +50,7 @@ class Login extends MY_Backend {
 			if ($_SESSION['status']=='1') 
 			{
 				$this->session->set_userdata('sess_login', $data);
-				redirect('home');
+				redirect('home/index');
 
 			}
 			else if($_SESSION['status']=='0'){

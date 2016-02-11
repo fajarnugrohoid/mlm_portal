@@ -7,13 +7,18 @@ class User_model extends CI_Model {
    }
    
 // login
-   function m_auth($email,$password)
+   function m_auth($username,$password)
    {
 
       $query = $this->db->get_where('mst_member', array(
-         'name' => $email,
+         'username' => $username,
          'password' => md5($password)
          ));
+      // echo $this->db->last_query();
+      // echo(md5($password));
+      // echo "<br>";
+      // echo($username);
+      // die();
       if($query->num_rows() == 1)
       {
          return $query->row();

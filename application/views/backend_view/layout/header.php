@@ -76,16 +76,7 @@
           <div class="pull-left info">
             <p><?php echo "Username : ".$this->session->userdata('name'); ?></p>
             <span>
-              <?php 
-              if($this->session->userdata('level')=="1")
-              {
-                echo "Level : Admin";
-              }
-              else if($this->session->userdata('level')=="2")
-              {
-                echo "Level : Admin Child";
-              }
-              ?>
+              <?php echo "Member ID : ".$this->session->userdata('member_id'); ?>
             </span>
           </div>
         </div>
