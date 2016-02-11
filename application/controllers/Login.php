@@ -49,7 +49,7 @@ class Login extends MY_Backend {
 			$this->session->set_userdata($data2);
 			if ($_SESSION['status']=='1') 
 			{
-				$this->session->set_userdata($data);
+				$this->session->set_userdata('sess_login', $data);
 				redirect('backend/dashboard/index');
 			}
 			else if($_SESSION['status']=='0'){

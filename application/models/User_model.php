@@ -35,7 +35,7 @@ class User_model extends CI_Model {
 
    }
    function get_data_by_id($member_id){
-
+      $this->db->flush_cache();
       $this->db->select('*');
       $this->db->from('mst_member');           
       $this->db->where('member_id', $member_id);
@@ -43,10 +43,26 @@ class User_model extends CI_Model {
    }
 
    function get_data_by_id_upline($id_anggota){
-
+      $this->db->flush_cache();
       $this->db->select('*');
       $this->db->from('mst_member');           
       $this->db->where('upline_id', $id_anggota);
       return $this->db->get();
    }
+
+   function get_data_member_id($id){
+      $this->db->flush_cache();
+      $this->db->select('*');
+      $this->db->from('mst_member');           
+      $this->db->where('id', $id);
+      return $this->db->get();
+   } 
+
+   function get_max_member_id(){
+      $query = $this->db->query('SELECT max(right(member_id,5)) AS maxid FROM mst_member');
+      $row = $query->row();
+      $max_id = $row->maxid;
+      return $max_id;
+   }
+
 }

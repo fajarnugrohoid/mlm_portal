@@ -6,6 +6,7 @@ Class Generate_network
 	{
 		$this->CI =& get_instance();
 		$this->CI->load->model('user_model'); 
+		$this->CI->load->model('referral_model'); 
 
 		@$kbase="8aHe3nUv9Wo4";
 	}
@@ -29,6 +30,24 @@ Class Generate_network
 	    	$res_network.= '</ul>'; 
 	    }
 	    return $res_network;
+	}
+
+	public function gen_sys_referral($userid){
+		$res=$this->CI->referral_model->get_sys_referral($userid);
+		$downline_selec = $res->row()->downline_selection;
+		
+		$arr_downline=explode(";",$downline_selec);
+		$i=0;
+		for($i=0;$i<count($arr_downline);$i++){
+			if ($arr_downline[$i]!=''){
+				$users[] = $arr_downline[$i];
+			}
+		}
+		$id = $users[array_rand($users)];
+		$arr_users_select=$this->CI->user_model->get_data_member_id($id);
+
+		$user_select=$arr_users_select->row()->member_id;
+		return $user_select;
 	}
 	
 }

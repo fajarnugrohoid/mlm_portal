@@ -22,10 +22,11 @@ class Register extends MY_Frontend {
 	{
 		parent::__construct();
 		$this->load->model('user_model');
+		$this->load->library('generate_network');
 		
 		
 	}
-	public function index()
+	public function signup()
 	{
 
 		$vals = array(
@@ -47,14 +48,19 @@ class Register extends MY_Frontend {
 
 		
 		$captcha = $this->input->post('captcha');
-		// echo "md5 captcha = ".$captcha;
-		// echo "<br>keycode = ".$this->session->userdata('keycode');
+		/*echo "md5 captcha = ".$captcha;
+		echo "<br>keycode = ".$this->session->userdata('keycode');
 		// die();
 		if($captcha==$this->session->userdata('keycode')){
 			$data['captcha']= $captcha;
 			$this->session->unset_userdata('keycode');
 		}else{
-			redirect('register?cap_error=1','refresh');
+			redirect('register/index/cap_error/1','refresh');
+		} */
+
+		$sess_upline_id = $this->session->userdata('sess_upline_id');
+		if ($sess_upline_id==''){
+			$sess_upline_id = $this->generate_network->gen_sys_referral('12');
 		}
 
 		$password = $this->input->post('password');
@@ -63,22 +69,25 @@ class Register extends MY_Frontend {
 		$data = array(
 			'name' => $this->input->post('username'),
 			'email' =>  $email,
+			'upline_id' => $sess_upline_id,
 			'password' => $password,
 			'status' => 1,
 			'level' => 1
 			);
-	
+
 		$this->form_validation->set_rules('email', 'Email','is_unique[mst_member.email]');
 		if ($this->form_validation->run() == true)
 		{  
 			$id = $this->user_model->m_add_account($data);
 			$this->session->set_flashdata('flash_data', 'Your Account Has Been Registered');
-			redirect(base_url().'register');
+			$this->session->unset_userdata('sess_upline_id');
+			redirect(base_url().'register/signup');
+
 		}
 		else
 		{
 			$this->session->set_flashdata('flash_data', 'Your Email Already Registered Try With Another Email');
-			redirect(base_url().'register');
+			redirect(base_url().'register/signup');
 		}
 	}
 
