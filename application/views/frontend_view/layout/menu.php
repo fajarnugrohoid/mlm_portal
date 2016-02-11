@@ -6,10 +6,10 @@
                 <div class="col-md-6 col-sm-6">
                     <div id="info">
                         <span>
-                            Phone: +1 123 456 789
+                            Phone: +62 812 9110 7430
                         </span>
                         <span>
-                            Email: Example@example.com
+                            Email: dhamar.labs@gmail.com
                         </span>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('register/index/')?>" style="color:gray;" title="Join">
+                            <a href="<?php echo base_url('register/signup/')?>" style="color:gray;" title="Join">
                                 Join
                             </a>
                         </li>
