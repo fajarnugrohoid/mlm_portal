@@ -62,4 +62,22 @@ class News_model extends CI_Model {
       $this->db->where('id', $id);
       $this->db->update('mst_news',$data);
    }
+
+   // FRONTS
+   function m_home_hot_promo()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where('category = "1" LIMIT 4');
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_home_hot_news()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where('category = "4" LIMIT 4');
+      $query = $this->db->get();
+      return $query->result();
+   }
 }
