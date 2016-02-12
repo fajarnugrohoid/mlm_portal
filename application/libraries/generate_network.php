@@ -35,15 +35,16 @@ Class Generate_network
 	public function gen_sys_referral($userid){
 		$res=$this->CI->referral_model->get_sys_referral($userid);
 		$downline_selec = $res->row()->downline_selection;
-		
 		$arr_downline=explode(";",$downline_selec);
 		$i=0;
 		for($i=0;$i<count($arr_downline);$i++){
 			if ($arr_downline[$i]!=''){
+				//echo 'test:'. $arr_downline[$i];
 				$users[] = $arr_downline[$i];
 			}
 		}
 		$id = $users[array_rand($users)];
+		//echo 'id:' . $id;
 		$arr_users_select=$this->CI->user_model->get_data_member_id($id);
 
 		$user_select=$arr_users_select->row()->member_id;

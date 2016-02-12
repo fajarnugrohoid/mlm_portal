@@ -42,8 +42,8 @@ class Profile extends MY_Frontend {
 		$data['bank']=$res_by_id->row()->bank;
 		$data['no_rek']=$res_by_id->row()->no_rek;
 		$data['tanggal']=$res_by_id->row()->date;
-		$data['kota']=$res_by_id->row()->city;
-		$data['no_hp']=$res_by_id->row()->no_hp;
+		$data['kota']=$res_by_id->row()->ktp_city;
+		$data['no_hp']=$res_by_id->row()->handphone;
 		$data['nama_ibu']=$res_by_id->row()->mothers_name;
 		$data['id_upline']=$res_by_id->row()->upline_id;
 		$data['id_sponsor']=$res_by_id->row()->sponsor_id;
@@ -54,7 +54,7 @@ class Profile extends MY_Frontend {
 		//==============
 
 
-
+/*
 		$data['login_id_anggota']=$this->session->userdata('id_anggota');
 		$login_results=$this->user_model->get_data_by_id($data['login_id_anggota']);
 		$data['login_id_anggota'] = $login_results->row()->member_id;
@@ -69,7 +69,7 @@ class Profile extends MY_Frontend {
 		$data['photo'] = $results->row()->photo;
 		//echo '<br/>';
 		//echo '<br/>';
-		$data['res_level2']=$this->user_model->get_data_by_id_upline($data['id_anggota']);
+		$data['res_level2']=$this->user_model->get_data_by_id_upline($data['id_anggota']); */
 		
 		
 		//exit;

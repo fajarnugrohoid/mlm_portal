@@ -63,7 +63,7 @@ class Register extends MY_Frontend {
 		$this->load->library('upload',$config);
 
 		print_r($this->input->post("userfile"));
-		die();
+		
 		$data = array(
 			
 			'sponsor_id' => 'MMS20141',
@@ -120,33 +120,33 @@ class Register extends MY_Frontend {
 
 			);
 
-		$this->form_validation->set_rules('email', 'Email','is_unique[mst_member.email]');
-		if ($this->form_validation->run() == true)
-		{  
-			if ($_FILES['userfile']['size'] > 0)
-			{	
-				$file = $this->upload->file_name;
-            	$data['photo']=$file;
-				$this->user_model->m_add_account($data);
-				$this->session->set_flashdata('flash_data', 'Your Account Has Been Registered');
-				$this->session->unset_userdata('sess_upline_id');
-				redirect(base_url().'register/signup');
-			}
-			else
-			{
-
-				$this->user_model->m_add_account($data);
-          		$this->session->set_flashdata('flash_data', 'Data Has Been Saved Without Photo Profile');
-          		redirect(base_url().'register/signup');
-			}
-
-		}
-		else
-		{
-			$this->session->set_flashdata('flash_data', 'Your Email Already Registered Try With Another Email');
-			redirect(base_url().'register/signup');
-		}
+$this->form_validation->set_rules('email', 'Email','is_unique[mst_member.email]');
+if ($this->form_validation->run() == true)
+{  
+	if ($_FILES['userfile']['size'] > 0)
+	{	
+		$file = $this->upload->file_name;
+		$data['photo']=$file;
+		$this->user_model->m_add_account($data);
+		$this->session->set_flashdata('flash_data', 'Your Account Has Been Registered');
+		$this->session->unset_userdata('sess_upline_id');
+		redirect(base_url().'register/signup');
 	}
+	else
+	{
+
+		$this->user_model->m_add_account($data);
+		$this->session->set_flashdata('flash_data', 'Data Has Been Saved Without Photo Profile');
+		redirect(base_url().'register/signup');
+	}
+
+}
+else
+{
+	$this->session->set_flashdata('flash_data', 'Your Email Already Registered Try With Another Email');
+	redirect(base_url().'register/signup');
+}
+}
 
 public function verification($key)
 {
