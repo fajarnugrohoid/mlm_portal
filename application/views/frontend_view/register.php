@@ -7,7 +7,7 @@
   </div>
   <div class="col-md-12 login-box container-fluid" style="margin-bottom:80px;">
     <legend>Sing Up</legend>
-    <?php echo form_open('register/submit'); ?>
+    <?php echo form_open_multipart('register/submit'); ?>
     <div class="col-md-7">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -16,7 +16,7 @@
         <div class="panel-body">
           <div class="form-group">
             <label>Email Sponsor</label>
-            <input type="text" name="email_sponsor" class="form-control" placeholder="admin" required>
+            <input type="email" name="email_sponsor" class="form-control" placeholder="admin@mail.com" required>
           </div>
           <div class="form-group">
             <label>Username Sponsor</label>
@@ -90,7 +90,7 @@
           </div>
           <div class="form-group">
             <label>Nama Akun Bank</label>
-            <input type="text" name="bank_an" class="form-control" placeholder="syariah" required>
+            <input type="text" name="bank_an" class="form-control" placeholder="Admin" required>
           </div>
           <div class="form-group">
             <label>Nomor Rekening</label>
@@ -98,11 +98,11 @@
           </div>
           <div class="form-group">
             <label>Cabang Bank</label>
-            <input type="text" name="bank_branch" class="form-control" placeholder="********" required>
+            <input type="text" name="bank_branch" class="form-control" placeholder="Sukabumi" required>
           </div>
           <div class="form-group">
             <label>Kota Bank</label>
-            <input type="text" name="bank_city" class="form-control" placeholder="********" required>
+            <input type="text" name="bank_city" class="form-control" placeholder="Bandung" required>
           </div>
           <div class="form-group">
             <label>Rencana</label>
@@ -117,15 +117,18 @@
           </div>
           <div class="form-group">
             <label>Nilai</label>
-            <input type="text" name="value" class="form-control" placeholder="********" required>
+            <input type="text" name="value" class="form-control" placeholder="1000.000.000" required>
           </div>
           <div class="form-group">
-            <label>Status Barang</label>
-            <input type="text" name="status_barang" class="form-control" placeholder="********" required>
+            <label>Rencana</label>
+            <select class="form-control" name="status_barang">
+              <option value="Kirim">Kirim</option>
+              <option value="Ambil">Ambil</option>
+            </select>
           </div>
           <div class="form-group">
             <label>Cabang Bank</label>
-            <input type="text" name="bank_branch" class="form-control" placeholder="********" required>
+            <input type="text" name="bank_branch" class="form-control" placeholder="Sukabumi" required>
           </div>
           <div class="form-group">
             <label>Status</label>
@@ -157,39 +160,39 @@
           <div class="panel-body">
             <div class="form-group">
               <label>Alamat KTP</label>
-              <input type="text" name="ktp_address" class="form-control" placeholder="username" required>
+              <input type="text" name="ktp_address" class="form-control" placeholder="kp.xxx rt000/000" required>
             </div>
             <div class="form-group">
               <label>Daerah</label>
-              <input type="password" name="ktp_district" class="form-control" placeholder="********" required>
+              <input type="text" name="ktp_district" class="form-control" placeholder="sukabumi" required>
             </div>
             <div class="form-group">
               <label>Kecamatan</label>
-              <input type="email" name="ktp_subdistrict" class="form-control" placeholder="admin" required>
+              <input type="text" name="ktp_subdistrict" class="form-control" placeholder="limbagan" required>
             </div>
             <div class="form-group">
               <label>Kabupaten/Kota Madya</label>
-              <input type="email" name="ktp_city" class="form-control" placeholder="admin" required>
+              <input type="text" name="ktp_city" class="form-control" placeholder="sukabumi" required>
             </div>
             <div class="form-group">
               <label>Propinsi</label>
-              <input type="email" name="ktp_province" class="form-control" placeholder="admin" required>
+              <input type="text" name="ktp_province" class="form-control" placeholder="jawa barat" required>
             </div>
             <div class="form-group">
               <label>Alamat Pengiriman</label>
-              <input type="email" name="shipment_address" class="form-control" placeholder="admin" required>
+              <input type="text" name="shipment_address" class="form-control" placeholder="kp.xxxxx rt 000/000" required>
             </div>
             <div class="form-group">
               <label>Daerah pengiriman</label>
-              <input type="email" name="shipment_district" class="form-control" placeholder="admin" required>
+              <input type="text" name="shipment_district" class="form-control" placeholder="sukabumi" required>
             </div>
             <div class="form-group">
               <label>Kecamatan Pengiriman</label>
-              <input type="email" name="shipment_city" class="form-control" placeholder="admin" required>
+              <input type="text" name="shipment_city" class="form-control" placeholder="sukaraja" required>
             </div>
             <div class="form-group">
               <label>Propinsi Pengiriman</label>
-              <input type="email" name="shipment_province" class="form-control" placeholder="admin" required>
+              <input type="text" name="shipment_province" class="form-control" placeholder="Jawabarat" required>
             </div>
             <div class="form-group panel-captcha">
               <div class="image" align="center" style="margin-bottom:25px;margin-top:25px;"><?php echo $captcha_img;?></div>

@@ -47,8 +47,7 @@ class Register extends MY_Frontend {
 		$sess_upline_id = $this->session->userdata('sess_upline_id');
 		if ($sess_upline_id=='')
 		{
-			// $sess_upline_id = $this->generate_network->gen_sys_referral('12');
-			$sess_upline_id = "gagal";
+			$sess_upline_id = $this->generate_network->gen_sys_referral('12');
 		}
 
 		$password = $this->input->post('password');
