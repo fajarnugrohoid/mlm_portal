@@ -14,15 +14,6 @@ class Home extends MY_Frontend {
 		$data['event'] = $this->news_model->m_home_hot_event();
 		$data['news'] = $this->news_model->m_home_hot_news();
 		$data['product'] = $this->news_model->m_home_hot_product();
-		// echo "=================================";
-		// print_r($data['promo']);
-		// echo "=================================";
-		// echo "=================================";
-		// echo "=================================";
-		// echo "=================================";
-		// print_r($data['event']);
-		// echo "=================================";
-		// die();
 		$this->header();
 		$this->load->view('frontend_view/home',$data);
 		$this->footer();
@@ -45,6 +36,34 @@ class Home extends MY_Frontend {
 	{
 		$this->header();
 		$this->load->view("frontend_view/forgot_password");
+		$this->footer();
+		
+	}
+	public function all_event()
+	{
+		$this->header();
+		$this->load->view("frontend_view/all_event");
+		$this->footer();
+		
+	}
+	public function all_news()
+	{
+		$this->header();
+		$this->load->view("frontend_view/all_news");
+		$this->footer();
+		
+	}
+	public function all_product()
+	{
+		$this->header();
+		$this->load->view("frontend_view/all_product");
+		$this->footer();
+		
+	}
+	public function all_promo()
+	{
+		$this->header();
+		$this->load->view("frontend_view/all_promo");
 		$this->footer();
 		
 	}

@@ -47,7 +47,7 @@
                             <div class="feature-box-containt">
                                 <?php echo substr($row_hot_promo->title,0,12) ?>        
                                 <br>
-                                <a title="Read More">Read More</a> / <a title="Read More">See All News</a>
+                                <a title="Read More">Read More</a> / <a href="<?php echo base_url('home/all_product/')?>" title="Read More">See All News</a>
                             </div>
                             <div class="feature-box-subtitle">
                                 <?php echo substr($row_hot_promo->description,0,12) ?>
