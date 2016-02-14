@@ -100,8 +100,8 @@ class User_model extends CI_Model {
       }  
       $this->db->where('id', $id);
       $this->db->update('mst_member',$data);
-      echo $this->db->last_query();
-      die();
+      // echo $this->db->last_query();
+      // die();
 
    }
    function m_edit_user_active($data,$id)

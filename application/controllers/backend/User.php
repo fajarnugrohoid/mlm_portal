@@ -115,7 +115,7 @@ class User extends MY_Backend {
             'allowed_types' => 'jpg|jpeg|gif|png',
             'max_size' => 2000,
             'file_name' => url_title($this->input->post('userfile')),
-            'upload_path' => './assets/images/news/'
+            'upload_path' => './assets/images/member/'
             );
          $this->load->library('upload',$config);
 
@@ -185,7 +185,7 @@ class User extends MY_Backend {
             }
             else
             {
-               $data['photo']="";
+               
                $this->session->set_flashdata('flash_data', $this->upload->display_errors());
                redirect($this->agent->referrer());
             }
@@ -193,6 +193,7 @@ class User extends MY_Backend {
          else
          {
 
+            $data['photo']= "";
             $this->user_model->m_edit_user_data($data,$id);
             $this->session->set_flashdata('flash_data', 'Data Has Been Saved Without Photo Profile');
             redirect($this->agent->referrer());
