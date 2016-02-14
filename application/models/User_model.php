@@ -90,16 +90,19 @@ class User_model extends CI_Model {
    {
       $this->db->where('id', $id);
       $query = $this->db->get('mst_member');
-      $count = $this->db->count_all_results();
       
+      
+
       if ($this->upload->file_name == "") 
       {
          foreach ($query->result() as $row){}
             unlink("./assets/images/member/".$row->photo);
       }  
-
       $this->db->where('id', $id);
       $this->db->update('mst_member',$data);
+      echo $this->db->last_query();
+      die();
+
    }
    function m_edit_user_active($data,$id)
    {
@@ -119,7 +122,7 @@ class User_model extends CI_Model {
       $query = $this->db->get('mst_member');
       foreach ($query->result() as $row){
          if ($row->photo !=null | $row->photo !="") {
-            unlink("./assets/images/news/".$row->photo);
+            unlink("./assets/images/member/".$row->photo);
          }
       }
       if($this->db->delete('mst_member',$data))

@@ -39,7 +39,7 @@ if(isset($_COOKIE['remember_me_cookie']))
                 </div>
                 <?php echo form_close(); ?>
                 <!-- <span class='text-center'><a href="<?php echo base_url('home/forgot_password/')?>" class="text-sm">Forgot Password?</a></span> -->
-                <span class='text-center text-sm'>Make Sure You Have Been Registered</span>
+                <span class='text-center text-sm'>Make Sure Your Caps Lock is Off </span>
                 <div class="form-group">
                     <p class="text-center m-t-xs text-sm">Do not have an account? <span class="label_login_fb">or login with facebook</span> &nbsp;<span id="fb-root"></span><span class="fb-login-button"></span></p> 
                     <a href="<?php echo base_url('register/signup/')?>" class="btn btn-default btn-block m-t-md">Create an account</a>

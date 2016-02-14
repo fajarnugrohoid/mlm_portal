@@ -1,13 +1,21 @@
 <div class="col-sm-12" id="news_add">
+  <ol class="breadcrumb">
+      <li><a href="<?php echo base_url('backend/dashboard/index/')?>">Dashboard</a></li>
+      <li class="active">User</a></li>
+      <li class="active">Edit</li>
+      <li style="float:right;"><a href="<?php echo base_url('backend/user/index/')?>">List Data</a></li>
+   </ol>
   <div class="grid">
     <div class="panel panel-default">
       <div class="panel-heading black-chrome">Add Data</div>
       <div class="panel-body">
         <div align="center" class="col-md-12" style="margin-left:25px;">
-          <?php if(isset($_SESSION)) {
+          <?php if(isset($_SESSION)) 
+          {
             echo $this->session->flashdata('flash_data');
           } ?>
         </div>
+        <div class="col-md-12">
         <?php foreach ($data_edit as $val) {?>
         <?php echo form_open_multipart('backend/user/edit_user_data'); ?>
         <div class="panel panel-default">
@@ -125,10 +133,6 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Cabang Bank</label>
-              <input type="text" name="bank_branch" class="form-control" placeholder="Sukabumi" required>
-            </div>
-            <div class="form-group">
               <label>Status</label>
               <select name="status" class="form-control">
                 <option value="Menikah" <?php if($val->status == 'Menikah'){ echo 'selected'; } ?> >Menikah</option>
@@ -150,7 +154,7 @@
               <?php if ($val->photo ==""): ?>
                 <img style="width:150px;height:150px;"  class="show_foto" src= "<?php echo base_url().'assets/images/no_photo.png' ?>" id="div_image_edit">  
               <?php else: ?>
-                <img style="width:150px;height:150px;"  class="show_foto" src= "<?php echo base_url().'assets/images/news/'.$val->photo ?>" id="div_image_edit">
+                <img style="width:150px;height:150px;"  class="show_foto" src= "<?php echo base_url().'assets/images/member/'.$val->photo ?>" id="div_image_edit">
               <?php endif ?>
             </div>
           </div>
@@ -203,10 +207,11 @@
           </div>
         </div>
         <div align="center">
-          <button type="submit" name="register" class="btn btn-success">Save</button>
+          <button type="submit" name="save" class="btn btn-success">Save</button>
         </div>
         <?php echo form_close();?> 
         <?php } ?>
+        </div>
       </div>
     </div>
   </div>
