@@ -10,9 +10,9 @@
 <div class="col-sm-12">
    <ol class="breadcrumb">
       <li><a href="<?php echo base_url('backend/dashboard/index/')?>">Dashboard</a></li>
-      <li class="active">News</a></li>
+      <li class="active">User</a></li>
       <li class="active">List</li>
-      <li style="float:right;"><a href="<?php echo base_url('backend/news/insert/')?>">New Data</a></li>
+      <!-- <li style="float:right;"><a href="<?php echo base_url('backend/news/insert/')?>">New Data</a></li> -->
    </ol>
    <div class="grid">
       <div class="panel panel-default">
@@ -26,7 +26,7 @@
                         <th>Name</th>
                         <th>Level</th>
                         <th>Status</th>
-                        <th>Aksi</th>
+                        <th width="25%">Aksi</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -58,8 +58,7 @@
             "targets": 4,
             "render": function ( data, type, full, meta ) 
             {
-               return '<select id="change_status_select_box" onchange="change_status()" class="form-control"><option value="1">Approve</option><option value="0">Disapprove</option></select>';
-               // return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn btn-success">Edit</a>';
+               return '<a href="'+base_url+'backend/user/edit_user/'+full.id+'" class="btn form-control btn-success">Edit</a> &nbsp;<select id="change_status_select_box" onchange="change_status()" class="form-control btn"><option value="1">Approve</option><option value="0">Disapprove</option></select>';
             }
          }
          ],

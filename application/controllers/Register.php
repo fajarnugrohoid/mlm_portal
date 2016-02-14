@@ -58,7 +58,7 @@ class Register extends MY_Frontend {
 			'allowed_types' => 'jpg|jpeg|gif|png',
 			'max_size' => 2000,
 			'file_name' => url_title($this->input->post('file_upload')),
-			'upload_path' => './assets/images/news/'
+			'upload_path' => './assets/images/member/'
 			);
 		$this->load->library('upload',$config);
 
@@ -123,7 +123,9 @@ class Register extends MY_Frontend {
 			'time' =>  date('HH:mm:ss'),
 
 			);
-
+print_r($_FILES['userfile']['size']);
+echo $_FILES['userfile']['size'];
+die();
 $this->form_validation->set_rules('email', 'Email','is_unique[mst_member.email]');
 if ($this->form_validation->run() == true)
 {  

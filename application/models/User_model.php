@@ -66,5 +66,29 @@ class User_model extends CI_Model {
       $max_id = $row->maxid;
       return $max_id;
    }
+   function m_edit_user($data)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_member');
+      $this->db->where($data);
+      $query = $this->db->get();
+      return $query->result();
+
+   }
+   function m_edit_user_data($data,$id)
+   {
+      $this->db->where('id', $id);
+      $query = $this->db->get('mst_member');
+      $count = $this->db->count_all_results();
+      
+      if ($this->upload->file_name == "") 
+      {
+         foreach ($query->result() as $row){}
+            unlink("./assets/images/member/".$row->photo);
+      }  
+
+      $this->db->where('id', $id);
+      $this->db->update('mst_member',$data);
+   }
 
 }

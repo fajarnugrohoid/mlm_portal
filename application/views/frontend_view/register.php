@@ -20,7 +20,7 @@
           </div>
           <div class="form-group">
             <label>Username Sponsor</label>
-            <input type="password" name="sponsor_name" class="form-control" placeholder="admin" required>
+            <input type="text" name="sponsor_name" class="form-control" placeholder="admin" required>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
           </div>
           <div class="form-group">
             <label>Nama Ibu</label>
-            <input type="email" name="mothers_name" class="form-control" placeholder="admin@gmail.com" required>
+            <input type="text" name="mothers_name" class="form-control" placeholder="admin@gmail.com" required>
           </div>
           <div class="form-group">
             <label>Nationality</label>

@@ -54,16 +54,16 @@
         </ul>
       </div>
     </nav>
-  </header>
+  </header>  
   <div class="wrapper row-offcanvas row-offcanvas-left">
     <aside class="left-side sidebar-offcanvas">
       <section class="sidebar">
         <div class="user-panel">
-          <div class="pull-left image">
+          <div class="image" align="center">
             <?php 
             if ($this->session->userdata('image')=="") 
             {
-              $myimage='team/1-290x290.jpg';
+              $myimage='no_photo.png';
             }
             else
             {
@@ -73,10 +73,10 @@
             ?>
             <img src= "<?php echo base_url().'assets/images/'.$myimage ?>" class="img-circle" alt="User Image">
           </div>
-          <div class="pull-left info">
-            <p><?php echo "Username : ".$this->session->userdata('name'); ?></p>
+          <div align="center" class="info">
+            <p><?php echo "Username : ".$this->session->userdata('sess_login')['username']; ?></p>
             <span>
-              <?php echo "Member ID : ".$this->session->userdata('member_id'); ?>
+              <?php echo "Member ID : ".$this->session->userdata('sess_login')['member_id']; ?>
             </span>
           </div>
         </div>

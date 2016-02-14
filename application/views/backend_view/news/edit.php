@@ -1,7 +1,13 @@
 <div class="col-sm-12" id="news_add">
+   <ol class="breadcrumb">
+      <li><a href="<?php echo base_url('backend/dashboard/index/')?>">Dashboard</a></li>
+      <li class="active">News</a></li>
+      <li class="active">Edit</li>
+      <li style="float:right;"><a href="<?php echo base_url('backend/news/index/')?>">List Data</a></li>
+   </ol>
   <div class="grid">
     <div class="panel panel-default">
-      <div class="panel-heading black-chrome">Add Data</div>
+      <div class="panel-heading black-chrome">Edit Data</div>
       <div class="panel-body">
         <div align="center" class="col-md-12" style="margin-left:25px;">
           <?php if(isset($_SESSION)) {
