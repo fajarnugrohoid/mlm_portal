@@ -27,15 +27,15 @@
                             </a>
                         </li>
                         <li>
-                        <?php if (isset($_COOKIE['remember_me_cookie'])): ?>
-                            <a  style="color:gray;" href="<?php echo base_url('backend/dashboard')?>" title="Login" >
-                                Dashboard
-                            </a>
+                            <?php if (isset($_COOKIE['remember_me_cookie'])): ?>
+                                <a  style="color:gray;" href="<?php echo base_url('backend/dashboard')?>" title="Login" >
+                                    Dashboard
+                                </a>
                             <?php else: ?>
-                            <a  style="color:gray;" href="<?php echo base_url('home/login')?>" title="Login" >
-                                Login
-                            </a>
-                        <?php endif ?>
+                                <a  style="color:gray;" href="<?php echo base_url('home/login')?>" title="Login" >
+                                    Login
+                                </a>
+                            <?php endif ?>
                         </li>
                     </ul>
 
@@ -141,12 +141,18 @@
                                         Contact
                                     </a>
                                 </li>
+                                <?php
+                                $var_check_sess=$this->session->userdata('sess_login')['member_id'];
+                                if ($var_check_sess){
+                                    echo '<li>';
+                                    echo '<a href="' . site_url() . $var_check_sess .'" title="Profile">Profile</a>';
+                                    echo '</li>';
 
-                                <li>
-                                    <a href="<?php echo site_url() ?>profile/user" title="Profile">
-                                        Profile
-                                    </a>
-                                </li>
+                                    echo '<li>';
+                                    echo '<a href="' . site_url() . 'send/link" title="Link Referral">Link Referral</a>';
+                                    echo '</li>';
+                                }
+                                ?>
 
                             </ul>
                         </div>

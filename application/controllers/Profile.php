@@ -29,14 +29,13 @@ class Profile extends MY_Frontend {
 		$user_referral1 = $this->uri->segment(1);
 		$user_referral0 = $this->uri->segment(0);
 		$data['user_referral']  = $user_referral . '-' . $user_referral2 . '-' . $user_referral1 . '-' . $user_referral0;
-		echo 'name:' . $user_referral . '-' . $user_referral2 . '-' . $user_referral1 . '-'. $user_referral0;
-
-
-		//$id_anggota=$this->session->userdata('id_anggota');
+		
 		$id_anggota=$user_referral1;
 		$res_by_id=$this->user_model->get_data_by_id($id_anggota);
+		if (!$res_by_id->row()->member_id){
+			redirect('home/index');
+		}
 		$data['id_anggota']=$res_by_id->row()->member_id;
-		echo $data['id_anggota'] . '----';
 		$data['nama']=$res_by_id->row()->name;
 		$data['bank_an']=$res_by_id->row()->bank_an;
 		$data['bank']=$res_by_id->row()->bank;
@@ -49,30 +48,6 @@ class Profile extends MY_Frontend {
 		$data['id_sponsor']=$res_by_id->row()->sponsor_id;
 		$data['plan']=$res_by_id->row()->plan;
 		$data['nilai']=$res_by_id->row()->value;
-		
-
-		//==============
-
-
-/*
-		$data['login_id_anggota']=$this->session->userdata('id_anggota');
-		$login_results=$this->user_model->get_data_by_id($data['login_id_anggota']);
-		$data['login_id_anggota'] = $login_results->row()->member_id;
-		$data['login_id_upline'] = $login_results->row()->upline_id;
-		$data['login_nama'] = $login_results->row()->name;
-		$data['login_photo'] = $login_results->row()->photo;
-		
-		$results=$this->user_model->get_data_by_id($data['login_id_anggota']);
-		$data['id_anggota'] = $results->row()->member_id;
-		$data['id_upline'] = $results->row()->upline_id;
-		$data['nama'] = $results->row()->name;
-		$data['photo'] = $results->row()->photo;
-		//echo '<br/>';
-		//echo '<br/>';
-		$data['res_level2']=$this->user_model->get_data_by_id_upline($data['id_anggota']); */
-		
-		
-		//exit;
 
 		$res_network = '';
 		$res_level2=$this->user_model->get_data_by_id_upline($id_anggota);

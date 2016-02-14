@@ -102,8 +102,6 @@
                         ?>
                     </li>
                 </ul>
-                <br/><br/><br/><br/><br/><br/>
-
                 <div align="center"><div id="chart" class="orgChart"></div></div>
             </div>
 
