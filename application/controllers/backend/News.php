@@ -55,6 +55,8 @@ class News extends MY_Backend {
           'description' => $this->input->post('description'),
           'link' => $this->input->post('link'),
           'category' => $this->input->post('category'),
+          'author' => $this->session->userdata('sess_login')['username'],
+          'author_date' => date('Y-m-d')
           );
         if ($_FILES['userfile']['size'] > 0)
         {
@@ -164,6 +166,8 @@ class News extends MY_Backend {
         'description' => $this->input->post('description'),
         'link' => $this->input->post('link'),
         'category' => $this->input->post('category'),
+        'author' => $this->session->userdata('sess_login')['username'],
+        'author_date' => date('Y-m-d')
         );
       if ($_FILES['userfile']['size'] > 0)
       {

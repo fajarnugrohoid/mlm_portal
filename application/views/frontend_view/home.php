@@ -47,7 +47,7 @@
                             <div class="feature-box-containt">
                                 <?php echo substr($row_hot_promo->title,0,12) ?>        
                                 <br>
-                                <a title="Read More">Read More</a> / <a href="<?php echo base_url('home/all_product/')?>" title="Read More">See All News</a>
+                                <a title="Read More">Read More</a> / <a href="<?php echo base_url('home/all_promo/')?>" title="Read More">See All News</a>
                             </div>
                             <div class="feature-box-subtitle">
                                 <?php echo substr($row_hot_promo->description,0,12) ?>
@@ -114,6 +114,7 @@
                         </div>
                         <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
                         <p><?php echo substr($row_hot_news->description,0,200)."...." ?></p>
+                        <div><a title="Read More">Read More</a> / <a href="<?php echo base_url('home/all_news/')?>" title="Read More">See All News</a></div>
                     </div> 
                 </div>
             <?php endforeach ?>
@@ -158,7 +159,7 @@
                                         </a>
                                     </div>
                                     <small>
-                                        <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
+                                        <i class="glyphicon glyphicon-time"></i> <?php echo substr($row_hot_product->author_date,0,12) ?> </span>
                                         <br>
                                         <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : product </a></span>
                                     </small>
@@ -167,6 +168,7 @@
                         </div>
                         <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
                         <p><?php echo substr($row_hot_product->description,0,200)."...." ?></p>
+                        <div><a title="Read More">Read More</a> / <a href="<?php echo base_url('home/all_product/')?>" title="Read More">See All News</a></div>
                     </div> 
                 </div>
             <?php endforeach ?>
@@ -223,7 +225,7 @@
             </div>
         </div>
         <?php endforeach ?>
-    <div align="center" class="col-md-12 see_all_news"><a>See All News</a></div>
+    <div><a title="Read More">Read More</a> / <a href="<?php echo base_url('home/all_event/')?>" title="Read More">See All</a></div>
 </div>
 </section>
 

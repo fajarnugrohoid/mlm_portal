@@ -3,23 +3,23 @@
         <div class="col-md-12" style="padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
-                    THis What We Have Of Product
+                    THis What We Have Of Promo
                 </div>
                 <div class="main-title">
-                    All Product
+                    All Promo
                 </div>
             </div>
             <div class="row">
-                <?php foreach($news as $row_hot_news):?>
+                <?php foreach($list_data as $row):?>
                 <hr>
                 <div class="row"> 
                     <div class="col-xs-12 col-sm-3 col-md-3">
                         <a href="#">
                             <div class="feature-box-image">
-                                <?php if ($row_hot_news->image==""): ?>
+                                <?php if ($row->image==""): ?>
                                     <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
                                 <?php else: ?>
-                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_news->image ?>"/>
+                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row->image ?>"/>
                                 <?php endif ?>
                             </div>
                         </a>
@@ -35,11 +35,11 @@
                                 <div class="row-content">
                                     <div class="list-group-item-heading">
                                         <a href="#" title="sintret">
-                                            <small><?php echo substr($row_hot_news->title,0,12) ?></small>
+                                            <small><?php echo substr($row->title,0,12) ?></small>
                                         </a>
                                     </div>
                                     <small>
-                                        <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
+                                        <i class="glyphicon glyphicon-time"></i> <?php echo substr($row->author_date,0,12) ?> </span>
                                         <br>
                                         <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : news </a></span>
                                     </small>
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
-                        <p><?php echo substr($row_hot_news->description,0,200)."...." ?></p>
+                        <p><?php echo substr($row->description,0,200)."...." ?></p>
                     </div> 
                 </div>
             <?php endforeach ?>

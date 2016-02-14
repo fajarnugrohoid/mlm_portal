@@ -111,4 +111,36 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
    }
+   function m_all_promo()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","1");
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_all_event()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","2");
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_all_news()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","4");
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_all_product()
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","3");
+      $query = $this->db->get();
+      return $query->result();
+   }
 }

@@ -41,29 +41,33 @@ class Home extends MY_Frontend {
 	}
 	public function all_event()
 	{
+		$data['list_data'] = $this->news_model->m_all_event();
 		$this->header();
-		$this->load->view("frontend_view/all_event");
+		$this->load->view("frontend_view/all_event",$data);
 		$this->footer();
 		
 	}
 	public function all_news()
 	{
+		$data['list_data'] = $this->news_model->m_all_news();
 		$this->header();
-		$this->load->view("frontend_view/all_news");
+		$this->load->view("frontend_view/all_news",$data);
 		$this->footer();
 		
 	}
 	public function all_product()
 	{
+		$data['list_data'] = $this->news_model->m_all_product();
 		$this->header();
-		$this->load->view("frontend_view/all_product");
+		$this->load->view("frontend_view/all_product",$data);
 		$this->footer();
 		
 	}
 	public function all_promo()
 	{
+		$data['list_data'] = $this->news_model->m_all_promo();
 		$this->header();
-		$this->load->view("frontend_view/all_promo");
+		$this->load->view("frontend_view/all_promo",$data);
 		$this->footer();
 		
 	}
