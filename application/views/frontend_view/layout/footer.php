@@ -108,4 +108,6 @@ Footer Section
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/plugins/retina-1.1.0.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/showfoto.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/frontend/custom.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/frontend/home.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/showfoto.js')?>"></script>
 </html>

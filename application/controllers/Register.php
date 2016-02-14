@@ -97,10 +97,10 @@ class Register extends MY_Frontend {
 			'no_rek' =>  $this->input->post('no_rek'),
 			'bank_branch' =>  $this->input->post('bank_branch'),
 			'bank_city' =>  $this->input->post('bank_city'),
-			'plan' =>  $this->input->post('plan'),
+			'plan' =>  'A',
 			'level' => 1,
 			'value' =>  $this->input->post('value'),
-			'mothers_name' =>  '',
+			'mothers_name' =>  $this->input->post('mothers_name'),
 			'status_barang' =>  $this->input->post('status_barang'),
 			'is_active' => 0,
 			'position' => '',
@@ -116,7 +116,11 @@ class Register extends MY_Frontend {
 			'shipment_districts' =>  $this->input->post('shipment_district'),
 			'shipment_subdistricts' =>  $this->input->post('shipment_subdistrict'),
 			'shipment_city' =>  $this->input->post('shipment_city'),
-			'shipment_province' =>  $this->input->post('shipment_province')
+			'shipment_province' =>  $this->input->post('shipment_province'),
+			
+
+			'date' =>  date('Y-m-d'),
+			'time' =>  date('HH:mm:ss'),
 
 			);
 

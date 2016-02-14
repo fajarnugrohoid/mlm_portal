@@ -15,14 +15,15 @@ class Dashboard extends MY_Backend {
   public function index()
   {
     $this->header();
-    if ($_SESSION['level']=='1')
-    {
-      $this->load->view('backend_view/dashboard/dashboard');
-    }
-    else if ($_SESSION['level']=='2')
-    {
-      $this->load->view('backend_view/dashboard/dashboard_user');
-    }
+    $this->load->view('backend_view/dashboard/dashboard');
+    // if ($_SESSION['level']=='1')
+    // {
+    //   $this->load->view('backend_view/dashboard/dashboard');
+    // }
+    // else if ($_SESSION['level']=='2')
+    // {
+    //   $this->load->view('backend_view/dashboard/dashboard_user');
+    // }
     $this->footer();
   }
 }

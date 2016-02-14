@@ -25,8 +25,11 @@ class News_model extends CI_Model {
       $query=$this->db->where('id', $id);
       $query = $this->db->get('mst_news');
       $count = $this->db->count_all_results();
-      foreach ($query->result() as $row){}
-      unlink("./assets/images/news/".$row->image);
+      foreach ($query->result() as $row){
+         if ($row->image !=null | $row->image !="") {
+            unlink("./assets/images/news/".$row->image);
+         }
+      }
       if($this->db->delete('mst_news',$data))
       {
          return 1;

@@ -16,11 +16,11 @@
         <div class="panel-body">
           <div class="form-group">
             <label>Email Sponsor</label>
-            <input type="email" name="email_sponsor" class="form-control" placeholder="admin@mail.com" required>
+            <input type="email" name="sponsor_email" class="form-control" placeholder="admin@mail.com" required>
           </div>
           <div class="form-group">
             <label>Username Sponsor</label>
-            <input type="password" name="username_sponsor" class="form-control" placeholder="admin" required>
+            <input type="password" name="sponsor_name" class="form-control" placeholder="admin" required>
           </div>
         </div>
       </div>
@@ -69,8 +69,12 @@
             <input type="email" name="email" class="form-control" placeholder="admin@gmail.com" required>
           </div>
           <div class="form-group">
+            <label>Nama Ibu</label>
+            <input type="email" name="mothers_name" class="form-control" placeholder="admin@gmail.com" required>
+          </div>
+          <div class="form-group">
             <label>Nationality</label>
-            <input type="text" name="phone" class="form-control" placeholder="Indonesia" required>
+            <input type="text" name="nationality" class="form-control" placeholder="Indonesia" required>
           </div>
           <div class="form-group">
             <label>No KTP</label>
@@ -94,7 +98,7 @@
           </div>
           <div class="form-group">
             <label>Nomor Rekening</label>
-            <input type="text" name="phone" class="form-control" placeholder="123456789" required>
+            <input type="text" name="no_rek" class="form-control" placeholder="123456789" required>
           </div>
           <div class="form-group">
             <label>Cabang Bank</label>
@@ -103,17 +107,6 @@
           <div class="form-group">
             <label>Kota Bank</label>
             <input type="text" name="bank_city" class="form-control" placeholder="Bandung" required>
-          </div>
-          <div class="form-group">
-            <label>Rencana</label>
-            <select class="form-control" name="plan">
-              <option value="">----Pilih Data-----</option>
-              <option value="A">L</option>
-              <option value="B">P</option>
-              <option value="C">P</option>
-              <option value="D">P</option>
-              <option value="E">P</option>
-            </select>
           </div>
           <div class="form-group">
             <label>Nilai</label>
@@ -188,7 +181,11 @@
             </div>
             <div class="form-group">
               <label>Kecamatan Pengiriman</label>
-              <input type="text" name="shipment_city" class="form-control" placeholder="sukaraja" required>
+              <input type="text" name="shipment_subdistricts" class="form-control" placeholder="sukaraja" required>
+            </div>
+            <div class="form-group">
+              <label>Kabupaten/Kota Madya Pengiriman</label>
+              <input type="text" name="shipment_city" class="form-control" placeholder="sukabumi" required>
             </div>
             <div class="form-group">
               <label>Propinsi Pengiriman</label>
@@ -231,8 +228,8 @@
         <button type="submit" name="register" class="btn btn-success">Sign Up</button>
       </div>
     </div> 
+    <?php echo form_close();?> 
   </div>
-  <?php echo form_close();?> 
 </div>
 <script type="text/javascript">
   $(document).ready(function(){

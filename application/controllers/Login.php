@@ -13,7 +13,6 @@ class Login extends MY_Backend {
 		$username=$this->input->post('username');
 		$password=$this->input->post('password');
 		$result = $this->user_model->m_auth($username,$password);
-
 		if($result) {
 
 			$remember_me=$this->input->post('remember_me_checkbox');
@@ -41,12 +40,13 @@ class Login extends MY_Backend {
 				'mothers_name' => $result->mothers_name,
 				);
 			$data2=array(					
-				'is_active'=>$result->status,
+				'is_active'=>$result->is_active,
 				'position'=>$result->status,
 				'level'=>$result->level,
 				);
 
 			$this->session->set_userdata($data2);
+
 			if ($_SESSION['is_active']=='1') 
 			{
 				$this->session->set_userdata('sess_login', $data);
@@ -54,7 +54,6 @@ class Login extends MY_Backend {
 
 			}
 			else if($_SESSION['is_active']=='0'){
-
 				setcookie('remember_me_cookie','',time()-3600,'/');
 				$this->session->set_flashdata('flash_data', 'Your account not activated yet!');
 				redirect('home/login');
@@ -67,7 +66,7 @@ class Login extends MY_Backend {
 		}				
 	}
 	public function logout() {
-		$data =array('id_user', 'email','active','level');
+		$data =array('id', 'username','is_active','level');
 		$this->session->unset_userdata($data);
 		setcookie('remember_me_cookie','',time()-3600,'/');
 		session_destroy();

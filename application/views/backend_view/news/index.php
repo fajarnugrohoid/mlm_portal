@@ -43,7 +43,6 @@
    $(document).ready(function()
    {
       load_data_news();
-      delete_news();
 
    });
 
@@ -66,7 +65,6 @@
             "targets": 2,
             "render": function ( data, type, full, meta ) 
             {
-               console.log(full);
                var myDesc = full.description
                var desc = myDesc.substring(1, 50);
                return desc+'....';
@@ -80,7 +78,7 @@
             "type": "GET",
             "dataSrc" : function(param_data)
             {
-               console.log(param_data);
+               // console.log(param_data);
                return param_data.data;
             }
          },
@@ -108,6 +106,7 @@
          dataType : "json",
          "url": base_url+'backend/news/delete_news_data/'+param,
          success:function(success){
+            $(window).scrollTop(0);
             console.log(success);
             show_alert(success);
             table_news.ajax.reload();

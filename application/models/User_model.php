@@ -15,9 +15,6 @@ class User_model extends CI_Model {
          'password' => md5($password)
          ));
       // echo $this->db->last_query();
-      // echo(md5($password));
-      // echo "<br>";
-      // echo($username);
       // die();
       if($query->num_rows() == 1)
       {
