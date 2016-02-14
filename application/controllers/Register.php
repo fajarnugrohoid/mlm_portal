@@ -39,7 +39,7 @@ class Register extends MY_Frontend {
 		}
 		else
 		{
-			redirect('register/index/cap_error/1','refresh');
+			redirect('register/signup/cap_error/1','refresh');
 		} 
 
 		$sess_upline_id = $this->session->userdata('sess_upline_id');
