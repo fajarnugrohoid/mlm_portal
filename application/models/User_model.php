@@ -26,6 +26,17 @@ class User_model extends CI_Model {
    function m_add_account($data)
    {
       $this->db->insert('mst_member',$data);
+      echo $this->db->last_query();
+      $last_id=$this->db->insert_id();
+      print_r($last_id);
+      $this->db->where('id', $last_id);
+
+      $year =date("Y");
+      echo $year;
+
+      $new_data = array('member_id' => 'MMS'.$year.$last_id, 'sponsor_id' => 'MMS'.$year.$last_id);
+      $this->db->update('mst_member',$new_data);
+      // die();
    }
 // user
    function m_list_user()
@@ -90,5 +101,31 @@ class User_model extends CI_Model {
       $this->db->where('id', $id);
       $this->db->update('mst_member',$data);
    }
-
+   function m_edit_user_active($data,$id)
+   {
+      $this->db->where('id', $id);
+      if ($this->db->update('mst_member',$data)) 
+      {
+         return 1;
+      }
+      else
+      {
+         return 0;
+      }
+   }
+   function m_delete_user_data($data,$id)
+   {
+      $query=$this->db->where('id', $id);
+      $query = $this->db->get('mst_member');
+      foreach ($query->result() as $row){
+         if ($row->photo !=null | $row->photo !="") {
+            unlink("./assets/images/news/".$row->photo);
+         }
+      }
+      if($this->db->delete('mst_member',$data))
+      {
+         return 1;
+      }
+      
+   }
 }

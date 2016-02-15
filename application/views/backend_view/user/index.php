@@ -12,7 +12,6 @@
       <li><a href="<?php echo base_url('backend/dashboard/index/')?>">Dashboard</a></li>
       <li class="active">User</a></li>
       <li class="active">List</li>
-      <!-- <li style="float:right;"><a href="<?php echo base_url('backend/news/insert/')?>">New Data</a></li> -->
    </ol>
    <div class="grid">
       <div class="panel panel-default">
@@ -58,7 +57,28 @@
             "targets": 4,
             "render": function ( data, type, full, meta ) 
             {
-               return '<a href="'+base_url+'backend/user/edit_user/'+full.id+'" class="btn form-control btn-success">Edit</a> &nbsp;<select id="change_status_select_box" onchange="change_status()" class="form-control btn"><option value="1">Approve</option><option value="0">Disapprove</option></select>';
+               if (full.is_active == 1) 
+               {
+                  return '<a class="btn btn-danger" oncLick="delete_user('+full.id+')">Delete</a><a href="'+base_url+'backend/user/edit_user/'+full.id+'" class="btn form-control btn-success">Edit</a><a oncLick="change_status('+full.id+','+0+')" class="btn form-control btn-danger"> Set In Active</a>';
+               }
+               else
+               {
+                  return '<a class="btn btn-danger" oncLick="delete_user('+full.id+')">Delete</a><a href="'+base_url+'backend/user/edit_user/'+full.id+'" class="btn form-control btn-success">Edit</a><a oncLick="change_status('+full.id+','+1+')" class="btn form-control btn-success">Set Active</a>';                     
+               }              
+            }
+         },
+         {
+            "targets": 3,
+            "render": function ( data, type, full, meta ) 
+            {
+               if (full.is_active == 1) 
+               {
+                  return 'Active';
+               }
+               else
+               {
+                  return 'In Active';                     
+               }              
             }
          }
          ],
@@ -79,29 +99,47 @@
          { "data": "id" },
          { "data": "name" },
          { "data": "level" },
-         { "data": "status" },
+         { "data": "is_active" },
          { "data": "email" },
          ]
 
       });
-      table_user.on( 'order.dt search.dt', function () {
-         table_user.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-            cell.innerHTML = i+1;
-         });
-      }).draw();
-   }
+table_user.on( 'order.dt search.dt', function () {
+   table_user.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+      cell.innerHTML = i+1;
+   });
+}).draw();
+}
 
-function change_status()
+function change_status(param,param2)
 {
    $.ajax({
       type:"post",
       dataType: 'json',
+      data : {id : param , is_active : param2},
       "url": base_url+'backend/user/change_status',
       datatype:'application/json',
       success:function(success){
-         alert(success.message);
+         $(window).scrollTop(0);
+         console.log(success);
+         show_alert(success);
+         table_user.ajax.reload();
       }
-    });
+   });
 }
-   
+function delete_user(param)
+{
+   $.ajax({
+      type:"GET",
+      dataType : "json",
+      "url": base_url+'backend/user/delete_user_data/'+param,
+      success:function(success){
+         $(window).scrollTop(0);
+         console.log(success);
+         show_alert(success);
+         table_user.ajax.reload();
+      }
+   });
+}
+
 </script>

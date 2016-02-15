@@ -33,13 +33,6 @@ class User extends MY_Backend {
     echo json_encode( $data );
 
   }
-  public function change_status()
-  {
-
-    $out = array('isSuccess' => 1,'message' => 'On Progress' );
-    echo json_encode( $out );
-
-  }
   function edit_user($id)
   {
     $data=array(
@@ -124,4 +117,58 @@ class User extends MY_Backend {
     redirect($this->agent->referrer());
   }
 }
+function change_status()
+    {      
+      $id=$this->input->post('id');
+      $data=array(
+        'id' => $id,
+        'is_active' => $this->input->post('is_active'),
+        );
+
+      $param=$this->user_model->m_edit_user_active($data,$id); 
+      if($param == 1)
+      {
+        $out= array(
+          'isSuccess' => 1,
+          'message' => "Success Change State Active"
+          );
+        echo json_encode( $out );
+      }
+      else
+      {
+        $out= array(
+          'isSuccess' => 0,
+          'message' => "Failed Change State Active"
+          );
+        echo json_encode( $out );
+      }
+
+
+    }
+function delete_user_data($id)
+    {      
+      $data=array(
+        'id' => $id
+        );
+
+
+      $param=$this->user_model->m_delete_user_data($data,$id);
+      if($param == 1)
+      {
+        $out= array(
+          'isSuccess' => 1,
+          'message' => "Success Delete Data"
+          );
+        echo json_encode( $out );
+      }
+      else
+      {
+        $out= array(
+          'isSuccess' => 0,
+          'message' => "Failed Delete Data"
+          );
+        echo json_encode( $out );
+      }
+
+    }
 }
