@@ -1,48 +1,36 @@
-<section>
-    <div class="col-md-3">
-
-        <div class="panel panel-default">
-          <!-- Default panel contents -->
-          <div class="panel-heading">
-            List Menu
-            <span class="pull-right"><i class="glyphicon glyphicon-chevron-right"></i></span>
-        </div>
-        <!-- List group -->
-        <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-    </div>
-</div>
-<div class="col-md-9" id="products-section" style="margin-bottom:0px !important;">
-    <div class="col-md-4">
-        <div class="row">
-            <div class="col-sm-12"> 
-                <a href="#" class="ribbon-container"> 
-                    <img src="http://placehold.it/300x150" alt=""> 
-                    <span class="ribbon"><i =class="fa fa-database fa-fw"> Title</i>
-                    </span></img>
-                </a>
+<section class="container">    
+    <?php foreach($list_data as $row):?>
+        <div class="col-md-12 row" id="products-section" style="margin-bottom:0px !important;color:black;padding-top : 50px;padding-bottom : 50px;padding-left : 0px;padding-right : 0px;min-height:438px;">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-sm-12" align="right"> 
+                        <a href="#" class="ribbon-container"> 
+                            <?php if ($row->image ==""): ?>
+                                <img style="width:150px;height:150px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
+                            <?php else: ?>
+                                <img style="width:150px;height:150px;" src= "<?php echo base_url().'assets/images/news/'.$row->image ?>"/>
+                            <?php endif ?> 
+                            <span class="ribbon"><i =class="fa fa-database fa-fw"> <?php echo $row->title ?></i>
+                            </span></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8" style="margin-top:25px;margin-left:0px">
+            <h3><i><b><?php echo $row->title ?></b></i></h3>
+                <small>
+                    <i class="glyphicon glyphicon-time"></i> 11/11/1111</span>
+                    <br>
+                    <span class="explore"><i class="glyphicon glyphicon-th"></i>category : product</span>
+                </small>
+            </div>
+            <div class="col-md-12" style="padding-left:200px;padding-right:200px;margin-top:50px;">
+                <h3><i>Description : </i></h3>
+                <div><?php echo $row->description ?></div>
+                <div style="margin-bottom:20px;" align="right"><small>Author : <?php echo $row->author ?></small></div>
             </div>
         </div>
-    </div>
-    <div class="col-md-8" style="margin-top:25px;">
-        <h3><i><b>asvragegregsegstrsr</b></i></h3>
-        <small>
-            <i class="glyphicon glyphicon-time"></i> 11/11/1111</span>
-            <br>
-            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="<?php echo base_url('home/all_product/')?>">category : product </a></span>
-        </small>
-    </div>
-    <div class="col-md-12" style="margin-top:50px;">
-        <h3><i>Description : </i></h3>
-        <div>vewvzewveawwwwwwwwwwwwwwwwwwwwwwwww</div>
-        <div style="margin-bottom:20px;" align="right"><small>Author:admin</small></div>
-    </div>
-</div>
+    <?php endforeach ?>
 </section>
 <style type="text/css">
 

@@ -216,9 +216,30 @@ class Home extends MY_Frontend {
 	}
 	function detail_promo($id)
 	{
-		$data['list_data'] = $this->news_model->m_detail_promo($id);
 		$this->header();
-		$this->load->view("frontend_view/detail_page");
+		$data['list_data'] = $this->news_model->m_detail_promo($id);
+		$this->load->view("frontend_view/detail_page",$data);
+		$this->footer();
+	}
+	function detail_event($id)
+	{
+		$this->header();
+		$data['list_data'] = $this->news_model->m_detail_event($id);
+		$this->load->view("frontend_view/detail_page",$data);
+		$this->footer();
+	}
+	function detail_news($id)
+	{
+		$this->header();
+		$data['list_data'] = $this->news_model->m_detail_news($id);
+		$this->load->view("frontend_view/detail_page",$data);
+		$this->footer();
+	}
+	function detail_product($id)
+	{
+		$this->header();
+		$data['list_data'] = $this->news_model->m_detail_product($id);
+		$this->load->view("frontend_view/detail_page",$data);
 		$this->footer();
 	}
 }

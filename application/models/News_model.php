@@ -76,15 +76,6 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result_object();
    }
-   function m_detail_promo($id)
-   {
-      $this->db->select('*');    
-      $this->db->from('mst_news');
-      $this->db->where("category","1");
-      $this->db->where('id', $id);
-      $query = $this->db->get();
-      return $query->result();
-   }
    function m_home_hot_news()
    {
       $this->db->select('*');    
@@ -179,5 +170,42 @@ class News_model extends CI_Model {
       {
          return null;
       }
+   }
+
+   function m_detail_promo($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","1");
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_detail_event($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","2");
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_detail_news($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","4");
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_detail_product($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","3");
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
    }
 }
