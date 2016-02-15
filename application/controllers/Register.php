@@ -48,6 +48,7 @@ class Register extends MY_Frontend {
 		$cap = create_captcha($vals);
 		$this->session->set_userdata('keycode',$cap['word']);
 		$data['captcha_img'] = $cap['image'];
+		$captcha = $this->input->post('captcha');
 
 
 		$password = $this->input->post('password');
@@ -55,11 +56,9 @@ class Register extends MY_Frontend {
 		$email=$this->input->post('email');
 
 
-		$captcha = $this->input->post('captcha');
 		$data['sponsor_id']= 'MMS20141';
 		$data['sponsor_name']= $this->input->post('sponsor_name');
 		$data['sponsor_email']= $this->input->post('sponsor_email');
-
 		$data['member_id']= 'MMS20141';
 		$data['upline_id']= $sess_upline_id;
 		$data['username']= $this->input->post('username');
@@ -102,11 +101,6 @@ class Register extends MY_Frontend {
 		$data['date']= date('Y-m-d');
 		$data['time']= date('HH:mm:ss');
 		
-		// echo $captcha;
-		// echo "string";
-		// echo $this->session->userdata('keycode');
-		// die();
-
 		if($captcha==$this->session->userdata('keycode'))
 		{
 			$data['captcha']= $captcha;
@@ -119,8 +113,6 @@ class Register extends MY_Frontend {
 				'upload_path' => 'assets/images/member/'
 				);
 			$this->load->library('upload',$config);
-
-
 
 			$this->form_validation->set_rules('email', 'Email','is_unique[mst_member.email]');
 			if ($this->form_validation->run() == true)
@@ -136,13 +128,11 @@ class Register extends MY_Frontend {
 						$this->user_model->m_add_account($data);
 						$this->session->set_flashdata('flash_data', 'Your Account Has Been Registered');
 						$this->session->unset_userdata('sess_upline_id');
-					//redirect(base_url().'register/signup');
 						$this->load->view("frontend_view/register",$data);
 					}
 					else
 					{
 						$this->session->set_flashdata('flash_data', $this->upload->display_errors());
-					//redirect(base_url().'register/signup');
 						$this->load->view("frontend_view/register",$data);
 					}
 				}
@@ -151,7 +141,6 @@ class Register extends MY_Frontend {
 
 					$this->user_model->m_add_account($data);
 					$this->session->set_flashdata('flash_data', 'Data Has Been Saved Without Photo Profile');
-				//redirect(base_url().'register/signup');
 					$this->load->view("frontend_view/register",$data);
 				}
 
@@ -159,20 +148,14 @@ class Register extends MY_Frontend {
 			else
 			{
 				$this->session->set_flashdata('flash_data', 'Your Email Already Registered Try With Another Email');
-			//redirect(base_url().'register/signup');
 				$this->load->view("frontend_view/register",$data);
 			}
 		}
 		else
 		{
-			//die();
-			//redirect('register/signup/cap_error/1','refresh');
 			$this->session->set_flashdata('flash_data', 'Wrong Input Captcha');
 			$this->load->view("frontend_view/register",$data);
 		} 
-
-
-		
 		$this->footer();
 	}
 	public function captcha_refresh(){
