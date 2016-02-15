@@ -36,6 +36,14 @@ class Referral extends MY_Frontend {
 		$this->footer();
 	}
 
+
+	public function link(){
+		$this->header();	
+
+		$data['sess_member_id']  = $sess_member_id=$this->session->userdata('sess_login')['member_id'];;
+		$this->load->view('frontend_view/referral',$data);
+		$this->footer();	
+	}
 	
 
 

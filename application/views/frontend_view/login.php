@@ -27,7 +27,7 @@ if(isset($_COOKIE['remember_me_cookie']))
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input id="password" name="password" value='' placeholder="Password" type="text" class="form-control" />
+                    <input id="password" name="password" value='' placeholder="Password" type="password" class="form-control" />
                 </div>
                 <div class="input-group">
                     <div class="checkbox">

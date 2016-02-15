@@ -43,6 +43,7 @@ class Login extends MY_Backend {
 				'is_active'=>$result->is_active,
 				'position'=>$result->status,
 				'level'=>$result->level,
+				
 				);
 
 			$this->session->set_userdata($data2);

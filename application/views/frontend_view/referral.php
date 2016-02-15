@@ -1,3 +1,20 @@
+<script type="text/javascript">
+    function copylink(){
+        var holdtext = $("#txt_copy_link").val();
+        var isIe = (navigator.userAgent.toLowerCase().indexOf("msie") != -1 
+         || navigator.userAgent.toLowerCase().indexOf("trident") != -1);
+
+        document.addEventListener('copy', function(e) {
+            var textToPutOnClipboard = "This is some text";
+            if (isIe) {
+                window.clipboardData.setData('Text', textToPutOnClipboard);    
+            } else {
+                e.clipboardData.setData('text/plain', textToPutOnClipboard);
+            }
+            e.preventDefault();
+        });
+    }
+</script>
 
 <section id="referral-section">
     <div class="container">
@@ -8,11 +25,11 @@
                 <!-- LINK URL Ref -->
                 <div class="col-md-12">
                     <div class="controls">
-                        <input type="text" class="form-control" name="link_url_referral">
+                        <input type="text" class="form-control" name="link_url_referral" id="txt_copy_link" value="<?php echo site_url() . $sess_member_id; ?>">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <button type="button" class="btn btn-lg btn-nesto submit">Copy Link</button>
+                    <button type="button" class="btn btn-lg btn-nesto submit" onclick="copylink()">Copy Link</button>
                 </div>
 
             </div><!-- /col-md-6 -->

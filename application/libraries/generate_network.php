@@ -19,7 +19,7 @@ Class Generate_network
 
 		foreach ($array->result() as $row) {
 			if ($row->upline_id == $parent) {
-				$res_network.='<li>' . $row->name;
+				$res_network.='<li><a href="' . site_url() . $row->member_id .  '">' . $row->name;
 				$array2=$this->CI->user_model->get_data_by_id_upline($row->member_id);
 	            $res_network.=$this->print_list($array2, $row->member_id);  # recurse
 	            $res_network.= '</li>';
