@@ -111,13 +111,22 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
    }
-   function m_all_promo()
+   function m_all_promo($perPage, $uri)
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","1");
-      $query = $this->db->get();
-      return $query->result();
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
    }
    function m_all_event()
    {

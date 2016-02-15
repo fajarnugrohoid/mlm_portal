@@ -65,9 +65,43 @@ class Home extends MY_Frontend {
 	}
 	public function all_promo()
 	{
-		$data['list_data'] = $this->news_model->m_all_promo();
+
+
+		$this->db->from('mst_news');
+
+		$pagination['base_url'] = base_url().'home/all_promo/';
+		$pagination['total_rows'] = $this->db->count_all_results();
+
+		$pagination['full_tag_open'] = '<ul class="pagination" style="color: black !important;background-color:transparent;">';
+		$pagination['full_tag_close'] = '</ul>';
+		$pagination['first_link'] = 'First';
+		$pagination['last_link'] = 'Last';
+		$pagination['first_tag_open'] = '<li>';
+		$pagination['first_tag_close'] = '</li>';
+		$pagination['prev_link'] = '&laquo';
+		$pagination['prev_tag_open'] = '<li class="prev">';
+		$pagination['prev_tag_close'] = '</li>';
+		$pagination['next_link'] = '&raquo';
+		$pagination['next_tag_open'] = '<li>';
+		$pagination['next_tag_close'] = '</li>';
+		$pagination['last_tag_open'] = '<li>';
+		$pagination['last_tag_close'] = '</li>';
+		$pagination['cur_tag_open'] = '<li class="active"><a href="#">';
+		$pagination['cur_tag_close'] = '</a></li>';
+		$pagination['num_tag_open'] = '<li>';
+		$pagination['num_tag_close'] = '</li>';
+
+		$pagination['per_page'] = "5";
+		$pagination['uri_segment'] = 3;
+		$pagination['num_links'] = 3;
+
+		$this->pagination->initialize($pagination);
+
+		$data['list_data'] = $this->news_model->m_all_promo($pagination['per_page'],$this->uri->segment(3,0));
+
+		$this->load->vars($data);
 		$this->header();
-		$this->load->view("frontend_view/all_promo",$data);
+		$this->load->view("frontend_view/all_promo");
 		$this->footer();
 		
 	}
