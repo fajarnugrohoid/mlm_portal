@@ -214,4 +214,11 @@ class Home extends MY_Frontend {
 		$this->footer();
 		
 	}
+	function detail_promo($id)
+	{
+		$data['list_data'] = $this->news_model->m_detail_promo($id);
+		$this->header();
+		$this->load->view("frontend_view/detail_page");
+		$this->footer();
+	}
 }

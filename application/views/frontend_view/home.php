@@ -47,7 +47,7 @@
                                 <div class="feature-box-containt">
                                     <?php echo substr($row_hot_promo->title,0,12) ?>        
                                     <br>
-                                    <a title="Read More">Read More</a> / <a href="<?php echo base_url('home/all_promo/')?>" title="Read More">See All Promo</a>
+                                    <a title="Read More" href="<?php echo base_url().'home/detail_promo/'.$row_hot_promo->id ?>">Read More</a> / <a href="<?php echo base_url('home/all_promo/')?>" title="Read More">See All Promo</a>
                                 </div>
                                 <div class="feature-box-subtitle">
                                     <?php echo substr($row_hot_promo->description,0,12) ?>
@@ -107,7 +107,7 @@
                                         <small>
                                             <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
                                             <br>
-                                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : news </a></span>
+                                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="<?php echo base_url('home/all_news/')?>">category : news </a></span>
                                         </small>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                                         <small>
                                             <i class="glyphicon glyphicon-time"></i> <?php echo substr($row_hot_product->author_date,0,12) ?> </span>
                                             <br>
-                                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : product </a></span>
+                                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="<?php echo base_url('home/all_product/')?>">category : product </a></span>
                                         </small>
                                     </div>
                                 </div>
