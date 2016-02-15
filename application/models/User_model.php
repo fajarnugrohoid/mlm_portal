@@ -26,13 +26,13 @@ class User_model extends CI_Model {
    function m_add_account($data)
    {
       $this->db->insert('mst_member',$data);
-      echo $this->db->last_query();
+      // echo $this->db->last_query();
       $last_id=$this->db->insert_id();
-      print_r($last_id);
+      // print_r($last_id);
       $this->db->where('id', $last_id);
 
       $year =date("Y");
-      echo $year;
+      // echo $year;
 
       $new_data = array('member_id' => 'MMS'.$year.$last_id, 'sponsor_id' => 'MMS'.$year.$last_id);
       $this->db->update('mst_member',$new_data);

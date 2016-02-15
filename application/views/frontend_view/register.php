@@ -31,7 +31,7 @@
         <div class="panel-body">
           <div class="form-group">
             <label>Username</label>
-            <input type="text" name="username" class="form-control" placeholder="username" required>
+            <input type="text" name="username" class="form-control" placeholder="username" value="<?php echo (isset($username)?$username:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Password</label>
@@ -46,43 +46,43 @@
         <div class="panel-body">
           <div class="form-group">
             <label>Alamat KTP</label>
-            <input type="text" name="ktp_address" class="form-control" placeholder="kp.xxx rt000/000" required>
+            <input type="text" name="ktp_address" class="form-control" placeholder="kp.xxx rt000/000" value="<?php echo (isset($ktp_address)?$ktp_address:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Daerah</label>
-            <input type="text" name="ktp_district" class="form-control" placeholder="sukabumi" required>
+            <input type="text" name="ktp_districts" class="form-control" placeholder="sukabumi" value="<?php echo (isset($ktp_districts)?$ktp_districts:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Kecamatan</label>
-            <input type="text" name="ktp_subdistrict" class="form-control" placeholder="limbagan" required>
+            <input type="text" name="ktp_subdistricts" class="form-control" placeholder="limbagan" value="<?php echo (isset($ktp_subdistricts)?$ktp_subdistricts:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Kabupaten/Kota Madya</label>
-            <input type="text" name="ktp_city" class="form-control" placeholder="sukabumi" required>
+            <input type="text" name="ktp_city" class="form-control" placeholder="sukabumi" value="<?php echo (isset($ktp_city)?$ktp_city:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Propinsi</label>
-            <input type="text" name="ktp_province" class="form-control" placeholder="jawa barat" required>
+            <input type="text" name="ktp_province" class="form-control" placeholder="jawa barat" value="<?php echo (isset($ktp_province)?$ktp_province:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Alamat Pengiriman</label>
-            <input type="text" name="shipment_address" class="form-control" placeholder="kp.xxxxx rt 000/000" required>
+            <input type="text" name="shipment_address" class="form-control" placeholder="kp.xxxxx rt 000/000" value="<?php echo (isset($shipment_address)?$shipment_address:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Daerah pengiriman</label>
-            <input type="text" name="shipment_district" class="form-control" placeholder="sukabumi" required>
+            <input type="text" name="shipment_district" class="form-control" placeholder="sukabumi" value="<?php echo (isset($shipment_district)?$shipment_district:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Kecamatan Pengiriman</label>
-            <input type="text" name="shipment_subdistricts" class="form-control" placeholder="sukaraja" required>
+            <input type="text" name="shipment_subdistricts" class="form-control" placeholder="sukaraja" value="<?php echo (isset($shipment_subdistricts)?$shipment_subdistricts:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Kabupaten/Kota Madya Pengiriman</label>
-            <input type="text" name="shipment_city" class="form-control" placeholder="sukabumi" required>
+            <input type="text" name="shipment_city" class="form-control" placeholder="sukabumi" value="<?php echo (isset($shipment_city)?$shipment_city:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Propinsi Pengiriman</label>
-            <input type="text" name="shipment_province" class="form-control" placeholder="Jawabarat" required>
+            <input type="text" name="shipment_province" class="form-control" placeholder="Jawabarat" value="<?php echo (isset($shipment_province)?$shipment_province:''); ?>" required>
           </div>
         </div>
       </div>
@@ -109,15 +109,6 @@
               <input name="captcha" class="form-control" required>
               <span class="input-group-addon" id="basic-addon2">&nbsp;&nbsp;<a href='' class ='refresh'><i class='fa fa-refresh'></i>&nbsp;perbarui gambar</a></span>
             </div>
-            <?php
-            $wrong = $this->input->get('cap_error');
-            if($wrong)
-            {
-              ?>
-              <span style="color:red;">Wrong Input capthca,please try again</span>
-              <?php
-            }
-            ?>
           </div>
           <div align="center" style="margin-top:15px;">
             <button type="submit" name="register" class="btn btn-success">Sign Up</button>
@@ -133,71 +124,71 @@
         <div class="panel-body">
           <div class="form-group">
             <label>Nama</label>
-            <input type="text" name="name" class="form-control" placeholder="username" required>
+            <input type="text" name="name" class="form-control" placeholder="username" value="<?php echo (isset($name)?$name:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Birthday Place</label>
-            <input type="text" name="birthday_place" class="form-control" placeholder="New York" required>
+            <input type="text" name="birthday_place" class="form-control" placeholder="New York" value="<?php echo (isset($birthday_place)?$birthday_place:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Tanggal Lahir</label>
-            <input type="date" name="birthday" class="form-control" placeholder="dd/mm/yyyy" required>
+            <input type="date" name="birthday" class="form-control" placeholder="dd/mm/yyyy" value="<?php echo (isset($birthday)?$birthday:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Nomor Telepon Genggam</label>
-            <input type="text" name="handphone" class="form-control" placeholder="+62 85862624149" required>
+            <input type="text" name="handphone" class="form-control" placeholder="+62 85862624149" value="<?php echo (isset($handphone)?$handphone:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Nomor Telepon</label>
-            <input type="text" name="phone" class="form-control" placeholder="+62 021 111 11111" required>
+            <input type="text" name="phone" class="form-control" placeholder="+62 021 111 11111" value="<?php echo (isset($phone)?$phone:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email" class="form-control" placeholder="admin@gmail.com" required>
+            <input type="email" name="email" class="form-control" placeholder="admin@gmail.com" value="<?php echo (isset($email)?$email:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Nama Ibu</label>
-            <input type="text" name="mothers_name" class="form-control" placeholder="admin@gmail.com" required>
+            <input type="text" name="mothers_name" class="form-control" placeholder="admin@gmail.com" value="<?php echo (isset($mothers_name)?$mothers_name:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Nationality</label>
-            <input type="text" name="nationality" class="form-control" placeholder="Indonesia" required>
+            <input type="text" name="nationality" class="form-control" placeholder="Indonesia" value="<?php echo (isset($nationality)?$nationality:''); ?>" required>
           </div>
           <div class="form-group">
             <label>No KTP</label>
-            <input type="text" name="no_ktp" class="form-control" placeholder="123456789" required>
+            <input type="text" name="no_ktp" class="form-control" placeholder="123456789" value="<?php echo (isset($no_ktp)?$no_ktp:''); ?>" required>
           </div>
           <div class="form-group">
             <label>No SIM</label>
-            <input type="text" name="no_sim" class="form-control" placeholder="123456789" required>
+            <input type="text" name="no_sim" class="form-control" placeholder="123456789" value="<?php echo (isset($no_sim)?$no_sim:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Pekerjaan</label>
-            <input type="text" name="job" class="form-control" placeholder="Developer" required>
+            <input type="text" name="job" class="form-control" placeholder="Developer" value="<?php echo (isset($job)?$job:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Bank</label>
-            <input type="text" name="bank" class="form-control" placeholder="Mandiri" required>
+            <input type="text" name="bank" class="form-control" placeholder="Mandiri" value="<?php echo (isset($bank)?$bank:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Nama Akun Bank</label>
-            <input type="text" name="bank_an" class="form-control" placeholder="Admin" required>
+            <input type="text" name="bank_an" class="form-control" placeholder="Admin" value="<?php echo (isset($bank_an)?$bank_an:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Nomor Rekening</label>
-            <input type="text" name="no_rek" class="form-control" placeholder="123456789" required>
+            <input type="text" name="no_rek" class="form-control" placeholder="123456789" value="<?php echo (isset($no_rek)?$no_rek:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Cabang Bank</label>
-            <input type="text" name="bank_branch" class="form-control" placeholder="Sukabumi" required>
+            <input type="text" name="bank_branch" class="form-control" placeholder="Sukabumi" value="<?php echo (isset($bank_branch)?$bank_branch:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Kota Bank</label>
-            <input type="text" name="bank_city" class="form-control" placeholder="Bandung" required>
+            <input type="text" name="bank_city" class="form-control" placeholder="Bandung" value="<?php echo (isset($bank_city)?$bank_city:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Nilai</label>
-            <input type="text" name="value" class="form-control" placeholder="1000.000.000" required>
+            <input type="text" name="value" class="form-control" placeholder="1000.000.000" value="<?php echo (isset($value)?$value:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Rencana</label>
@@ -208,7 +199,7 @@
           </div>
           <div class="form-group">
             <label>Cabang Bank</label>
-            <input type="text" name="bank_branch" class="form-control" placeholder="Sukabumi" required>
+            <input type="text" name="bank_branch" class="form-control" placeholder="Sukabumi" value="<?php echo (isset($bank_branch)?$bank_branch:''); ?>" required>
           </div>
           <div class="form-group">
             <label>Status</label>
