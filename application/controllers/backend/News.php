@@ -34,6 +34,32 @@ class News extends MY_Backend {
     $this->load->view('backend_view/news/add');
     $this->footer();
   }
+  function change_status()
+   {      
+      $id=$this->input->post('id');
+      $data=array(
+         'id' => $id,
+         'status' => $this->input->post('is_active'),
+         );
+
+      $param=$this->news_model->m_edit_news_active($data,$id); 
+      if($param == 1)
+      {
+         $out= array(
+            'isSuccess' => 1,
+            'message' => "Success Change State Active"
+            );
+         echo json_encode( $out );
+      }
+      else
+      {
+         $out= array(
+            'isSuccess' => 0,
+            'message' => "Failed Change State Active"
+            );
+         echo json_encode( $out );
+      }
+   }
   function insert_data()
   {
 
@@ -56,7 +82,8 @@ class News extends MY_Backend {
           'link' => $this->input->post('link'),
           'category' => $this->input->post('category'),
           'author' => $this->session->userdata('sess_login')['username'],
-          'author_date' => date('Y-m-d')
+          'author_date' => date('Y-m-d'),
+          'status' => 1,
           );
         if ($_FILES['userfile']['size'] > 0)
         {
@@ -167,7 +194,8 @@ class News extends MY_Backend {
         'link' => $this->input->post('link'),
         'category' => $this->input->post('category'),
         'author' => $this->session->userdata('sess_login')['username'],
-        'author_date' => date('Y-m-d')
+        'author_date' => date('Y-m-d'),
+        'status' => 1,
         );
       if ($_FILES['userfile']['size'] > 0)
       {

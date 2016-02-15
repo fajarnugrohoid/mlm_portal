@@ -24,6 +24,7 @@ class Search extends MY_Frontend {
 
 		$this->db->from('mst_news');
 		$this->db->like('title', $data['search_keyword']);
+		$this->db->where("status","1");
 
 		$pagination['base_url'] = base_url().'search/index/';
 		$pagination['total_rows'] = $this->db->count_all_results();

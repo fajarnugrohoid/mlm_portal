@@ -20,6 +20,18 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
    }
+   function m_edit_news_active($data,$id)
+   {
+      $this->db->where('id', $id);
+      if ($this->db->update('mst_news',$data)) 
+      {
+         return 1;
+      }
+      else
+      {
+         return 0;
+      }
+   }
    function m_delete_news_data($data,$id)
    {
       $query=$this->db->where('id', $id);
@@ -72,6 +84,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","1");
+      $this->db->where("status","1");
       $this->db->limit("4");
       $query = $this->db->get();
       return $query->result_object();
@@ -81,6 +94,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","4");
+      $this->db->where("status","1");
       $this->db->limit("3");
       $query = $this->db->get();
       return $query->result();
@@ -90,6 +104,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","3");
+      $this->db->where("status","1");
       $this->db->limit("3");
       $query = $this->db->get();
       return $query->result();
@@ -99,6 +114,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","2");
+      $this->db->where("status","1");
       $this->db->limit("6");
       $query = $this->db->get();
       return $query->result();
@@ -108,6 +124,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","1");
+      $this->db->where("status","1");
 
       $getData = $this->db->get('', $perPage, $uri);
 
@@ -125,6 +142,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","2");
+      $this->db->where("status","1");
 
       $getData = $this->db->get('', $perPage, $uri);
 
@@ -142,6 +160,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","4");
+      $this->db->where("status","1");
 
       $getData = $this->db->get('', $perPage, $uri);
 
@@ -159,6 +178,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","3");
+      $this->db->where("status","1");
 
       $getData = $this->db->get('', $perPage, $uri);
 
@@ -177,6 +197,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","1");
+      $this->db->where("status","1");
       $this->db->where('id', $id);
       $query = $this->db->get();
       return $query->result();
@@ -186,6 +207,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","2");
+      $this->db->where("status","1");
       $this->db->where('id', $id);
       $query = $this->db->get();
       return $query->result();
@@ -195,6 +217,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","4");
+      $this->db->where("status","1");
       $this->db->where('id', $id);
       $query = $this->db->get();
       return $query->result();
@@ -204,6 +227,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","3");
+      $this->db->where("status","1");
       $this->db->where('id', $id);
       $query = $this->db->get();
       return $query->result();
@@ -213,6 +237,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where('id', $id);
+      $this->db->where("status","1");
       $query = $this->db->get();
       return $query->result();
    }
@@ -221,6 +246,7 @@ class News_model extends CI_Model {
    {
       $this->db->select('*');
       $this->db->from('mst_news');
+      $this->db->where("status","1");
 
       if (!empty($search_keyword)) 
       {

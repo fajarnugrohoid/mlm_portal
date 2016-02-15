@@ -25,6 +25,7 @@
                         <th>No</th>
                         <th>Title</th>
                         <th>Description</th>
+                        <th>Status</th>
                         <th>category</th>
                         <th>Aksi</th>
                      </tr>
@@ -55,10 +56,32 @@
          "columnDefs": 
          [ 
          {
-            "targets": 4,
+            "targets": 5,
             "render": function ( data, type, full, meta ) 
             {
-               return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn btn-success">Edit</a>';
+               // return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn btn-success">Edit</a>';
+               if (full.status == 1) 
+               {
+                  return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn form-control btn-success">Edit</a><a oncLick="change_status('+full.id+','+0+')" class="btn form-control btn-danger"> Set In Active</a>';
+               }
+               else
+               {
+                  return '<a class="btn btn-danger" oncLick="delete_news('+full.id+')">Delete</a><a href="'+base_url+'backend/news/edit_news/'+full.id+'" class="btn form-control btn-success">Edit</a><a oncLick="change_status('+full.id+','+1+')" class="btn form-control btn-success">Set Active</a>';                     
+               }              
+            }
+         },
+         {
+            "targets": 3,
+            "render": function ( data, type, full, meta ) 
+            {
+               if (full.status == 1) 
+               {
+                  return 'Active';
+               }
+               else
+               {
+                  return 'In Active';                     
+               }              
             }
          },
          {
@@ -88,7 +111,8 @@
          { "data": "id" },
          { "data": "title" },
          { "data": "description" },
-         { "data": "category" }
+         { "data": "category" },
+         { "data": "id" }
          ]
 
       });
@@ -113,4 +137,21 @@
          }
       });
    }
+
+   function change_status(param,param2)
+{
+   $.ajax({
+      type:"post",
+      dataType: 'json',
+      data : {id : param , is_active : param2},
+      "url": base_url+'backend/news/change_status',
+      datatype:'application/json',
+      success:function(success){
+         $(window).scrollTop(0);
+         console.log(success);
+         show_alert(success);
+         table_news.ajax.reload();
+      }
+   });
+}
 </script>

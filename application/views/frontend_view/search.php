@@ -3,13 +3,14 @@
         <div class="col-md-12" style="margin-bottom:50px;padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
-                    THis What We Have Of Promo
+                    THis What We Have Of Content
                 </div>
                 <div class="main-title">
-                    All Promo
+                    All Content
                 </div>
             </div>
             <div class="row">
+            <?php if ($list_data !=""): ?>
                 <?php foreach($list_data as $row):?>
                     <hr>
                     <div class="row"> 
@@ -62,6 +63,9 @@
                         </div> 
                     </div>
                 <?php endforeach ?>
+                <?php else: ?>
+                    <div align="center" class="col-md-12" style="min-height:170px;">No data Found</div>
+                <?php endif ?>
             </div>
             <?php  echo "<div class='col-md-12' align='center'>".$this->pagination->create_links()."</div>";?>
         </div>
