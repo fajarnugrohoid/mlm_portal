@@ -32,6 +32,10 @@
           <div class="form-group">
             <label>Category</label>
             <select class="form-control" id="category" name="category">
+              <option value="1" <?php if($val->category == '1'){ echo 'selected'; } ?> >Promo</option>
+              <option value="2" <?php if($val->category == '2'){ echo 'selected'; } ?> >Event</option>
+              <option value="3" <?php if($val->category == '3'){ echo 'selected'; } ?> >Product</option>
+              <option value="4" <?php if($val->category == '4'){ echo 'selected'; } ?> >News</option>
             </select>
           </div>
           <div class="form-group">
@@ -84,5 +88,7 @@
 
       }
     });
+
+    var getCategory = 
   }
 </script>

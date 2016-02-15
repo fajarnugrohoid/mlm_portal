@@ -1,6 +1,6 @@
 <section id="products-section" style="margin-bottom:0px !important;">
     <div class="container"> 
-        <div class="col-md-12" style="padding: 50px 50px 10px 10px;">
+        <div class="col-md-12" style="margin-bottom:50px;padding: 50px 50px 10px 10px;">
             <div class="section-title">
                 <div class="desc-title">
                     THis What We Have Of Promo
@@ -19,7 +19,7 @@
                                 <?php if ($row['image']==""): ?>
                                     <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
                                 <?php else: ?>
-                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row->image ?>"/>
+                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/news/'.$row['image'] ?>"/>
                                 <?php endif ?>
                             </div>
                         </a>
@@ -41,7 +41,7 @@
                                     <small>
                                         <i class="glyphicon glyphicon-time"></i> <?php echo $row['author_date']; ?> </span>
                                         <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : promo </a></span>
+                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="<?php echo base_url('home/all_promo/')?>">category : promo </a></span>
                                     </small>
                                 </div>
                             </div>

@@ -103,14 +103,6 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
    }
-   function m_home_hot_testimonial()
-   {
-      $this->db->select('*');    
-      $this->db->from('mst_news');
-      $this->db->where('category = "4" LIMIT 4');
-      $query = $this->db->get();
-      return $query->result();
-   }
    function m_all_promo($perPage, $uri)
    {
       $this->db->select('*');    
@@ -128,28 +120,55 @@ class News_model extends CI_Model {
          return null;
       }
    }
-   function m_all_event()
+   function m_all_event($perPage, $uri)
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","2");
-      $query = $this->db->get();
-      return $query->result();
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
    }
-   function m_all_news()
+   function m_all_news($perPage, $uri)
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","4");
-      $query = $this->db->get();
-      return $query->result();
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
    }
-   function m_all_product()
+   function m_all_product($perPage, $uri)
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","3");
-      $query = $this->db->get();
-      return $query->result();
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
    }
 }
