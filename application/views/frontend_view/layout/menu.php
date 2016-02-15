@@ -104,6 +104,10 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
+                                    <div class="col-md-9"><input  type="text" class="form-control"></div>
+                                    <div class="col-md-3" style="margin-left:0px;padding-left:0px"><input type="submit" value="Search" class="btn btn-default"></div>
+                                </li>
+                                <li>
                                     <a href="<?php echo base_url('home/index')?>" title="Home">
                                         Home
                                     </a>
