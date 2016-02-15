@@ -242,4 +242,11 @@ class Home extends MY_Frontend {
 		$this->load->view("frontend_view/detail_page",$data);
 		$this->footer();
 	}
+	function detail_search($id)
+	{
+		$this->header();
+		$data['list_data'] = $this->news_model->m_detail_search($id);
+		$this->load->view("frontend_view/detail_page",$data);
+		$this->footer();
+	}
 }

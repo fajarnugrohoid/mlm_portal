@@ -208,4 +208,34 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
    }
+   function m_detail_search($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
+   }
+
+   function m_search($perPage, $uri, $search_keyword)
+   {
+      $this->db->select('*');
+      $this->db->from('mst_news');
+
+      if (!empty($search_keyword)) 
+      {
+         $this->db->like('title', $search_keyword);
+      }
+      $this->db->order_by('id','asc');
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
+   }
 }

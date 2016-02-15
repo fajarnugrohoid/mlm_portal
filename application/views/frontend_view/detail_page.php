@@ -17,11 +17,21 @@
                 </div>
             </div>
             <div class="col-md-8" style="margin-top:25px;margin-left:0px">
-            <h3><i><b><?php echo $row->title ?></b></i></h3>
+                <h3><i><b><?php echo $row->title ?></b></i></h3>
                 <small>
                     <i class="glyphicon glyphicon-time"></i> 11/11/1111</span>
                     <br>
-                    <span class="explore"><i class="glyphicon glyphicon-th"></i>category : product</span>
+                    <span class="explore"><i class="glyphicon glyphicon-th"></i>
+                        <?php if ($row->category==1): ?>
+                            <a href="<?php echo base_url('home/all_promo/')?>">category : promo </a>
+                        <?php elseif($row->category==2): ?>
+                            <a href="<?php echo base_url('home/all_event/')?>">category : event </a>
+                        <?php elseif($row->category==3): ?>
+                            <a href="<?php echo base_url('home/all_product/')?>">category : product </a>
+                        <?php elseif($row->category==4): ?>
+                            <a href="<?php echo base_url('home/all_news/')?>">category : news </a>
+                        <?php endif ?>                                     
+                    </span>
                 </small>
             </div>
             <div class="col-md-12" style="padding-left:200px;padding-right:200px;margin-top:50px;">
