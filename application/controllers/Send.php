@@ -14,7 +14,8 @@ class Send extends MY_Frontend {
 	public function link(){
 		$this->header();	
 
-		$data['sess_member_id']  = $sess_member_id=$this->session->userdata('sess_login')['member_id'];;
+		$data['sess_member_id']  = $this->session->userdata('sess_login')['member_id'];
+		$data['link_referral'] = site_url() . $data['sess_member_id'];
 		$this->load->view('frontend_view/referral',$data);
 		$this->footer();	
 	}

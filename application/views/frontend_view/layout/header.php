@@ -24,8 +24,8 @@
 
 	<link href="<?php echo base_url('assets/css/frontend/home.css'); ?>" rel="stylesheet">
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>
-
 	
+	<!--<script type="text/javascript" src="<?php // echo base_url('assets/js/frontend/referral.js')?>"></script> -->
 
 </head>
 <body>
