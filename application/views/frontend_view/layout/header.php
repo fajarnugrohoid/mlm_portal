@@ -21,6 +21,7 @@
 	<link href="<?php echo base_url('assets/css/bootstrap-theme.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/font-awesome.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/frontend/custom.css')?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/jquery.steps.css')?>" rel="stylesheet">
 
 	<link href="<?php echo base_url('assets/css/frontend/home.css'); ?>" rel="stylesheet">
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.2.0.min.js')?>"></script>

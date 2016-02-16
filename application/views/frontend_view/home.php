@@ -31,37 +31,37 @@
         <div class="row">
             <div class="home-boxes-wrapper">
                 <?php foreach($promo as $row_hot_promo):?>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="feature-box-style1">
-                        <div class="box-container">
-                            <div class="feature-box-image">
-                                <?php if ($row_hot_promo->image==""): ?>
-                                    <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
-                                <?php else: ?>
-                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_promo->image ?>"/>
-                                <?php endif ?>
-                            </div>
-                            <div class="feature-box-icon">
-                                <i class="fa fa-newspaper-o"></i>
-                            </div>
-                            <div class="feature-box-containt">
-                                <?php echo substr($row_hot_promo->title,0,12) ?>        
-                                <br>
-                                <a title="Read More">Read More</a> / <a title="Read More">See All News</a>
-                            </div>
-                            <div class="feature-box-subtitle">
-                                <?php echo substr($row_hot_promo->description,0,12) ?>
-                            </div>
-                            <div class="feature-box-title">
-                                <h4><?php echo substr($row_hot_promo->title,0,12) ?></h4>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="feature-box-style1">
+                            <div class="box-container">
+                                <div class="feature-box-image">
+                                    <?php if ($row_hot_promo->image==""): ?>
+                                        <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
+                                    <?php else: ?>
+                                        <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/news/'.$row_hot_promo->image ?>"/>
+                                    <?php endif ?>
+                                </div>
+                                <div class="feature-box-icon">
+                                    <i class="fa fa-newspaper-o"></i>
+                                </div>
+                                <div class="feature-box-containt">
+                                    <?php echo substr($row_hot_promo->title,0,12) ?>        
+                                    <br>
+                                    <a title="Read More" href="<?php echo base_url().'home/detail_promo/'.$row_hot_promo->id ?>">Read More</a> / <a href="<?php echo base_url('home/all_promo/')?>" title="Read More">See All Promo</a>
+                                </div>
+                                <div class="feature-box-subtitle">
+                                    <?php echo substr($row_hot_promo->description,0,12) ?>
+                                </div>
+                                <div class="feature-box-title">
+                                    <h4><?php echo substr($row_hot_promo->title,0,12) ?></h4>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php endforeach ?>
+                <?php endforeach ?>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
 <section id="products-section">
@@ -77,46 +77,47 @@
             </div>
             <div class="row">
                 <?php foreach($news as $row_hot_news):?>
-                <hr>
-                <div class="row"> 
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#">
-                            <div class="feature-box-image">
-                                <?php if ($row_hot_news->image==""): ?>
-                                    <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
-                                <?php else: ?>
-                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_news->image ?>"/>
-                                <?php endif ?>
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="col-xs-12 col-sm-9 col-md-9">
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-picture">
-                                    <a href="#" title="sintret">
-                                        <img src="<?php echo base_url('assets/images/png-gto-logo.png'); ?>"/>
-                                    </a>
+                    <hr>
+                    <div class="row"> 
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <a href="#">
+                                <div class="feature-box-image">
+                                    <?php if ($row_hot_news->image==""): ?>
+                                        <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
+                                    <?php else: ?>
+                                        <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/news/'.$row_hot_news->image ?>"/>
+                                    <?php endif ?>
                                 </div>
-                                <div class="row-content">
-                                    <div class="list-group-item-heading">
+                            </a>
+                        </div> 
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row-picture">
                                         <a href="#" title="sintret">
-                                            <small><?php echo substr($row_hot_news->title,0,12) ?></small>
+                                            <img src="<?php echo base_url('assets/images/png-gto-logo.png'); ?>"/>
                                         </a>
                                     </div>
-                                    <small>
-                                        <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
-                                        <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : news </a></span>
-                                    </small>
+                                    <div class="row-content">
+                                        <div class="list-group-item-heading">
+                                            <a href="#" title="sintret">
+                                                <small><?php echo substr($row_hot_news->title,0,12) ?></small>
+                                            </a>
+                                        </div>
+                                        <small>
+                                            <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
+                                            <br>
+                                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="<?php echo base_url('home/all_news/')?>">category : news </a></span>
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
-                        <p><?php echo substr($row_hot_news->description,0,200)."...." ?></p>
-                    </div> 
-                </div>
-            <?php endforeach ?>
+                            <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
+                            <p><?php echo substr($row_hot_news->description,0,200)."...." ?></p>
+                            <div><a title="Read More" href="<?php echo base_url().'home/detail_news/'.$row_hot_news->id ?>">Read More</a> / <a href="<?php echo base_url('home/all_news/')?>" title="Read More">See All News</a></div>
+                        </div> 
+                    </div>
+                <?php endforeach ?>
             </div>
         </div>
         <div class="col-md-6" style="padding: 50px 50px 10px 10px;">
@@ -130,46 +131,47 @@
             </div>
             <div class="row">
                 <?php foreach($product as $row_hot_product):?>
-                <hr>
-                <div class="row"> 
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <a href="#">
-                            <div class="feature-box-image">
-                                <?php if ($row_hot_product->image==""): ?>
-                                    <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
-                                <?php else: ?>
-                                    <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/'.$row_hot_product->image ?>"/>
-                                <?php endif ?>
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="col-xs-12 col-sm-9 col-md-9">
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-picture">
-                                    <a href="#" title="sintret">
-                                        <img src="<?php echo base_url('assets/images/png-gto-logo.png'); ?>"/>
-                                    </a>
+                    <hr>
+                    <div class="row"> 
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <a href="#">
+                                <div class="feature-box-image">
+                                    <?php if ($row_hot_product->image==""): ?>
+                                        <img style="width:125px;height:125px;" src="<?php echo base_url('assets/images/no_photo.png'); ?>"/>
+                                    <?php else: ?>
+                                        <img style="width:125px;height:125px;" src= "<?php echo base_url().'assets/images/news/'.$row_hot_product->image ?>"/>
+                                    <?php endif ?>
                                 </div>
-                                <div class="row-content">
-                                    <div class="list-group-item-heading">
+                            </a>
+                        </div> 
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row-picture">
                                         <a href="#" title="sintret">
-                                            <small><?php echo substr($row_hot_product->title,0,12) ?></small>
+                                            <img src="<?php echo base_url('assets/images/png-gto-logo.png'); ?>"/>
                                         </a>
                                     </div>
-                                    <small>
-                                        <i class="glyphicon glyphicon-time"></i> 11/12/11 </span>
-                                        <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">category : product </a></span>
-                                    </small>
+                                    <div class="row-content">
+                                        <div class="list-group-item-heading">
+                                            <a href="#" title="sintret">
+                                                <small><?php echo substr($row_hot_product->title,0,12) ?></small>
+                                            </a>
+                                        </div>
+                                        <small>
+                                            <i class="glyphicon glyphicon-time"></i> <?php echo substr($row_hot_product->author_date,0,12) ?> </span>
+                                            <br>
+                                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="<?php echo base_url('home/all_product/')?>">category : product </a></span>
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
-                        <p><?php echo substr($row_hot_product->description,0,200)."...." ?></p>
-                    </div> 
-                </div>
-            <?php endforeach ?>
+                            <!-- <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4> -->
+                            <p><?php echo substr($row_hot_product->description,0,200)."...." ?></p>
+                            <div><a title="Read More" href="<?php echo base_url().'home/detail_product/'.$row_hot_product->id ?>">Read More</a> / <a href="<?php echo base_url('home/all_product/')?>" title="Read More">See All Product</a></div>
+                        </div> 
+                    </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
@@ -210,21 +212,21 @@
             </div>
         </div>
         <?php foreach($event as $row_hot_event):?>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
-                <div class="feature-box-icon">
-                    <i class="fa fa-globe"></i>
-                </div>
-                <div class="feature-box-containt">
-                    <h4><?php echo substr($row_hot_event->title,0,12) ?></h4>
-                    <p><?php echo substr($row_hot_event->description,0,50) ?></p>
-                    <div align="center"><a>Read More</a></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="feature-box-style2" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500}">
+                    <div class="feature-box-icon">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <div class="feature-box-containt">
+                        <h4><?php echo substr($row_hot_event->title,0,12) ?></h4>
+                        <p><?php echo substr($row_hot_event->description,0,50) ?></p>
+                        <div align="center"><a title="Read More" href="<?php echo base_url().'home/detail_event/'.$row_hot_event->id ?>">Read More</a></div>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endforeach ?>
-    <div align="center" class="col-md-12 see_all_news"><a>See All News</a></div>
-</div>
+    </div>
+    <div align="center" style="margin-top:100px;margin-bottom:50px;"><a style="margin-top:100px;margin-bottom:50px;" href="<?php echo base_url('home/all_event/')?>" title="Read More">See All Event</a></div>
 </section>
 
 

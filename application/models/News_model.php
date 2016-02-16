@@ -20,6 +20,18 @@ class News_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
    }
+   function m_edit_news_active($data,$id)
+   {
+      $this->db->where('id', $id);
+      if ($this->db->update('mst_news',$data)) 
+      {
+         return 1;
+      }
+      else
+      {
+         return 0;
+      }
+   }
    function m_delete_news_data($data,$id)
    {
       $query=$this->db->where('id', $id);
@@ -72,6 +84,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","1");
+      $this->db->where("status","1");
       $this->db->limit("4");
       $query = $this->db->get();
       return $query->result_object();
@@ -81,6 +94,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","4");
+      $this->db->where("status","1");
       $this->db->limit("3");
       $query = $this->db->get();
       return $query->result();
@@ -90,6 +104,7 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","3");
+      $this->db->where("status","1");
       $this->db->limit("3");
       $query = $this->db->get();
       return $query->result();
@@ -99,16 +114,154 @@ class News_model extends CI_Model {
       $this->db->select('*');    
       $this->db->from('mst_news');
       $this->db->where("category","2");
+      $this->db->where("status","1");
       $this->db->limit("6");
       $query = $this->db->get();
       return $query->result();
    }
-   function m_home_hot_testimonial()
+   function m_all_promo($perPage, $uri)
    {
       $this->db->select('*');    
       $this->db->from('mst_news');
-      $this->db->where('category = "4" LIMIT 4');
+      $this->db->where("category","1");
+      $this->db->where("status","1");
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
+   }
+   function m_all_event($perPage, $uri)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","2");
+      $this->db->where("status","1");
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
+   }
+   function m_all_news($perPage, $uri)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","4");
+      $this->db->where("status","1");
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
+   }
+   function m_all_product($perPage, $uri)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","3");
+      $this->db->where("status","1");
+
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
+   }
+
+   function m_detail_promo($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","1");
+      $this->db->where("status","1");
+      $this->db->where('id', $id);
       $query = $this->db->get();
       return $query->result();
+   }
+   function m_detail_event($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","2");
+      $this->db->where("status","1");
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_detail_news($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","4");
+      $this->db->where("status","1");
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_detail_product($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where("category","3");
+      $this->db->where("status","1");
+      $this->db->where('id', $id);
+      $query = $this->db->get();
+      return $query->result();
+   }
+   function m_detail_search($id)
+   {
+      $this->db->select('*');    
+      $this->db->from('mst_news');
+      $this->db->where('id', $id);
+      $this->db->where("status","1");
+      $query = $this->db->get();
+      return $query->result();
+   }
+
+   function m_search($perPage, $uri, $search_keyword)
+   {
+      $this->db->select('*');
+      $this->db->from('mst_news');
+      $this->db->where("status","1");
+
+      if (!empty($search_keyword)) 
+      {
+         $this->db->like('title', $search_keyword);
+      }
+      $this->db->order_by('id','asc');
+      $getData = $this->db->get('', $perPage, $uri);
+
+      if ($getData->num_rows() > 0)
+      {
+         return $getData->result_array();
+      }
+      else
+      {
+         return null;
+      }
    }
 }
